@@ -104,7 +104,7 @@ add_stripes \
     -nets [list $POWER_NET $GROUND_NET] \
     -layer Metal10 \
     -width 1.0 \
-    -spacing 1.0 \
+    -spacing 1.5 \
     -set_to_set_distance 20.0 \
     -merge_stripes_value 0.6 \
     -max_same_layer_jog_length 0.44 \
@@ -117,7 +117,7 @@ add_stripes \
 # Route power nets
 ###############################
 route_special \
-    -connect [list block_pin core_pin] \
+    -connect core_pin \
     -nets [list $POWER_NET $GROUND_NET] \
     -layer_change_range [list Metal1(1) Metal11(11)] \
     -crossover_via_layer_range [list Metal1(1) Metal11(11)] \

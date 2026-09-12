@@ -36,15 +36,16 @@ if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
 }
 
 ###############################
-# Insert filler cells before routing
-###############################
-set_db add_fillers_cells $FILLER_CELLS
-add_fillers
-
-###############################
 # Route and optimize design
 ###############################
 route_opt_design
+
+###############################
+# Insert filler cells after timing optimization
+###############################
+# Keep whitespace available while route_opt_design inserts hold buffers.
+set_db add_fillers_cells $FILLER_CELLS
+add_fillers
 
 ###############################
 # Report and save design

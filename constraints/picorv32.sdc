@@ -13,7 +13,10 @@ set INPUT_DELAY_MIN_NS             0.20
 set INPUT_TRANSITION_MAX_NS        0.10
 set INPUT_TRANSITION_MIN_NS        0.05
 set OUTPUT_DELAY_MAX_NS            1.00
-set OUTPUT_DELAY_MIN_NS           -0.20
+# No external receiver hold specification is available for this standalone
+# core.  Use a neutral minimum output delay; replace it with -t_hold when the
+# core is integrated with a characterized memory/peripheral interface.
+set OUTPUT_DELAY_MIN_NS            0.00
 set OUTPUT_LOAD_PF                  0.05
 set DESIGN_MAX_TRANSITION_NS        0.50
 set DESIGN_MAX_FANOUT              16

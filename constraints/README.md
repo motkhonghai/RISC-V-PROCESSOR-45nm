@@ -64,12 +64,15 @@ không đặt false path. Nếu reset được xử lý trong wrapper khác, con
 Tất cả output hiện dùng:
 
 - Max output delay: 1.00 ns.
-- Min output delay: -0.20 ns.
+- Min output delay: 0.00 ns.
 - Output load: 0.05 pF.
 
-Min delay âm mô hình hóa yêu cầu hold của thiết bị nhận. Khi có timing thật
-của SRAM, interconnect hoặc peripheral, phải thay các giả định này bằng thông
-số của khối nhận tương ứng.
+Project standalone chưa có specification hold của thiết bị nhận, vì vậy min
+output delay 0.00 ns là giả định trung tính. Giá trị -0.20 ns cũ đã mô hình
+hóa một receiver hold time 0.20 ns không có căn cứ và tạo C2O hold WNS
+-0.050 ns dù router đã chèn nhiều delay cell. Khi có timing thật của SRAM,
+interconnect hoặc peripheral, đặt min output delay bằng `-t_hold` của khối
+nhận và chạy lại synthesis/PD; không giữ 0.00 ns như giá trị signoff mặc định.
 
 ## 5. Native memory interface
 
