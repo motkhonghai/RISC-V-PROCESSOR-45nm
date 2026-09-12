@@ -70,14 +70,23 @@ read_hdl ${RTL_PATH}/picorv32.v
 elaborate $DESIGN
 init_design
 
-# This is a functional, non-DFT flow.  Prevent Genus from implementing muxed
+# This is a functional, non-DFT flow. Prevent Genus from implementing muxed
 # registers with scan cells: Innovus otherwise interprets their SI/SE arcs as
-# incomplete scan chains and reports IMPSP-9099 during placement.
-set SCAN_BASE_CELLS [get_db base_cells */SDFF*]
-if {[llength $SCAN_BASE_CELLS] > 0} {
-    set_db $SCAN_BASE_CELLS .dont_use true
-    puts "Disabled [llength $SCAN_BASE_CELLS] SDFF base cells for non-DFT synthesis"
+# incomplete scan chains and reports IMPSP-9099 during placement. Base-cell
+# names are not library-qualified, so patterns must not contain a "*/" prefix.
+set SCAN_BASE_CELLS [list]
+foreach SCAN_CELL_PATTERN [list SDFF* SEDFF* SPDFF* SRDFF*] {
+    set SCAN_BASE_CELLS [concat \
+        $SCAN_BASE_CELLS \
+        [get_db base_cells $SCAN_CELL_PATTERN]]
 }
+
+if {[llength $SCAN_BASE_CELLS] == 0} {
+    error "No scan base cells matched; check the Genus base-cell query"
+}
+
+set_db $SCAN_BASE_CELLS .dont_use true
+puts "Disabled [llength $SCAN_BASE_CELLS] scan base cells for non-DFT synthesis"
 
 check_design -unresolved \
     > ${REPORTS_PATH}/picorv32_check_design.rpt
@@ -204,6 +213,27 @@ report_timing \
 
 write_hdl \
     > ${OUTPUTS_PATH}/picorv32_netlist.v
+
+# Fail before writing the Innovus handoff if a scan cell escaped dont_use.
+set NETLIST_FILE ${OUTPUTS_PATH}/picorv32_netlist.v
+set SCAN_CHECK_REPORT ${REPORTS_PATH}/picorv32_scan_cell_check.rpt
+set NETLIST_HANDLE [open $NETLIST_FILE r]
+set NETLIST_TEXT [read $NETLIST_HANDLE]
+close $NETLIST_HANDLE
+
+set MAPPED_SCAN_CELL_COUNT [regexp -all -line \
+    {^[ \t]*(SDFF|SEDFF|SPDFF|SRDFF)[^ \t]*[ \t]+} \
+    $NETLIST_TEXT]
+
+set SCAN_REPORT_HANDLE [open $SCAN_CHECK_REPORT w]
+puts $SCAN_REPORT_HANDLE "Mapped scan-cell instances: $MAPPED_SCAN_CELL_COUNT"
+close $SCAN_REPORT_HANDLE
+
+if {$MAPPED_SCAN_CELL_COUNT != 0} {
+    error "Non-DFT netlist contains $MAPPED_SCAN_CELL_COUNT scan cells; Innovus handoff was not written"
+}
+
+puts "Scan-cell validation passed: 0 mapped scan cells"
 
 write_sdc -view slow_setup_view \
     > ${OUTPUTS_PATH}/picorv32_slow_setup.sdc

@@ -193,10 +193,17 @@ init_design
 ```
 
 Đây là flow functional chưa chèn DFT. Sau `init_design`, script đặt
-`.dont_use true` cho các base cell `SDFF*`. Nếu không chặn, Genus có thể dùng
-scan flop để thực hiện mux-register; Innovus sau đó báo `IMPSP-9099` vì không
-có định nghĩa scan-chain. Nếu dự án bổ sung DFT thật, bỏ phần chặn này và thay
-bằng quy trình scan insertion/scan-chain đầy đủ.
+`.dont_use true` cho các base cell `SDFF*`, `SEDFF*`, `SPDFF*` và `SRDFF*`.
+Tên base cell không có library prefix nên pattern không được viết thành
+`*/SDFF*`. Nếu không chặn, Genus có thể dùng scan flop để thực hiện
+mux-register; Innovus sau đó báo `IMPSP-9099` vì không có định nghĩa
+scan-chain.
+
+Sau khi ghi netlist, script đếm lại scan-cell instance và ghi kết quả vào
+`synthesis/reports/mmmc/picorv32_scan_cell_check.rpt`. Nếu count khác 0,
+script dừng trước khi ghi Innovus handoff để tránh PD dùng nhầm database lỗi.
+Nếu dự án bổ sung DFT thật, bỏ phần chặn/check này và thay bằng quy trình scan
+insertion/scan-chain đầy đủ.
 
 File `picorv32.v` chứa nhiều module nhưng `elaborate picorv32` chọn module
 `picorv32` làm top.
