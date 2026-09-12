@@ -278,11 +278,14 @@ Các report chính:
 | `picorv32_power.rpt` | Ước lượng công suất |
 | `picorv32_qor.rpt` | Tổng hợp quality of results |
 | `picorv32_setup_timing.rpt` | 50 setup path của `slow_setup_view` |
-| `picorv32_hold_timing.rpt` | 50 hold path của `fast_hold_view` |
 
-Hai report timing được chọn bằng option `report_timing -views`. Genus 25.13
-không hỗ trợ `-view`, `-late` hoặc `-early` cho lệnh `report_timing`; thuộc tính
-setup/hold đã được xác định bởi analysis view trong `mmmc.view`.
+Setup report được chọn bằng option `report_timing -views`. Genus 25.13 không
+hỗ trợ `-view`, `-late` hoặc `-early` cho lệnh `report_timing`, và lệnh này chỉ
+thực hiện setup analysis. Vì vậy không gọi `report_timing` với
+`fast_hold_view`: view này chỉ active cho hold nên Genus sẽ báo `TUI-745` và
+dừng script. Flow vẫn giữ `fast_hold_view` trong `mmmc.view` và xuất
+`picorv32_fast_hold.sdc` để Innovus phân tích hold sau CTS, khi clock tree và
+clock skew đã thực tế hơn.
 
 Thư mục đầy đủ:
 
@@ -294,7 +297,7 @@ Thư mục đầy đủ:
 2. `picorv32_check_design.rpt`.
 3. `picorv32_check_timing_intent.rpt`.
 4. `picorv32_qor.rpt`.
-5. `picorv32_setup_timing.rpt` và `picorv32_hold_timing.rpt`.
+5. `picorv32_setup_timing.rpt`.
 6. Area và power report.
 
 ## 13. Output và handoff sang Innovus

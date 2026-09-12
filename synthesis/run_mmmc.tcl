@@ -185,10 +185,9 @@ report_timing \
     -max_paths 50 \
     > ${REPORTS_PATH}/picorv32_setup_timing.rpt
 
-report_timing \
-    -views [list fast_hold_view] \
-    -max_paths 50 \
-    > ${REPORTS_PATH}/picorv32_hold_timing.rpt
+# Genus 25.13 report_timing performs setup analysis.  A hold-only analysis
+# view is therefore rejected with TUI-745 here.  Keep fast_hold_view in MMMC
+# and export its SDC below so Innovus can report hold timing after CTS.
 
 ###############################################################################
 # Netlist, constraints, databases and Innovus handoff
