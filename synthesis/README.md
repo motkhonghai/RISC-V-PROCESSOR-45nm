@@ -238,7 +238,9 @@ Flow tạo bốn cost group:
 Các group được tạo bằng lệnh Stylus `group_path`, giúp Genus tối ưu và báo cáo
 riêng từng loại đường timing. Group liên quan tới register chỉ được tạo khi
 design thực sự có register. Clock port được loại khỏi nhóm input bằng option
-`all_inputs -no_clocks`.
+`all_inputs -no_clocks`. Trên Genus 25.13, `group_path` không có option
+`-view`; các group được khai báo một lần và được dùng bởi các analysis view
+đang hoạt động.
 
 ## 11. Ba giai đoạn synthesis
 
@@ -277,6 +279,10 @@ Các report chính:
 | `picorv32_qor.rpt` | Tổng hợp quality of results |
 | `picorv32_setup_timing.rpt` | 50 setup path của `slow_setup_view` |
 | `picorv32_hold_timing.rpt` | 50 hold path của `fast_hold_view` |
+
+Hai report timing được chọn bằng option `report_timing -views`. Genus 25.13
+không hỗ trợ `-view`, `-late` hoặc `-early` cho lệnh `report_timing`; thuộc tính
+setup/hold đã được xác định bởi analysis view trong `mmmc.view`.
 
 Thư mục đầy đủ:
 

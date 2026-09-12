@@ -87,33 +87,27 @@ time_info ELABORATION
 
 set HAS_REGISTERS [expr {[llength [all_registers]] > 0}]
 
-foreach VIEW [get_db analysis_views -if {.is_setup == true}] {
-    if {$HAS_REGISTERS} {
-        group_path \
-            -name I2C \
-            -from [all_inputs -no_clocks] \
-            -to [all_registers] \
-            -view $VIEW
-
-        group_path \
-            -name R2R \
-            -from [all_registers] \
-            -to [all_registers] \
-            -view $VIEW
-
-        group_path \
-            -name C2O \
-            -from [all_registers] \
-            -to [all_outputs] \
-            -view $VIEW
-    }
+if {$HAS_REGISTERS} {
+    group_path \
+        -name I2C \
+        -from [all_inputs -no_clocks] \
+        -to [all_registers]
 
     group_path \
-        -name I2O \
-        -from [all_inputs -no_clocks] \
-        -to [all_outputs] \
-        -view $VIEW
+        -name R2R \
+        -from [all_registers] \
+        -to [all_registers]
+
+    group_path \
+        -name C2O \
+        -from [all_registers] \
+        -to [all_outputs]
 }
+
+group_path \
+    -name I2O \
+    -from [all_inputs -no_clocks] \
+    -to [all_outputs]
 
 report_timing -max_paths 20 \
     > ${REPORTS_PATH}/picorv32_pre_synthesis_timing.rpt
@@ -187,14 +181,12 @@ report_qor \
     > ${REPORTS_PATH}/picorv32_qor.rpt
 
 report_timing \
-    -view slow_setup_view \
-    -late \
+    -views [list slow_setup_view] \
     -max_paths 50 \
     > ${REPORTS_PATH}/picorv32_setup_timing.rpt
 
 report_timing \
-    -view fast_hold_view \
-    -early \
+    -views [list fast_hold_view] \
     -max_paths 50 \
     > ${REPORTS_PATH}/picorv32_hold_timing.rpt
 
