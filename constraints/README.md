@@ -45,10 +45,12 @@ Tất cả input ngoại trừ `clk` được constraint so với `core_clk`:
 
 - Max input delay: 1.00 ns cho setup analysis.
 - Min input delay: 0.20 ns cho hold analysis.
-- Driver giả định: output `Y` của standard cell `BUFX2`.
+- Max input transition: 0.10 ns.
+- Min input transition: 0.05 ns.
 
-Không khai báo đồng thời `set_input_transition` trên các data input vì slew
-đầu vào sẽ được tính từ mô hình timing của `BUFX2`.
+Flow khai báo slew trực tiếp bằng `set_input_transition` thay vì
+`set_driving_cell`. Điều này tránh Genus ghi tên slow library vào SDC dùng
+chung rồi làm Innovus báo `IMPCTE-290` trong `fast_hold_view`.
 
 Nhóm này bao gồm `resetn`, memory response, PCPI response và IRQ.
 

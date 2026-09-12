@@ -23,12 +23,15 @@ file mkdir $REPORT_PATH
 ###############################
 # Use in-memory design or read input database
 ###############################
-# Always reload the predecessor checkpoint, including in run_full.tcl.
-# This avoids accidentally using an unrelated design left in memory.
-if {![file exists $INPUT_DB]} {
-    error "Predecessor database not found: $INPUT_DB"
+if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
+    puts "Use design already loaded in memory"
+} else {
+    if {![file exists $INPUT_DB]} {
+        error "Stage 5 database not found: $INPUT_DB"
+    }
+    read_db $INPUT_DB
+    set PD_DATABASE_LOADED true
 }
-read_db $INPUT_DB
 
 ###############################
 # Extract detailed parasitics

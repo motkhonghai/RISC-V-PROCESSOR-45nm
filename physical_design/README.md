@@ -13,8 +13,10 @@ trong PATH. Các thông số floorplan/power dưới đây là điểm khởi đ
 kiểm chứng bằng congestion, timing, DRC và connectivity trên máy Cadence.
 
 Máy chạy cần Innovus/license, Liberty, LEF, QRC và database synthesis đầy đủ.
-Database synthesis phải được tạo sau khi bỏ capTbl (lần chạy genus.log4).
-Handoff chứa đường dẫn tuyệt đối từ máy synthesis.
+Phải chạy lại synthesis sau các thay đổi constraint hiện tại để common
+database chỉ dùng `gpdk045.tch` và không còn constraint
+`set_driving_cell -library slow_vdd1v0` gây warning `IMPCTE-290` trong fast
+hold view. Handoff chứa đường dẫn tuyệt đối từ máy synthesis.
 
 Mỗi script khai báo thư mục cha cố định:
 
@@ -43,11 +45,13 @@ innovus -stylus -files /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_desig
 ```
 
 Thoát phiên trước khi mở phiên tiếp theo. Trong cùng GUI cũng có thể dùng
-`source` với đường dẫn tuyệt đối của script tiếp theo. Mỗi bước từ 2 đến 7
-luôn đọc checkpoint của bước trước, kể cả khi chạy `run_full.tcl`.
-Vì vậy chỉnh tay trong GUI cần `write_db` vào checkpoint tương ứng trước khi
-source bước tiếp. Chạy lại một stage sẽ ghi lại output của stage đó; lưu bản
-sao checkpoint nếu cần giữ phương án cũ. Flow không tự thoát GUI.
+`source` với đường dẫn tuyệt đối của script tiếp theo. Khi chạy
+`run_full.tcl`, stage 1 nạp Genus handoff một lần và các stage sau tiếp tục
+trên design đang ở trong memory. Khi chạy riêng một stage, script nạp
+checkpoint của stage trước. Cách này tránh lỗi Innovus `IMPIMEX-7031` do gọi
+`read_db` nhiều lần trong cùng session. Chạy lại một stage sẽ ghi lại output
+của stage đó; lưu bản sao checkpoint nếu cần giữ phương án cũ. Flow không tự
+thoát GUI.
 
 | Script | Thao tác | Checkpoint trong outputs/mmmc |
 |---|---|---|
@@ -60,6 +64,8 @@ sao checkpoint nếu cần giữ phương án cũ. Flow không tự thoát GUI.
 | 7_export.tcl | DB, netlist, DEF và SDC của slow_setup_view/fast_hold_view | picorv32_final |
 
 Report nằm trong `physical_design/reports/mmmc/<stage>/`.
+Stage 1 tạo lại các path group I2C/R2R/C2O/I2O ở global scope vì Innovus bỏ
+qua path group nằm trong mode-specific SDC (`TA-976`).
 
 ## Floorplan, pins và power
 

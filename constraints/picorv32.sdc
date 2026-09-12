@@ -10,6 +10,8 @@ set CLOCK_HOLD_UNCERTAINTY_NS      0.10
 set CLOCK_TRANSITION_NS            0.10
 set INPUT_DELAY_MAX_NS             1.00
 set INPUT_DELAY_MIN_NS             0.20
+set INPUT_TRANSITION_MAX_NS        0.10
+set INPUT_TRANSITION_MIN_NS        0.05
 set OUTPUT_DELAY_MAX_NS            1.00
 set OUTPUT_DELAY_MIN_NS           -0.20
 set OUTPUT_LOAD_PF                  0.05
@@ -58,9 +60,12 @@ if {[sizeof_collection $DATA_INPUT_PORTS] > 0} {
         -min $INPUT_DELAY_MIN_NS \
         $DATA_INPUT_PORTS
 
-    set_driving_cell \
-        -lib_cell BUFX2 \
-        -pin Y \
+    set_input_transition \
+        -max $INPUT_TRANSITION_MAX_NS \
+        $DATA_INPUT_PORTS
+
+    set_input_transition \
+        -min $INPUT_TRANSITION_MIN_NS \
         $DATA_INPUT_PORTS
 }
 

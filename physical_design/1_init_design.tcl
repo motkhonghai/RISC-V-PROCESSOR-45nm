@@ -41,6 +41,20 @@ if {![file exists $INPUT_DB]} {
 # Read Genus MMMC handoff
 ###############################
 read_db -common $INPUT_DB
+set PD_DATABASE_LOADED true
+
+# Path groups exported inside a mode-specific SDC are ignored by Innovus
+# (TA-976). Recreate them here as global path groups for all active views.
+set DATA_INPUTS [all_inputs -no_clocks]
+set REGISTERS   [all_registers]
+
+if {[sizeof_collection $REGISTERS] > 0} {
+    group_path -name I2C -from $DATA_INPUTS -to $REGISTERS
+    group_path -name R2R -from $REGISTERS -to $REGISTERS
+    group_path -name C2O -from $REGISTERS -to [all_outputs]
+}
+
+group_path -name I2O -from $DATA_INPUTS -to [all_outputs]
 
 ###############################
 # Configure Innovus

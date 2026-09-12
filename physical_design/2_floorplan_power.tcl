@@ -34,12 +34,17 @@ file mkdir $REPORT_PATH
 ###############################
 # Use in-memory design or read input database
 ###############################
-# Always reload the predecessor checkpoint, including in run_full.tcl.
-# This avoids accidentally using an unrelated design left in memory.
-if {![file exists $INPUT_DB]} {
-    error "Predecessor database not found: $INPUT_DB"
+# run_full.tcl keeps the design in memory. A standalone stage reloads the
+# checkpoint written by its predecessor.
+if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
+    puts "Use design already loaded in memory"
+} else {
+    if {![file exists $INPUT_DB]} {
+        error "Stage 1 database not found: $INPUT_DB"
+    }
+    read_db $INPUT_DB
+    set PD_DATABASE_LOADED true
 }
-read_db $INPUT_DB
 
 ###############################
 # Create floorplan with room for power rings inside the die
