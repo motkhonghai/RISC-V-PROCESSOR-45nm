@@ -1,0 +1,83 @@
+set PROJECT_PATH    /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR
+set LIB_PATH        ${PROJECT_PATH}/lib
+set CAPTABLE_PATH   ${PROJECT_PATH}/captable
+set QRC_PATH        ${PROJECT_PATH}/QRC_Tech
+set CONSTRAINT_PATH ${PROJECT_PATH}/constraints
+
+cd $PROJECT_PATH
+
+create_library_set \
+    -name slow_libset \
+    -timing [list \
+        ${LIB_PATH}/slow_vdd1v0_basicCells.lib \
+    ]
+
+create_library_set \
+    -name fast_libset \
+    -timing [list \
+        ${LIB_PATH}/fast_vdd1v0_basicCells.lib \
+    ]
+
+create_opcond \
+    -name slow_opcond \
+    -process 1 \
+    -voltage 0.9 \
+    -temperature 125
+
+create_opcond \
+    -name fast_opcond \
+    -process 1 \
+    -voltage 1.1 \
+    -temperature 0
+
+create_timing_condition \
+    -name slow_timing_condition \
+    -library_sets [list slow_libset] \
+    -opcond slow_opcond
+
+create_timing_condition \
+    -name fast_timing_condition \
+    -library_sets [list fast_libset] \
+    -opcond fast_opcond
+
+create_rc_corner \
+    -name rc_typical \
+    -cap_table ${CAPTABLE_PATH}/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl \
+    -qrc_tech ${QRC_PATH}/gpdk045.tch \
+    -pre_route_res 1.0 \
+    -pre_route_cap 1.0 \
+    -post_route_res 1.0 \
+    -post_route_cap 1.0 \
+    -post_route_cross_cap 1.0 \
+    -pre_route_clock_res 0.0 \
+    -pre_route_clock_cap 0.0
+
+create_delay_corner \
+    -name slow_delay_corner \
+    -timing_condition slow_timing_condition \
+    -rc_corner rc_typical
+
+create_delay_corner \
+    -name fast_delay_corner \
+    -timing_condition fast_timing_condition \
+    -rc_corner rc_typical
+
+create_constraint_mode \
+    -name functional \
+    -sdc_files [list \
+        ${CONSTRAINT_PATH}/picorv32.sdc \
+    ]
+
+create_analysis_view \
+    -name slow_setup_view \
+    -constraint_mode functional \
+    -delay_corner slow_delay_corner
+
+create_analysis_view \
+    -name fast_hold_view \
+    -constraint_mode functional \
+    -delay_corner fast_delay_corner
+
+set_analysis_view \
+    -setup [list slow_setup_view] \
+    -hold [list fast_hold_view]
