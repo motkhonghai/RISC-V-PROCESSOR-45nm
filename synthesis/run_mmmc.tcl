@@ -70,6 +70,15 @@ read_hdl ${RTL_PATH}/picorv32.v
 elaborate $DESIGN
 init_design
 
+# This is a functional, non-DFT flow.  Prevent Genus from implementing muxed
+# registers with scan cells: Innovus otherwise interprets their SI/SE arcs as
+# incomplete scan chains and reports IMPSP-9099 during placement.
+set SCAN_BASE_CELLS [get_db base_cells */SDFF*]
+if {[llength $SCAN_BASE_CELLS] > 0} {
+    set_db $SCAN_BASE_CELLS .dont_use true
+    puts "Disabled [llength $SCAN_BASE_CELLS] SDFF base cells for non-DFT synthesis"
+}
+
 check_design -unresolved \
     > ${REPORTS_PATH}/picorv32_check_design.rpt
 

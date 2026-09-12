@@ -192,6 +192,12 @@ elaborate $DESIGN
 init_design
 ```
 
+Đây là flow functional chưa chèn DFT. Sau `init_design`, script đặt
+`.dont_use true` cho các base cell `SDFF*`. Nếu không chặn, Genus có thể dùng
+scan flop để thực hiện mux-register; Innovus sau đó báo `IMPSP-9099` vì không
+có định nghĩa scan-chain. Nếu dự án bổ sung DFT thật, bỏ phần chặn này và thay
+bằng quy trình scan insertion/scan-chain đầy đủ.
+
 File `picorv32.v` chứa nhiều module nhưng `elaborate picorv32` chọn module
 `picorv32` làm top.
 
