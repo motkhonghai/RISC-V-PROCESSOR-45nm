@@ -1,6 +1,6 @@
 #################################################################################
 #
-# Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 13:29:32 +07 2026
+# Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 13:56:08 +07 2026
 #
 #################################################################################
 
@@ -31,7 +31,6 @@ create_timing_condition -name fast_timing_condition \
 ## rc_corner
 create_rc_corner -name rc_typical \
     -qrc_tech /home/icd1/workspace/RISC-V-PROCESSOR-45nm/QRC_Tech/gpdk045.tch \
-    -cap_table /home/icd1/workspace/RISC-V-PROCESSOR-45nm/captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl \
     -pre_route_res 1.0 \
     -pre_route_cap 1.0 \
     -pre_route_clock_res 0.0 \
