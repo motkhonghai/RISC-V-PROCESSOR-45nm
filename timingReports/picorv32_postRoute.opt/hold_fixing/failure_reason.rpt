@@ -1,0 +1,1300 @@
+
+
+// Path 1
+Endpoint:      mem_instr
+Beginpoint:    mem_instr_reg/Q
+Analysis View: fast_hold_view
+Hold Slack:    -211.7ps
+
+Node: mem_instr
+Net:  mem_instr
+  Setup Slack:   8415.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NetDrvFailed
+Node: mem_instr_reg/Q
+Net:  mem_instr
+  Setup Slack:   8415.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NetDrvFailed
+
+
+// Path 2
+Endpoint:      mem_wstrb[0]
+Beginpoint:    mem_wstrb_reg[0]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -211.2ps
+
+Node: mem_wstrb[0]
+Net:  mem_wstrb[0]
+  Setup Slack:   8415.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NetDrvFailed
+Node: mem_wstrb_reg[0]/Q
+Net:  mem_wstrb[0]
+  Setup Slack:   8415.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NetDrvFailed
+
+
+// Path 3
+Endpoint:      mem_addr[28]
+Beginpoint:    mem_addr_reg[28]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.2ps
+
+Node: mem_addr[28]
+Net:  mem_addr[28]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[28]/Q
+Net:  mem_addr[28]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 4
+Endpoint:      mem_addr[24]
+Beginpoint:    mem_addr_reg[24]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.2ps
+
+Node: mem_addr[24]
+Net:  mem_addr[24]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[24]/Q
+Net:  mem_addr[24]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 5
+Endpoint:      mem_wdata[31]
+Beginpoint:    mem_wdata_reg[31]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.2ps
+
+Node: mem_wdata[31]
+Net:  mem_wdata[31]
+  Setup Slack:   7897.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[31]/Q
+Net:  mem_wdata[31]
+  Setup Slack:   7897.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 6
+Endpoint:      mem_wdata[8]
+Beginpoint:    mem_wdata_reg[8]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.2ps
+
+Node: mem_wdata[8]
+Net:  mem_wdata[8]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[8]/Q
+Net:  mem_wdata[8]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 7
+Endpoint:      mem_wdata[4]
+Beginpoint:    mem_wdata_reg[4]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.2ps
+
+Node: mem_wdata[4]
+Net:  mem_wdata[4]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[4]/Q
+Net:  mem_wdata[4]
+  Setup Slack:   7893.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 8
+Endpoint:      mem_addr[20]
+Beginpoint:    mem_addr_reg[20]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.1ps
+
+Node: mem_addr[20]
+Net:  mem_addr[20]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[20]/Q
+Net:  mem_addr[20]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 9
+Endpoint:      mem_addr[16]
+Beginpoint:    mem_addr_reg[16]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.1ps
+
+Node: mem_addr[16]
+Net:  mem_addr[16]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[16]/Q
+Net:  mem_addr[16]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 10
+Endpoint:      mem_addr[8]
+Beginpoint:    mem_addr_reg[8]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.1ps
+
+Node: mem_addr[8]
+Net:  mem_addr[8]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[8]/Q
+Net:  mem_addr[8]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 11
+Endpoint:      mem_addr[4]
+Beginpoint:    mem_addr_reg[4]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.1ps
+
+Node: mem_addr[4]
+Net:  mem_addr[4]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[4]/Q
+Net:  mem_addr[4]
+  Setup Slack:   7893.0ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 12
+Endpoint:      mem_wdata[19]
+Beginpoint:    mem_wdata_reg[19]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.1ps
+
+Node: mem_wdata[19]
+Net:  mem_wdata[19]
+  Setup Slack:   7897.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[19]/Q
+Net:  mem_wdata[19]
+  Setup Slack:   7897.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 13
+Endpoint:      mem_wdata[27]
+Beginpoint:    mem_wdata_reg[27]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -69.0ps
+
+Node: mem_wdata[27]
+Net:  mem_wdata[27]
+  Setup Slack:   7897.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[27]/Q
+Net:  mem_wdata[27]
+  Setup Slack:   7897.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 14
+Endpoint:      mem_addr[23]
+Beginpoint:    mem_addr_reg[23]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.9ps
+
+Node: mem_addr[23]
+Net:  mem_addr[23]
+  Setup Slack:   7889.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[23]/Q
+Net:  mem_addr[23]
+  Setup Slack:   7889.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 15
+Endpoint:      mem_addr[19]
+Beginpoint:    mem_addr_reg[19]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.9ps
+
+Node: mem_addr[19]
+Net:  mem_addr[19]
+  Setup Slack:   7889.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[19]/Q
+Net:  mem_addr[19]
+  Setup Slack:   7889.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 16
+Endpoint:      mem_addr[15]
+Beginpoint:    mem_addr_reg[15]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.9ps
+
+Node: mem_addr[15]
+Net:  mem_addr[15]
+  Setup Slack:   7889.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[15]/Q
+Net:  mem_addr[15]
+  Setup Slack:   7889.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 17
+Endpoint:      mem_addr[11]
+Beginpoint:    mem_addr_reg[11]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.9ps
+
+Node: mem_addr[11]
+Net:  mem_addr[11]
+  Setup Slack:   7889.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[11]/Q
+Net:  mem_addr[11]
+  Setup Slack:   7889.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 18
+Endpoint:      mem_addr[3]
+Beginpoint:    mem_addr_reg[3]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.9ps
+
+Node: mem_addr[3]
+Net:  mem_addr[3]
+  Setup Slack:   7889.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[3]/Q
+Net:  mem_addr[3]
+  Setup Slack:   7889.6ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 19
+Endpoint:      mem_addr[7]
+Beginpoint:    mem_addr_reg[7]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.8ps
+
+Node: mem_addr[7]
+Net:  mem_addr[7]
+  Setup Slack:   7889.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[7]/Q
+Net:  mem_addr[7]
+  Setup Slack:   7889.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 20
+Endpoint:      mem_wdata[28]
+Beginpoint:    mem_wdata_reg[28]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.5ps
+
+Node: mem_wdata[28]
+Net:  mem_wdata[28]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[28]/Q
+Net:  mem_wdata[28]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 21
+Endpoint:      mem_wdata[24]
+Beginpoint:    mem_wdata_reg[24]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.5ps
+
+Node: mem_wdata[24]
+Net:  mem_wdata[24]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[24]/Q
+Net:  mem_wdata[24]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 22
+Endpoint:      mem_wdata[16]
+Beginpoint:    mem_wdata_reg[16]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.5ps
+
+Node: mem_wdata[16]
+Net:  mem_wdata[16]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[16]/Q
+Net:  mem_wdata[16]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 23
+Endpoint:      mem_wdata[12]
+Beginpoint:    mem_wdata_reg[12]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.5ps
+
+Node: mem_wdata[12]
+Net:  mem_wdata[12]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[12]/Q
+Net:  mem_wdata[12]
+  Setup Slack:   7891.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 24
+Endpoint:      mem_addr[31]
+Beginpoint:    mem_addr_reg[31]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.1ps
+
+Node: mem_addr[31]
+Net:  mem_addr[31]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[31]/Q
+Net:  mem_addr[31]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 25
+Endpoint:      mem_addr[27]
+Beginpoint:    mem_addr_reg[27]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.1ps
+
+Node: mem_addr[27]
+Net:  mem_addr[27]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[27]/Q
+Net:  mem_addr[27]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 26
+Endpoint:      mem_wdata[23]
+Beginpoint:    mem_wdata_reg[23]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.1ps
+
+Node: mem_wdata[23]
+Net:  mem_wdata[23]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[23]/Q
+Net:  mem_wdata[23]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 27
+Endpoint:      mem_wdata[15]
+Beginpoint:    mem_wdata_reg[15]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.1ps
+
+Node: mem_wdata[15]
+Net:  mem_wdata[15]
+  Setup Slack:   7888.8ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[15]/Q
+Net:  mem_wdata[15]
+  Setup Slack:   7888.8ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 28
+Endpoint:      mem_wdata[7]
+Beginpoint:    mem_wdata_reg[7]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.1ps
+
+Node: mem_wdata[7]
+Net:  mem_wdata[7]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[7]/Q
+Net:  mem_wdata[7]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 29
+Endpoint:      mem_wdata[3]
+Beginpoint:    mem_wdata_reg[3]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -68.1ps
+
+Node: mem_wdata[3]
+Net:  mem_wdata[3]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[3]/Q
+Net:  mem_wdata[3]
+  Setup Slack:   7888.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 30
+Endpoint:      mem_addr[25]
+Beginpoint:    mem_addr_reg[25]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.8ps
+
+Node: mem_addr[25]
+Net:  mem_addr[25]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[25]/Q
+Net:  mem_addr[25]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 31
+Endpoint:      mem_wdata[29]
+Beginpoint:    mem_wdata_reg[29]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.8ps
+
+Node: mem_wdata[29]
+Net:  mem_wdata[29]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[29]/Q
+Net:  mem_wdata[29]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 32
+Endpoint:      mem_wdata[21]
+Beginpoint:    mem_wdata_reg[21]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.8ps
+
+Node: mem_wdata[21]
+Net:  mem_wdata[21]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[21]/Q
+Net:  mem_wdata[21]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 33
+Endpoint:      mem_wdata[17]
+Beginpoint:    mem_wdata_reg[17]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.8ps
+
+Node: mem_wdata[17]
+Net:  mem_wdata[17]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[17]/Q
+Net:  mem_wdata[17]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 34
+Endpoint:      mem_wdata[13]
+Beginpoint:    mem_wdata_reg[13]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.8ps
+
+Node: mem_wdata[13]
+Net:  mem_wdata[13]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[13]/Q
+Net:  mem_wdata[13]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 35
+Endpoint:      mem_wdata[9]
+Beginpoint:    mem_wdata_reg[9]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.8ps
+
+Node: mem_wdata[9]
+Net:  mem_wdata[9]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[9]/Q
+Net:  mem_wdata[9]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 36
+Endpoint:      mem_addr[13]
+Beginpoint:    mem_addr_reg[13]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.7ps
+
+Node: mem_addr[13]
+Net:  mem_addr[13]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[13]/Q
+Net:  mem_addr[13]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 37
+Endpoint:      mem_addr[9]
+Beginpoint:    mem_addr_reg[9]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.7ps
+
+Node: mem_addr[9]
+Net:  mem_addr[9]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[9]/Q
+Net:  mem_addr[9]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 38
+Endpoint:      mem_addr[5]
+Beginpoint:    mem_addr_reg[5]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.7ps
+
+Node: mem_addr[5]
+Net:  mem_addr[5]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[5]/Q
+Net:  mem_addr[5]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 39
+Endpoint:      mem_wdata[25]
+Beginpoint:    mem_wdata_reg[25]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.7ps
+
+Node: mem_wdata[25]
+Net:  mem_wdata[25]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[25]/Q
+Net:  mem_wdata[25]
+  Setup Slack:   7899.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 40
+Endpoint:      mem_wdata[1]
+Beginpoint:    mem_wdata_reg[1]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.7ps
+
+Node: mem_wdata[1]
+Net:  mem_wdata[1]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[1]/Q
+Net:  mem_wdata[1]
+  Setup Slack:   7890.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 41
+Endpoint:      mem_addr[22]
+Beginpoint:    mem_addr_reg[22]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.6ps
+
+Node: mem_addr[22]
+Net:  mem_addr[22]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[22]/Q
+Net:  mem_addr[22]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 42
+Endpoint:      mem_addr[18]
+Beginpoint:    mem_addr_reg[18]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.6ps
+
+Node: mem_addr[18]
+Net:  mem_addr[18]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[18]/Q
+Net:  mem_addr[18]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 43
+Endpoint:      mem_addr[2]
+Beginpoint:    mem_addr_reg[2]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.6ps
+
+Node: mem_addr[2]
+Net:  mem_addr[2]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[2]/Q
+Net:  mem_addr[2]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 44
+Endpoint:      mem_addr[29]
+Beginpoint:    mem_addr_reg[29]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.5ps
+
+Node: mem_addr[29]
+Net:  mem_addr[29]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[29]/Q
+Net:  mem_addr[29]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 45
+Endpoint:      mem_addr[21]
+Beginpoint:    mem_addr_reg[21]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.5ps
+
+Node: mem_addr[21]
+Net:  mem_addr[21]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[21]/Q
+Net:  mem_addr[21]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 46
+Endpoint:      mem_addr[17]
+Beginpoint:    mem_addr_reg[17]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.5ps
+
+Node: mem_addr[17]
+Net:  mem_addr[17]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[17]/Q
+Net:  mem_addr[17]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 47
+Endpoint:      mem_addr[10]
+Beginpoint:    mem_addr_reg[10]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.5ps
+
+Node: mem_addr[10]
+Net:  mem_addr[10]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[10]/Q
+Net:  mem_addr[10]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 48
+Endpoint:      mem_addr[6]
+Beginpoint:    mem_addr_reg[6]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.5ps
+
+Node: mem_addr[6]
+Net:  mem_addr[6]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[6]/Q
+Net:  mem_addr[6]
+  Setup Slack:   7897.7ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 49
+Endpoint:      mem_wdata[5]
+Beginpoint:    mem_wdata_reg[5]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -67.5ps
+
+Node: mem_wdata[5]
+Net:  mem_wdata[5]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_wdata_reg[5]/Q
+Net:  mem_wdata[5]
+  Setup Slack:   7890.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)
+
+
+// Path 50
+Endpoint:      mem_addr[30]
+Beginpoint:    mem_addr_reg[30]/Q
+Analysis View: fast_hold_view
+Hold Slack:    -66.7ps
+
+Node: mem_addr[30]
+Net:  mem_addr[30]
+  Setup Slack:   7895.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected
+Node: mem_addr_reg[30]/Q
+Net:  mem_addr[30]
+  Setup Slack:   7895.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    LegalSingleBuffer
+      RCErrorNet
+    ResizeLegal
+      NoCellSelected(2)

@@ -1,0 +1,239 @@
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sat Sep 12 15:13:26 2026
+
+Design Name: picorv32
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (200.0000, 201.4000)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net resetn: no routing.
+Net trap: no routing.
+Net mem_valid: no routing.
+Net mem_instr: no routing.
+Net mem_ready: no routing.
+Net mem_addr[31]: no routing.
+Net mem_addr[30]: no routing.
+Net mem_addr[29]: no routing.
+Net mem_addr[28]: no routing.
+Net mem_addr[27]: no routing.
+Net mem_addr[26]: no routing.
+Net mem_addr[25]: no routing.
+Net mem_addr[24]: no routing.
+Net mem_addr[23]: no routing.
+Net mem_addr[22]: no routing.
+Net mem_addr[21]: no routing.
+Net mem_addr[20]: no routing.
+Net mem_addr[19]: no routing.
+Net mem_addr[18]: no routing.
+Net mem_addr[17]: no routing.
+Net mem_addr[16]: no routing.
+Net mem_addr[15]: no routing.
+Net mem_addr[13]: no routing.
+Net mem_addr[11]: no routing.
+Net mem_addr[10]: no routing.
+Net mem_addr[9]: no routing.
+Net mem_addr[8]: no routing.
+Net mem_addr[7]: no routing.
+Net mem_addr[6]: no routing.
+Net mem_addr[5]: no routing.
+Net mem_addr[4]: no routing.
+Net mem_addr[3]: no routing.
+Net mem_addr[2]: no routing.
+Net mem_wdata[31]: no routing.
+Net mem_wdata[30]: no routing.
+Net mem_wdata[29]: no routing.
+Net mem_wdata[28]: no routing.
+Net mem_wdata[27]: no routing.
+Net mem_wdata[26]: no routing.
+Net mem_wdata[25]: no routing.
+Net mem_wdata[24]: no routing.
+Net mem_wdata[23]: no routing.
+Net mem_wdata[21]: no routing.
+Net mem_wdata[19]: no routing.
+Net mem_wdata[18]: no routing.
+Net mem_wdata[17]: no routing.
+Net mem_wdata[16]: no routing.
+Net mem_wdata[15]: no routing.
+Net mem_wdata[14]: no routing.
+Net mem_wdata[13]: no routing.
+Net mem_wdata[12]: no routing.
+Net mem_wdata[10]: no routing.
+Net mem_wdata[9]: no routing.
+Net mem_wdata[8]: no routing.
+Net mem_wdata[7]: no routing.
+Net mem_wdata[6]: no routing.
+Net mem_wdata[5]: no routing.
+Net mem_wdata[4]: no routing.
+Net mem_wdata[3]: no routing.
+Net mem_wdata[1]: no routing.
+Net mem_wstrb[3]: no routing.
+Net mem_wstrb[2]: no routing.
+Net mem_wstrb[1]: no routing.
+Net mem_wstrb[0]: no routing.
+Net mem_rdata[31]: no routing.
+Net mem_rdata[30]: no routing.
+Net mem_rdata[29]: no routing.
+Net mem_rdata[28]: no routing.
+Net mem_rdata[27]: no routing.
+Net mem_rdata[26]: no routing.
+Net mem_rdata[25]: no routing.
+Net mem_rdata[24]: no routing.
+Net mem_rdata[23]: no routing.
+Net mem_rdata[22]: no routing.
+Net mem_rdata[21]: no routing.
+Net mem_rdata[20]: no routing.
+Net mem_rdata[19]: no routing.
+Net mem_rdata[18]: no routing.
+Net mem_rdata[16]: no routing.
+Net mem_rdata[15]: no routing.
+Net mem_rdata[14]: no routing.
+Net mem_rdata[13]: no routing.
+Net mem_rdata[12]: no routing.
+Net mem_rdata[11]: no routing.
+Net mem_rdata[10]: no routing.
+Net mem_rdata[9]: no routing.
+Net mem_rdata[8]: no routing.
+Net mem_rdata[7]: no routing.
+Net mem_rdata[5]: no routing.
+Net mem_rdata[3]: no routing.
+Net mem_rdata[2]: no routing.
+Net mem_rdata[0]: no routing.
+Net mem_la_read: no routing.
+Net mem_la_write: no routing.
+Net mem_la_addr[30]: no routing.
+Net mem_la_addr[29]: no routing.
+Net mem_la_addr[28]: no routing.
+Net mem_la_addr[27]: no routing.
+Net mem_la_addr[26]: no routing.
+Net mem_la_addr[25]: no routing.
+Net mem_la_addr[24]: no routing.
+Net mem_la_addr[23]: no routing.
+Net mem_la_addr[22]: no routing.
+Net mem_la_addr[21]: no routing.
+Net mem_la_addr[20]: no routing.
+Net mem_la_addr[19]: no routing.
+Net mem_la_addr[18]: no routing.
+Net mem_la_addr[17]: no routing.
+Net mem_la_addr[16]: no routing.
+Net mem_la_addr[15]: no routing.
+Net mem_la_addr[14]: no routing.
+Net mem_la_addr[13]: no routing.
+Net mem_la_addr[12]: no routing.
+Net mem_la_addr[11]: no routing.
+Net mem_la_addr[10]: no routing.
+Net mem_la_addr[9]: no routing.
+Net mem_la_addr[8]: no routing.
+Net mem_la_addr[7]: no routing.
+Net mem_la_addr[6]: no routing.
+Net mem_la_addr[5]: no routing.
+Net mem_la_addr[4]: no routing.
+Net mem_la_addr[3]: no routing.
+Net mem_la_addr[2]: no routing.
+Net mem_la_wdata[31]: no routing.
+Net mem_la_wdata[30]: no routing.
+Net mem_la_wdata[29]: no routing.
+Net mem_la_wdata[28]: no routing.
+Net mem_la_wdata[27]: no routing.
+Net mem_la_wdata[26]: no routing.
+Net mem_la_wdata[25]: no routing.
+Net mem_la_wdata[24]: no routing.
+Net mem_la_wdata[23]: no routing.
+Net mem_la_wdata[22]: no routing.
+Net mem_la_wdata[21]: no routing.
+Net mem_la_wdata[20]: no routing.
+Net mem_la_wdata[19]: no routing.
+Net mem_la_wdata[18]: no routing.
+Net mem_la_wdata[17]: no routing.
+Net mem_la_wdata[16]: no routing.
+Net mem_la_wdata[15]: no routing.
+Net mem_la_wdata[14]: no routing.
+Net mem_la_wdata[13]: no routing.
+Net mem_la_wdata[12]: no routing.
+Net mem_la_wdata[11]: no routing.
+Net mem_la_wdata[10]: no routing.
+Net mem_la_wdata[9]: no routing.
+Net mem_la_wdata[8]: no routing.
+Net mem_la_wdata[7]: no routing.
+Net mem_la_wdata[6]: no routing.
+Net mem_la_wdata[5]: no routing.
+Net mem_la_wdata[4]: no routing.
+Net mem_la_wdata[3]: no routing.
+Net mem_la_wdata[2]: no routing.
+Net mem_la_wdata[1]: no routing.
+Net mem_la_wdata[0]: no routing.
+Net mem_la_wstrb[3]: no routing.
+Net mem_la_wstrb[2]: no routing.
+Net mem_la_wstrb[1]: no routing.
+Net mem_la_wstrb[0]: no routing.
+Net pcpi_rs1[31]: no routing.
+Net pcpi_rs1[30]: no routing.
+Net pcpi_rs1[29]: no routing.
+Net pcpi_rs1[28]: no routing.
+Net pcpi_rs1[27]: no routing.
+Net pcpi_rs1[26]: no routing.
+Net pcpi_rs1[25]: no routing.
+Net pcpi_rs1[24]: no routing.
+Net pcpi_rs1[23]: no routing.
+Net pcpi_rs1[22]: no routing.
+Net pcpi_rs1[21]: no routing.
+Net pcpi_rs1[20]: no routing.
+Net pcpi_rs1[19]: no routing.
+Net pcpi_rs1[17]: no routing.
+Net pcpi_rs1[15]: no routing.
+Net pcpi_rs1[14]: no routing.
+Net pcpi_rs1[13]: no routing.
+Net pcpi_rs1[12]: no routing.
+Net pcpi_rs1[11]: no routing.
+Net pcpi_rs1[10]: no routing.
+Net pcpi_rs1[9]: no routing.
+Net pcpi_rs1[8]: no routing.
+Net pcpi_rs1[7]: no routing.
+Net pcpi_rs1[6]: no routing.
+Net pcpi_rs1[5]: no routing.
+Net pcpi_rs1[4]: no routing.
+Net pcpi_rs1[3]: no routing.
+Net pcpi_rs1[2]: no routing.
+Net pcpi_rs1[1]: no routing.
+Net pcpi_rs1[0]: no routing.
+Net pcpi_rs2[31]: no routing.
+Net pcpi_rs2[30]: no routing.
+Net pcpi_rs2[28]: no routing.
+Net pcpi_rs2[27]: no routing.
+Net pcpi_rs2[26]: no routing.
+Net pcpi_rs2[25]: no routing.
+Net pcpi_rs2[24]: no routing.
+Net pcpi_rs2[23]: no routing.
+Net pcpi_rs2[22]: no routing.
+Net pcpi_rs2[21]: no routing.
+Net pcpi_rs2[20]: no routing.
+Net pcpi_rs2[19]: no routing.
+Net pcpi_rs2[18]: no routing.
+Net pcpi_rs2[17]: no routing.
+Net pcpi_rs2[16]: no routing.
+Net pcpi_rs2[15]: no routing.
+Net pcpi_rs2[14]: no routing.
+Net pcpi_rs2[13]: no routing.
+Net pcpi_rs2[12]: no routing.
+Net pcpi_rs2[11]: no routing.
+Net pcpi_rs2[10]: no routing.
+Net pcpi_rs2[9]: no routing.
+Net pcpi_rs2[8]: no routing.
+**** 15:13:26 **** Processed 5000 nets.
+Net VSS: has an unconnected terminal, has special routes with opens.
+
+Begin Summary 
+    212 Problem(s) (IMPVFC-98): Net has no global routing and no special routing.
+    106 Problem(s) (IMPVFC-96): Terminal(s) are not connected.
+    1 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    319 total info(s) created.
+End Summary
+
+End Time: Sat Sep 12 15:13:27 2026
+Time Elapsed: 0:00:01.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 319 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.7  MEM: 0.648M)
+

@@ -5,6 +5,10 @@ catch { setAnalysisMode -analysisType onChipVariation }
 catch { setAnalysisMode -cppr both }
 catch { setOptMode -opt_multi_bit_flop_name_prefix CDN_MBIT_ }
 catch { setOptMode -opt_multi_bit_flop_name_separator _MB_ }
+catch { setPathGroupOptions R2R -late -slackAdjustment -0 }
+catch { setPathGroupOptions I2O -late -slackAdjustment -0 }
+catch { setPathGroupOptions I2C -late -slackAdjustment -0 }
+catch { setPathGroupOptions C2O -late -slackAdjustment -0 }
 catch { setExtractRCMode  -engine preRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.1 }
 catch {setNanoRouteMode -quiet -extract_qrc_n2p_accuracy_enhancement true}
 catch {setNanoRouteMode -quiet -route_extract_third_party_compatible false}

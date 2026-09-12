@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 13:56:45 +07 2026
+#  Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 14:55:51 +07 2026
 
 # ####################################################################
 
@@ -1528,18 +1528,19 @@ group_path -name I2C -from [list \
   [get_cells {reg_op1_reg[5]}]  \
   [get_cells {reg_op1_reg[6]}]  \
   [get_cells {reg_op1_reg[7]}]  \
-  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[8]}]  \
+  [get_cells {reg_op1_reg[10]}]  \
+  [get_cells {reg_op1_reg[12]}]  \
+  [get_cells {reg_op1_reg[14]}]  \
   [get_cells {reg_op1_reg[16]}]  \
   [get_cells {reg_op1_reg[17]}]  \
   [get_cells {reg_op1_reg[18]}]  \
   [get_cells {reg_op1_reg[19]}]  \
   [get_cells {reg_op1_reg[20]}]  \
-  [get_cells {reg_op1_reg[22]}]  \
-  [get_cells {reg_op1_reg[23]}]  \
+  [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
-  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
   [get_cells {reg_op2_reg[2]}]  \
@@ -1660,18 +1661,17 @@ group_path -name I2C -from [list \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
-  [get_cells {reg_op1_reg[8]}]  \
   [get_cells {reg_op1_reg[9]}]  \
-  [get_cells {reg_op1_reg[10]}]  \
   [get_cells {reg_op1_reg[11]}]  \
-  [get_cells {reg_op1_reg[12]}]  \
   [get_cells {reg_op1_reg[13]}]  \
-  [get_cells {reg_op1_reg[14]}]  \
-  [get_cells {reg_op1_reg[21]}]  \
+  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[22]}]  \
+  [get_cells {reg_op1_reg[23]}]  \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[31]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
+  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ]
 group_path -name R2R -from [list \
   [get_cells {alu_out_q_reg[0]}]  \
@@ -3086,18 +3086,19 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[5]}]  \
   [get_cells {reg_op1_reg[6]}]  \
   [get_cells {reg_op1_reg[7]}]  \
-  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[8]}]  \
+  [get_cells {reg_op1_reg[10]}]  \
+  [get_cells {reg_op1_reg[12]}]  \
+  [get_cells {reg_op1_reg[14]}]  \
   [get_cells {reg_op1_reg[16]}]  \
   [get_cells {reg_op1_reg[17]}]  \
   [get_cells {reg_op1_reg[18]}]  \
   [get_cells {reg_op1_reg[19]}]  \
   [get_cells {reg_op1_reg[20]}]  \
-  [get_cells {reg_op1_reg[22]}]  \
-  [get_cells {reg_op1_reg[23]}]  \
+  [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
-  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
   [get_cells {reg_op2_reg[2]}]  \
@@ -3218,18 +3219,17 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
-  [get_cells {reg_op1_reg[8]}]  \
   [get_cells {reg_op1_reg[9]}]  \
-  [get_cells {reg_op1_reg[10]}]  \
   [get_cells {reg_op1_reg[11]}]  \
-  [get_cells {reg_op1_reg[12]}]  \
   [get_cells {reg_op1_reg[13]}]  \
-  [get_cells {reg_op1_reg[14]}]  \
-  [get_cells {reg_op1_reg[21]}]  \
+  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[22]}]  \
+  [get_cells {reg_op1_reg[23]}]  \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[31]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
+  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ] -to [list \
   [get_cells {alu_out_q_reg[0]}]  \
   [get_cells {alu_out_q_reg[1]}]  \
@@ -4643,18 +4643,19 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[5]}]  \
   [get_cells {reg_op1_reg[6]}]  \
   [get_cells {reg_op1_reg[7]}]  \
-  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[8]}]  \
+  [get_cells {reg_op1_reg[10]}]  \
+  [get_cells {reg_op1_reg[12]}]  \
+  [get_cells {reg_op1_reg[14]}]  \
   [get_cells {reg_op1_reg[16]}]  \
   [get_cells {reg_op1_reg[17]}]  \
   [get_cells {reg_op1_reg[18]}]  \
   [get_cells {reg_op1_reg[19]}]  \
   [get_cells {reg_op1_reg[20]}]  \
-  [get_cells {reg_op1_reg[22]}]  \
-  [get_cells {reg_op1_reg[23]}]  \
+  [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
-  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
   [get_cells {reg_op2_reg[2]}]  \
@@ -4775,18 +4776,17 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
-  [get_cells {reg_op1_reg[8]}]  \
   [get_cells {reg_op1_reg[9]}]  \
-  [get_cells {reg_op1_reg[10]}]  \
   [get_cells {reg_op1_reg[11]}]  \
-  [get_cells {reg_op1_reg[12]}]  \
   [get_cells {reg_op1_reg[13]}]  \
-  [get_cells {reg_op1_reg[14]}]  \
-  [get_cells {reg_op1_reg[21]}]  \
+  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[22]}]  \
+  [get_cells {reg_op1_reg[23]}]  \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[31]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
+  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ]
 group_path -name C2O -from [list \
   [get_cells {alu_out_q_reg[0]}]  \
@@ -6201,18 +6201,19 @@ group_path -name C2O -from [list \
   [get_cells {reg_op1_reg[5]}]  \
   [get_cells {reg_op1_reg[6]}]  \
   [get_cells {reg_op1_reg[7]}]  \
-  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[8]}]  \
+  [get_cells {reg_op1_reg[10]}]  \
+  [get_cells {reg_op1_reg[12]}]  \
+  [get_cells {reg_op1_reg[14]}]  \
   [get_cells {reg_op1_reg[16]}]  \
   [get_cells {reg_op1_reg[17]}]  \
   [get_cells {reg_op1_reg[18]}]  \
   [get_cells {reg_op1_reg[19]}]  \
   [get_cells {reg_op1_reg[20]}]  \
-  [get_cells {reg_op1_reg[22]}]  \
-  [get_cells {reg_op1_reg[23]}]  \
+  [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
-  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
   [get_cells {reg_op2_reg[2]}]  \
@@ -6333,18 +6334,17 @@ group_path -name C2O -from [list \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
-  [get_cells {reg_op1_reg[8]}]  \
   [get_cells {reg_op1_reg[9]}]  \
-  [get_cells {reg_op1_reg[10]}]  \
   [get_cells {reg_op1_reg[11]}]  \
-  [get_cells {reg_op1_reg[12]}]  \
   [get_cells {reg_op1_reg[13]}]  \
-  [get_cells {reg_op1_reg[14]}]  \
-  [get_cells {reg_op1_reg[21]}]  \
+  [get_cells {reg_op1_reg[15]}]  \
+  [get_cells {reg_op1_reg[22]}]  \
+  [get_cells {reg_op1_reg[23]}]  \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[31]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
+  [get_cells {reg_op1_reg[29]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ] -to [list \
   [get_ports trap]  \
   [get_ports mem_valid]  \
@@ -8189,106 +8189,207 @@ set_output_delay -clock [get_clocks core_clk] -add_delay -min -0.2 [get_ports {t
 set_max_fanout 16.000 [current_design]
 set_max_transition 0.5 [current_design]
 set_max_capacitance 0.2 [current_design]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports resetn]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports mem_ready]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[31]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[30]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[29]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[28]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[27]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[26]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[25]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[24]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[23]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[22]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[21]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[20]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[19]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[18]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[17]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[16]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[15]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[14]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[13]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[12]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[11]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[10]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[9]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[8]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[7]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[6]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[5]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[4]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[3]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[2]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[1]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {mem_rdata[0]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports pcpi_wr]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[31]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[30]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[29]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[28]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[27]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[26]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[25]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[24]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[23]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[22]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[21]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[20]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[19]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[18]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[17]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[16]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[15]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[14]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[13]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[12]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[11]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[10]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[9]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[8]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[7]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[6]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[5]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[4]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[3]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[2]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[1]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {pcpi_rd[0]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports pcpi_wait]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports pcpi_ready]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[31]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[30]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[29]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[28]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[27]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[26]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[25]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[24]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[23]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[22]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[21]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[20]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[19]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[18]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[17]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[16]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[15]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[14]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[13]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[12]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[11]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[10]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[9]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[8]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[7]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[6]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[5]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[4]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[3]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[2]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[1]}]
-set_driving_cell -lib_cell BUFX2 -library slow_vdd1v0 -pin "Y" [get_ports {irq[0]}]
+set_input_transition -min 0.05 [get_ports resetn]
+set_input_transition -max 0.1 [get_ports resetn]
+set_input_transition -min 0.05 [get_ports mem_ready]
+set_input_transition -max 0.1 [get_ports mem_ready]
+set_input_transition -min 0.05 [get_ports {mem_rdata[31]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[31]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[30]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[30]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[29]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[29]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[28]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[28]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[27]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[27]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[26]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[26]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[25]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[25]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[24]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[24]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[23]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[23]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[22]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[22]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[21]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[21]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[20]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[20]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[19]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[19]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[18]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[18]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[17]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[17]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[16]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[16]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[15]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[15]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[14]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[14]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[13]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[13]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[12]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[12]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[11]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[11]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[10]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[10]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[9]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[9]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[8]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[8]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[7]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[7]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[6]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[6]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[5]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[5]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[4]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[4]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[3]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[3]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[2]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[2]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[1]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[1]}]
+set_input_transition -min 0.05 [get_ports {mem_rdata[0]}]
+set_input_transition -max 0.1 [get_ports {mem_rdata[0]}]
+set_input_transition -min 0.05 [get_ports pcpi_wr]
+set_input_transition -max 0.1 [get_ports pcpi_wr]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[31]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[31]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[30]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[30]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[29]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[29]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[28]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[28]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[27]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[27]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[26]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[26]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[25]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[25]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[24]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[24]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[23]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[23]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[22]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[22]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[21]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[21]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[20]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[20]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[19]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[19]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[18]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[18]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[17]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[17]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[16]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[16]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[15]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[15]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[14]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[14]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[13]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[13]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[12]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[12]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[11]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[11]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[10]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[10]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[9]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[9]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[8]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[8]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[7]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[7]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[6]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[6]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[5]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[5]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[4]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[4]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[3]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[3]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[2]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[2]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[1]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[1]}]
+set_input_transition -min 0.05 [get_ports {pcpi_rd[0]}]
+set_input_transition -max 0.1 [get_ports {pcpi_rd[0]}]
+set_input_transition -min 0.05 [get_ports pcpi_wait]
+set_input_transition -max 0.1 [get_ports pcpi_wait]
+set_input_transition -min 0.05 [get_ports pcpi_ready]
+set_input_transition -max 0.1 [get_ports pcpi_ready]
+set_input_transition -min 0.05 [get_ports {irq[31]}]
+set_input_transition -max 0.1 [get_ports {irq[31]}]
+set_input_transition -min 0.05 [get_ports {irq[30]}]
+set_input_transition -max 0.1 [get_ports {irq[30]}]
+set_input_transition -min 0.05 [get_ports {irq[29]}]
+set_input_transition -max 0.1 [get_ports {irq[29]}]
+set_input_transition -min 0.05 [get_ports {irq[28]}]
+set_input_transition -max 0.1 [get_ports {irq[28]}]
+set_input_transition -min 0.05 [get_ports {irq[27]}]
+set_input_transition -max 0.1 [get_ports {irq[27]}]
+set_input_transition -min 0.05 [get_ports {irq[26]}]
+set_input_transition -max 0.1 [get_ports {irq[26]}]
+set_input_transition -min 0.05 [get_ports {irq[25]}]
+set_input_transition -max 0.1 [get_ports {irq[25]}]
+set_input_transition -min 0.05 [get_ports {irq[24]}]
+set_input_transition -max 0.1 [get_ports {irq[24]}]
+set_input_transition -min 0.05 [get_ports {irq[23]}]
+set_input_transition -max 0.1 [get_ports {irq[23]}]
+set_input_transition -min 0.05 [get_ports {irq[22]}]
+set_input_transition -max 0.1 [get_ports {irq[22]}]
+set_input_transition -min 0.05 [get_ports {irq[21]}]
+set_input_transition -max 0.1 [get_ports {irq[21]}]
+set_input_transition -min 0.05 [get_ports {irq[20]}]
+set_input_transition -max 0.1 [get_ports {irq[20]}]
+set_input_transition -min 0.05 [get_ports {irq[19]}]
+set_input_transition -max 0.1 [get_ports {irq[19]}]
+set_input_transition -min 0.05 [get_ports {irq[18]}]
+set_input_transition -max 0.1 [get_ports {irq[18]}]
+set_input_transition -min 0.05 [get_ports {irq[17]}]
+set_input_transition -max 0.1 [get_ports {irq[17]}]
+set_input_transition -min 0.05 [get_ports {irq[16]}]
+set_input_transition -max 0.1 [get_ports {irq[16]}]
+set_input_transition -min 0.05 [get_ports {irq[15]}]
+set_input_transition -max 0.1 [get_ports {irq[15]}]
+set_input_transition -min 0.05 [get_ports {irq[14]}]
+set_input_transition -max 0.1 [get_ports {irq[14]}]
+set_input_transition -min 0.05 [get_ports {irq[13]}]
+set_input_transition -max 0.1 [get_ports {irq[13]}]
+set_input_transition -min 0.05 [get_ports {irq[12]}]
+set_input_transition -max 0.1 [get_ports {irq[12]}]
+set_input_transition -min 0.05 [get_ports {irq[11]}]
+set_input_transition -max 0.1 [get_ports {irq[11]}]
+set_input_transition -min 0.05 [get_ports {irq[10]}]
+set_input_transition -max 0.1 [get_ports {irq[10]}]
+set_input_transition -min 0.05 [get_ports {irq[9]}]
+set_input_transition -max 0.1 [get_ports {irq[9]}]
+set_input_transition -min 0.05 [get_ports {irq[8]}]
+set_input_transition -max 0.1 [get_ports {irq[8]}]
+set_input_transition -min 0.05 [get_ports {irq[7]}]
+set_input_transition -max 0.1 [get_ports {irq[7]}]
+set_input_transition -min 0.05 [get_ports {irq[6]}]
+set_input_transition -max 0.1 [get_ports {irq[6]}]
+set_input_transition -min 0.05 [get_ports {irq[5]}]
+set_input_transition -max 0.1 [get_ports {irq[5]}]
+set_input_transition -min 0.05 [get_ports {irq[4]}]
+set_input_transition -max 0.1 [get_ports {irq[4]}]
+set_input_transition -min 0.05 [get_ports {irq[3]}]
+set_input_transition -max 0.1 [get_ports {irq[3]}]
+set_input_transition -min 0.05 [get_ports {irq[2]}]
+set_input_transition -max 0.1 [get_ports {irq[2]}]
+set_input_transition -min 0.05 [get_ports {irq[1]}]
+set_input_transition -max 0.1 [get_ports {irq[1]}]
+set_input_transition -min 0.05 [get_ports {irq[0]}]
+set_input_transition -max 0.1 [get_ports {irq[0]}]
 set_clock_uncertainty -setup 0.2 [get_clocks core_clk]
 set_clock_uncertainty -hold 0.1 [get_clocks core_clk]

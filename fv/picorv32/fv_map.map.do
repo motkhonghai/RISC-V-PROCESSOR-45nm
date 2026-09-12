@@ -1840,18 +1840,19 @@ add mapped point reg_op1[3]/q reg_op1_reg[3]/Q -type DFF DFF
 add mapped point reg_op1[5]/q reg_op1_reg[5]/Q -type DFF DFF
 add mapped point reg_op1[6]/q reg_op1_reg[6]/Q -type DFF DFF
 add mapped point reg_op1[7]/q reg_op1_reg[7]/Q -type DFF DFF
-add mapped point reg_op1[15]/q reg_op1_reg[15]/Q -type DFF DFF
+add mapped point reg_op1[8]/q reg_op1_reg[8]/Q -type DFF DFF
+add mapped point reg_op1[10]/q reg_op1_reg[10]/Q -type DFF DFF
+add mapped point reg_op1[12]/q reg_op1_reg[12]/Q -type DFF DFF
+add mapped point reg_op1[14]/q reg_op1_reg[14]/Q -type DFF DFF
 add mapped point reg_op1[16]/q reg_op1_reg[16]/Q -type DFF DFF
 add mapped point reg_op1[17]/q reg_op1_reg[17]/Q -type DFF DFF
 add mapped point reg_op1[18]/q reg_op1_reg[18]/Q -type DFF DFF
 add mapped point reg_op1[19]/q reg_op1_reg[19]/Q -type DFF DFF
 add mapped point reg_op1[20]/q reg_op1_reg[20]/Q -type DFF DFF
-add mapped point reg_op1[22]/q reg_op1_reg[22]/Q -type DFF DFF
-add mapped point reg_op1[23]/q reg_op1_reg[23]/Q -type DFF DFF
+add mapped point reg_op1[21]/q reg_op1_reg[21]/Q -type DFF DFF
 add mapped point reg_op1[24]/q reg_op1_reg[24]/Q -type DFF DFF
-add mapped point reg_op1[28]/q reg_op1_reg[28]/Q -type DFF DFF
-add mapped point reg_op1[29]/q reg_op1_reg[29]/Q -type DFF DFF
 add mapped point reg_op1[30]/q reg_op1_reg[30]/Q -type DFF DFF
+add mapped point reg_op1[31]/q reg_op1_reg[31]/Q -type DFF DFF
 add mapped point reg_op2[0]/q reg_op2_reg[0]/Q -type DFF DFF
 add mapped point reg_op2[1]/q reg_op2_reg[1]/Q -type DFF DFF
 add mapped point reg_op2[2]/q reg_op2_reg[2]/Q -type DFF DFF
@@ -1963,18 +1964,17 @@ add mapped point mem_rdata_q[14]/q mem_rdata_q_reg[14]/Q -type DFF DFF
 add mapped point reg_op1[0]/q reg_op1_reg[0]/Q -type DFF DFF
 add mapped point reg_op1[1]/q reg_op1_reg[1]/Q -type DFF DFF
 add mapped point reg_op1[4]/q reg_op1_reg[4]/Q -type DFF DFF
-add mapped point reg_op1[8]/q reg_op1_reg[8]/Q -type DFF DFF
 add mapped point reg_op1[9]/q reg_op1_reg[9]/Q -type DFF DFF
-add mapped point reg_op1[10]/q reg_op1_reg[10]/Q -type DFF DFF
 add mapped point reg_op1[11]/q reg_op1_reg[11]/Q -type DFF DFF
-add mapped point reg_op1[12]/q reg_op1_reg[12]/Q -type DFF DFF
 add mapped point reg_op1[13]/q reg_op1_reg[13]/Q -type DFF DFF
-add mapped point reg_op1[14]/q reg_op1_reg[14]/Q -type DFF DFF
-add mapped point reg_op1[21]/q reg_op1_reg[21]/Q -type DFF DFF
+add mapped point reg_op1[15]/q reg_op1_reg[15]/Q -type DFF DFF
+add mapped point reg_op1[22]/q reg_op1_reg[22]/Q -type DFF DFF
+add mapped point reg_op1[23]/q reg_op1_reg[23]/Q -type DFF DFF
 add mapped point reg_op1[25]/q reg_op1_reg[25]/Q -type DFF DFF
 add mapped point reg_op1[26]/q reg_op1_reg[26]/Q -type DFF DFF
 add mapped point reg_op1[27]/q reg_op1_reg[27]/Q -type DFF DFF
-add mapped point reg_op1[31]/q reg_op1_reg[31]/Q -type DFF DFF
+add mapped point reg_op1[28]/q reg_op1_reg[28]/Q -type DFF DFF
+add mapped point reg_op1[29]/q reg_op1_reg[29]/Q -type DFF DFF
 
 
 
