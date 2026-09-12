@@ -1,14 +1,14 @@
 #################################################################################
 #
-# Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 10:18:37 +07 2026
+# Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 13:30:10 +07 2026
 #
 #################################################################################
 
 ## library_sets
 create_library_set -name slow_libset \
-    -timing { /home/icd1/workspace/RISC-V-PROCESSOR-45nm//lib/slow_vdd1v0_basicCells.lib }
+    -timing { /home/icd1/workspace/RISC-V-PROCESSOR-45nm/lib/slow_vdd1v0_basicCells.lib }
 create_library_set -name fast_libset \
-    -timing { /home/icd1/workspace/RISC-V-PROCESSOR-45nm//lib/fast_vdd1v0_basicCells.lib }
+    -timing { /home/icd1/workspace/RISC-V-PROCESSOR-45nm/lib/fast_vdd1v0_basicCells.lib }
 
 ## opcond
 create_opcond -name slow_opcond \
@@ -30,8 +30,8 @@ create_timing_condition -name fast_timing_condition \
 
 ## rc_corner
 create_rc_corner -name rc_typical \
-    -qrc_tech /home/icd1/workspace/RISC-V-PROCESSOR-45nm//QRC_Tech/gpdk045.tch \
-    -cap_table /home/icd1/workspace/RISC-V-PROCESSOR-45nm//captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl \
+    -qrc_tech /home/icd1/workspace/RISC-V-PROCESSOR-45nm/QRC_Tech/gpdk045.tch \
+    -cap_table /home/icd1/workspace/RISC-V-PROCESSOR-45nm/captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl \
     -pre_route_res 1.0 \
     -pre_route_cap 1.0 \
     -pre_route_clock_res 0.0 \
