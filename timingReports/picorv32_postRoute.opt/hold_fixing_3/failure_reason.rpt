@@ -1,77 +1,35 @@
 
 
 // Path 1
-Endpoint:      mem_wdata[15]
-Beginpoint:    mem_wdata_reg[15]/Q
+Endpoint:      cpuregs_reg[4][12]/SI
+Beginpoint:    cpuregs_reg[4][12]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -52.9ps
+Hold Slack:    -7.7ps
 
-Node: mem_wdata[15]
-Net:  mem_wdata[15]
-  Setup Slack:   7632.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC857_mem_wdata_15/Y
-Net:  mem_wdata[15]
-  Setup Slack:   7632.5ps
+Node: cpuregs_reg[4][12]/SI
+Net:  FE_PHN859_cpuregs_4_12
+  Setup Slack:   9274.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC857_mem_wdata_15/A
-Net:  FE_PHN3053_mem_wdata_15
-  Setup Slack:   7632.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3053_mem_wdata_15/Y
-Net:  FE_PHN3053_mem_wdata_15
-  Setup Slack:   7632.5ps
+Node: FE_PHC859_cpuregs_4_12/Y
+Net:  FE_PHN859_cpuregs_4_12
+  Setup Slack:   8558.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3053_mem_wdata_15/A
-Net:  FE_PHN3032_mem_wdata_15
-  Setup Slack:   7632.5ps
+Node: FE_PHC859_cpuregs_4_12/A
+Net:  cpuregs[4][12]
+  Setup Slack:   8558.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3032_mem_wdata_15/Y
-Net:  FE_PHN3032_mem_wdata_15
-  Setup Slack:   7632.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3032_mem_wdata_15/A
-Net:  FE_PHN1455_mem_wdata_15
-  Setup Slack:   7632.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2542_mem_wdata_15/Y
-Net:  FE_PHN1455_mem_wdata_15
-  Setup Slack:   7632.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2542_mem_wdata_15/A
-Net:  FE_PHN2542_mem_wdata_15
-  Setup Slack:   7632.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[15]/Q
-Net:  FE_PHN2542_mem_wdata_15
-  Setup Slack:   7632.5ps
+Node: cpuregs_reg[4][12]/Q
+Net:  cpuregs[4][12]
+  Setup Slack:   8558.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -79,91 +37,35 @@ Net:  FE_PHN2542_mem_wdata_15
 
 
 // Path 2
-Endpoint:      mem_wdata[31]
-Beginpoint:    mem_wdata_reg[31]/Q
+Endpoint:      cpuregs_reg[25][12]/SI
+Beginpoint:    cpuregs_reg[25][12]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -35.5ps
+Hold Slack:    -7.2ps
 
-Node: mem_wdata[31]
-Net:  mem_wdata[31]
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC869_mem_wdata_31/Y
-Net:  mem_wdata[31]
-  Setup Slack:   7621.1ps
+Node: cpuregs_reg[25][12]/SI
+Net:  FE_PHN1200_cpuregs_25_12
+  Setup Slack:   9275.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC869_mem_wdata_31/A
-Net:  FE_PHN3052_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3096_mem_wdata_31/Y
-Net:  FE_PHN3052_mem_wdata_31
-  Setup Slack:   7621.1ps
+Node: FE_PHC1200_cpuregs_25_12/Y
+Net:  FE_PHN1200_cpuregs_25_12
+  Setup Slack:   9275.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3096_mem_wdata_31/A
-Net:  FE_PHN3096_mem_wdata_31
-  Setup Slack:   7621.1ps
+Node: FE_PHC1200_cpuregs_25_12/A
+Net:  cpuregs[25][12]
+  Setup Slack:   9275.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3052_mem_wdata_31/Y
-Net:  FE_PHN3096_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3052_mem_wdata_31/A
-Net:  FE_PHN3009_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3009_mem_wdata_31/Y
-Net:  FE_PHN3009_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3009_mem_wdata_31/A
-Net:  FE_PHN868_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1445_mem_wdata_31/Y
-Net:  FE_PHN868_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1445_mem_wdata_31/A
-Net:  FE_PHN1445_mem_wdata_31
-  Setup Slack:   7621.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[31]/Q
-Net:  FE_PHN1445_mem_wdata_31
-  Setup Slack:   7621.1ps
+Node: cpuregs_reg[25][12]/Q
+Net:  cpuregs[25][12]
+  Setup Slack:   8427.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -171,105 +73,49 @@ Net:  FE_PHN1445_mem_wdata_31
 
 
 // Path 3
-Endpoint:      mem_wdata[27]
-Beginpoint:    mem_wdata_reg[27]/Q
+Endpoint:      is_jalr_addi_slti_sltiu_xori_ori_andi_reg/D
+Beginpoint:    instr_jalr_reg/Q
 Analysis View: fast_hold_view
-Hold Slack:    -31.5ps
+Hold Slack:    -6.3ps
 
-Node: mem_wdata[27]
-Net:  mem_wdata[27]
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC907_mem_wdata_27/Y
-Net:  mem_wdata[27]
-  Setup Slack:   7527.7ps
+Node: is_jalr_addi_slti_sltiu_xori_ori_andi_reg/D
+Net:  n_1096
+  Setup Slack:   8687.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC907_mem_wdata_27/A
-Net:  FE_PHN3014_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3014_mem_wdata_27/Y
-Net:  FE_PHN3014_mem_wdata_27
-  Setup Slack:   7527.7ps
+Node: g89624/Y
+Net:  n_1096
+  Setup Slack:   8687.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3014_mem_wdata_27/A
-Net:  FE_PHN906_mem_wdata_27
-  Setup Slack:   7527.7ps
+Node: g89624/C0
+Net:  n_8
+  Setup Slack:   8773.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3059_mem_wdata_27/Y
-Net:  FE_PHN906_mem_wdata_27
-  Setup Slack:   7527.7ps
+Node: g91946/Y
+Net:  n_8
+  Setup Slack:   7762.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3059_mem_wdata_27/A
-Net:  FE_PHN3059_mem_wdata_27
-  Setup Slack:   7527.7ps
+Node: g91946/B
+Net:  instr_jalr
+  Setup Slack:   8185.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3080_mem_wdata_27/Y
-Net:  FE_PHN3059_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3080_mem_wdata_27/A
-Net:  FE_PHN3080_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1449_mem_wdata_27/Y
-Net:  FE_PHN3080_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1449_mem_wdata_27/A
-Net:  FE_PHN1449_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2612_mem_wdata_27/Y
-Net:  FE_PHN1449_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2612_mem_wdata_27/A
-Net:  FE_PHN2612_mem_wdata_27
-  Setup Slack:   7527.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[27]/Q
-Net:  FE_PHN2612_mem_wdata_27
-  Setup Slack:   7527.7ps
+Node: instr_jalr_reg/Q
+Net:  instr_jalr
+  Setup Slack:   6596.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -277,91 +123,35 @@ Net:  FE_PHN2612_mem_wdata_27
 
 
 // Path 4
-Endpoint:      mem_wdata[11]
-Beginpoint:    mem_wdata_reg[11]/Q
+Endpoint:      cpuregs_reg[15][26]/SI
+Beginpoint:    cpuregs_reg[15][26]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -23.1ps
+Hold Slack:    -5.7ps
 
-Node: mem_wdata[11]
-Net:  mem_wdata[11]
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC844_mem_wdata_11/Y
-Net:  mem_wdata[11]
-  Setup Slack:   7528.2ps
+Node: cpuregs_reg[15][26]/SI
+Net:  cpuregs[15][26]
+  Setup Slack:   9260.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC844_mem_wdata_11/A
-Net:  FE_PHN3060_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3060_mem_wdata_11/Y
-Net:  FE_PHN3060_mem_wdata_11
-  Setup Slack:   7528.2ps
+Node: FE_PHC1256_cpuregs_15_26/Y
+Net:  cpuregs[15][26]
+  Setup Slack:   8436.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3060_mem_wdata_11/A
-Net:  FE_PHN843_mem_wdata_11
-  Setup Slack:   7528.2ps
+Node: FE_PHC1256_cpuregs_15_26/A
+Net:  FE_PHN2474_cpuregs_15_26
+  Setup Slack:   8436.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3007_mem_wdata_11/Y
-Net:  FE_PHN843_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3007_mem_wdata_11/A
-Net:  FE_PHN3007_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1446_mem_wdata_11/Y
-Net:  FE_PHN3007_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1446_mem_wdata_11/A
-Net:  FE_PHN1446_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2282_mem_wdata_11/Y
-Net:  FE_PHN1446_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2282_mem_wdata_11/A
-Net:  FE_PHN2282_mem_wdata_11
-  Setup Slack:   7528.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[11]/Q
-Net:  FE_PHN2282_mem_wdata_11
-  Setup Slack:   7528.2ps
+Node: cpuregs_reg[15][26]/Q
+Net:  FE_PHN2474_cpuregs_15_26
+  Setup Slack:   8436.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -369,91 +159,35 @@ Net:  FE_PHN2282_mem_wdata_11
 
 
 // Path 5
-Endpoint:      mem_wdata[19]
-Beginpoint:    mem_wdata_reg[19]/Q
+Endpoint:      cpuregs_reg[1][3]/D
+Beginpoint:    cpuregs_reg[1][3]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -22.5ps
+Hold Slack:    -5.6ps
 
-Node: mem_wdata[19]
-Net:  mem_wdata[19]
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC859_mem_wdata_19/Y
-Net:  mem_wdata[19]
-  Setup Slack:   7533.4ps
+Node: cpuregs_reg[1][3]/D
+Net:  cpuregs[1][3]
+  Setup Slack:   9258.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC859_mem_wdata_19/A
-Net:  FE_PHN3031_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3031_mem_wdata_19/Y
-Net:  FE_PHN3031_mem_wdata_19
-  Setup Slack:   7533.4ps
+Node: FE_PHC1233_cpuregs_1_3/Y
+Net:  cpuregs[1][3]
+  Setup Slack:   8378.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3031_mem_wdata_19/A
-Net:  FE_PHN858_mem_wdata_19
-  Setup Slack:   7533.4ps
+Node: FE_PHC1233_cpuregs_1_3/A
+Net:  FE_PHN2436_cpuregs_1_3
+  Setup Slack:   8378.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3061_mem_wdata_19/Y
-Net:  FE_PHN858_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3061_mem_wdata_19/A
-Net:  FE_PHN3061_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1440_mem_wdata_19/Y
-Net:  FE_PHN3061_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1440_mem_wdata_19/A
-Net:  FE_PHN1440_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2591_mem_wdata_19/Y
-Net:  FE_PHN1440_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2591_mem_wdata_19/A
-Net:  FE_PHN2591_mem_wdata_19
-  Setup Slack:   7533.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[19]/Q
-Net:  FE_PHN2591_mem_wdata_19
-  Setup Slack:   7533.4ps
+Node: cpuregs_reg[1][3]/Q
+Net:  FE_PHN2436_cpuregs_1_3
+  Setup Slack:   8378.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -461,77 +195,35 @@ Net:  FE_PHN2591_mem_wdata_19
 
 
 // Path 6
-Endpoint:      pcpi_rs2[30]
-Beginpoint:    reg_op2_reg[30]/Q
+Endpoint:      cpuregs_reg[25][2]/SI
+Beginpoint:    cpuregs_reg[25][2]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -21.3ps
+Hold Slack:    -4.2ps
 
-Node: pcpi_rs2[30]
-Net:  pcpi_rs2[30]
-  Setup Slack:   7568.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PDC740_pcpi_rs2_30/Y
-Net:  pcpi_rs2[30]
-  Setup Slack:   6396.4ps
+Node: cpuregs_reg[25][2]/SI
+Net:  cpuregs[25][2]
+  Setup Slack:   9254.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PDC740_pcpi_rs2_30/A
-Net:  FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3050_FE_PDN4109_pcpi_rs2_30/Y
-Net:  FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
+Node: FE_PHC1455_cpuregs_25_2/Y
+Net:  cpuregs[25][2]
+  Setup Slack:   8400.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3050_FE_PDN4109_pcpi_rs2_30/A
-Net:  FE_PHN3063_FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
+Node: FE_PHC1455_cpuregs_25_2/A
+Net:  FE_PHN1455_cpuregs_25_2
+  Setup Slack:   8400.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3063_FE_PDN4109_pcpi_rs2_30/Y
-Net:  FE_PHN3063_FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3063_FE_PDN4109_pcpi_rs2_30/A
-Net:  FE_PHN3050_FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2988_FE_PDN4109_pcpi_rs2_30/Y
-Net:  FE_PHN3050_FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2988_FE_PDN4109_pcpi_rs2_30/A
-Net:  FE_PHN2988_FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[30]/Q
-Net:  FE_PHN2988_FE_PDN4109_pcpi_rs2_30
-  Setup Slack:   6396.4ps
+Node: cpuregs_reg[25][2]/Q
+Net:  FE_PHN1455_cpuregs_25_2
+  Setup Slack:   8400.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -539,63 +231,35 @@ Net:  FE_PHN2988_FE_PDN4109_pcpi_rs2_30
 
 
 // Path 7
-Endpoint:      mem_wdata[3]
-Beginpoint:    mem_wdata_reg[3]/Q
+Endpoint:      cpuregs_reg[31][31]/SI
+Beginpoint:    cpuregs_reg[31][31]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -18.5ps
+Hold Slack:    -3.6ps
 
-Node: mem_wdata[3]
-Net:  mem_wdata[3]
-  Setup Slack:   7403.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC894_mem_wdata_3/Y
-Net:  mem_wdata[3]
-  Setup Slack:   7403.7ps
+Node: cpuregs_reg[31][31]/SI
+Net:  cpuregs[31][31]
+  Setup Slack:   9243.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC894_mem_wdata_3/A
-Net:  FE_PHN2996_mem_wdata_3
-  Setup Slack:   7403.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2996_mem_wdata_3/Y
-Net:  FE_PHN2996_mem_wdata_3
-  Setup Slack:   7403.7ps
+Node: FE_PHC1638_cpuregs_31_31/Y
+Net:  cpuregs[31][31]
+  Setup Slack:   8500.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2996_mem_wdata_3/A
-Net:  FE_PHN893_mem_wdata_3
-  Setup Slack:   7403.7ps
+Node: FE_PHC1638_cpuregs_31_31/A
+Net:  FE_PHN1638_cpuregs_31_31
+  Setup Slack:   8500.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1414_mem_wdata_3/Y
-Net:  FE_PHN893_mem_wdata_3
-  Setup Slack:   7403.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1414_mem_wdata_3/A
-Net:  FE_PHN1414_mem_wdata_3
-  Setup Slack:   7403.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[3]/Q
-Net:  FE_PHN1414_mem_wdata_3
-  Setup Slack:   7403.7ps
+Node: cpuregs_reg[31][31]/Q
+Net:  FE_PHN1638_cpuregs_31_31
+  Setup Slack:   8500.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -603,105 +267,35 @@ Net:  FE_PHN1414_mem_wdata_3
 
 
 // Path 8
-Endpoint:      mem_addr[3]
-Beginpoint:    mem_addr_reg[3]/Q
+Endpoint:      cpuregs_reg[18][29]/SI
+Beginpoint:    cpuregs_reg[18][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -17.8ps
+Hold Slack:    -3.4ps
 
-Node: mem_addr[3]
-Net:  mem_addr[3]
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC834_mem_addr_3/Y
-Net:  mem_addr[3]
-  Setup Slack:   7497.8ps
+Node: cpuregs_reg[18][29]/SI
+Net:  cpuregs[18][29]
+  Setup Slack:   9250.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC834_mem_addr_3/A
-Net:  FE_PHN3056_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3056_mem_addr_3/Y
-Net:  FE_PHN3056_mem_addr_3
-  Setup Slack:   7497.8ps
+Node: FE_PHC1197_cpuregs_18_29/Y
+Net:  cpuregs[18][29]
+  Setup Slack:   8358.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3056_mem_addr_3/A
-Net:  FE_PHN3073_mem_addr_3
-  Setup Slack:   7497.8ps
+Node: FE_PHC1197_cpuregs_18_29/A
+Net:  FE_PHN1197_cpuregs_18_29
+  Setup Slack:   8358.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3073_mem_addr_3/Y
-Net:  FE_PHN3073_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3073_mem_addr_3/A
-Net:  FE_PHN833_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2989_mem_addr_3/Y
-Net:  FE_PHN833_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2989_mem_addr_3/A
-Net:  FE_PHN2989_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1416_mem_addr_3/Y
-Net:  FE_PHN2989_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1416_mem_addr_3/A
-Net:  FE_PHN1416_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2346_mem_addr_3/Y
-Net:  FE_PHN1416_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2346_mem_addr_3/A
-Net:  FE_PHN2346_mem_addr_3
-  Setup Slack:   7497.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[3]/Q
-Net:  FE_PHN2346_mem_addr_3
-  Setup Slack:   7497.8ps
+Node: cpuregs_reg[18][29]/Q
+Net:  FE_PHN1197_cpuregs_18_29
+  Setup Slack:   8358.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -709,63 +303,35 @@ Net:  FE_PHN2346_mem_addr_3
 
 
 // Path 9
-Endpoint:      mem_addr[15]
-Beginpoint:    mem_addr_reg[15]/Q
+Endpoint:      cpuregs_reg[15][21]/SI
+Beginpoint:    cpuregs_reg[15][21]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -17.5ps
+Hold Slack:    -3.3ps
 
-Node: mem_addr[15]
-Net:  mem_addr[15]
-  Setup Slack:   7437.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC825_mem_addr_15/Y
-Net:  mem_addr[15]
-  Setup Slack:   7437.2ps
+Node: cpuregs_reg[15][21]/SI
+Net:  FE_PHN1190_cpuregs_15_21
+  Setup Slack:   9258.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC825_mem_addr_15/A
-Net:  FE_PHN3001_mem_addr_15
-  Setup Slack:   7437.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3001_mem_addr_15/Y
-Net:  FE_PHN3001_mem_addr_15
-  Setup Slack:   7437.2ps
+Node: FE_PHC1190_cpuregs_15_21/Y
+Net:  FE_PHN1190_cpuregs_15_21
+  Setup Slack:   9258.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3001_mem_addr_15/A
-Net:  FE_PHN824_mem_addr_15
-  Setup Slack:   7437.2ps
+Node: FE_PHC1190_cpuregs_15_21/A
+Net:  cpuregs[15][21]
+  Setup Slack:   9258.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1436_mem_addr_15/Y
-Net:  FE_PHN824_mem_addr_15
-  Setup Slack:   7437.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1436_mem_addr_15/A
-Net:  FE_PHN1436_mem_addr_15
-  Setup Slack:   7437.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[15]/Q
-Net:  FE_PHN1436_mem_addr_15
-  Setup Slack:   7437.2ps
+Node: cpuregs_reg[15][21]/Q
+Net:  cpuregs[15][21]
+  Setup Slack:   8730.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -773,49 +339,35 @@ Net:  FE_PHN1436_mem_addr_15
 
 
 // Path 10
-Endpoint:      pcpi_rs2[16]
-Beginpoint:    reg_op2_reg[16]/Q
+Endpoint:      mem_addr_reg[31]/D1
+Beginpoint:    mem_addr_reg[31]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -16.9ps
+Hold Slack:    -3.1ps
 
-Node: pcpi_rs2[16]
-Net:  pcpi_rs2[16]
-  Setup Slack:   7368.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC161_pcpi_rs2_16/Y
-Net:  pcpi_rs2[16]
-  Setup Slack:   4756.1ps
+Node: mem_addr_reg[31]/D1
+Net:  FE_PDN4113_mem_addr_31
+  Setup Slack:   9275.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC161_pcpi_rs2_16/A
-Net:  FE_PHN747_FE_OFN75_pcpi_rs2_16
-  Setup Slack:   4756.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC747_FE_OFN75_pcpi_rs2_16/Y
-Net:  FE_PHN747_FE_OFN75_pcpi_rs2_16
-  Setup Slack:   4756.1ps
+Node: FE_PHC2581_FE_PDN4113_mem_addr_31/Y
+Net:  FE_PDN4113_mem_addr_31
+  Setup Slack:   8159.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC747_FE_OFN75_pcpi_rs2_16/A
-Net:  FE_OFN75_pcpi_rs2_16
-  Setup Slack:   4756.1ps
+Node: FE_PHC2581_FE_PDN4113_mem_addr_31/A
+Net:  FE_PHN2581_FE_PDN4113_mem_addr_31
+  Setup Slack:   8159.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op2_reg[16]/Q
-Net:  FE_OFN75_pcpi_rs2_16
-  Setup Slack:   4756.1ps
+Node: mem_addr_reg[31]/Q
+Net:  FE_PHN2581_FE_PDN4113_mem_addr_31
+  Setup Slack:   8159.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -823,63 +375,35 @@ Net:  FE_OFN75_pcpi_rs2_16
 
 
 // Path 11
-Endpoint:      mem_addr[19]
-Beginpoint:    mem_addr_reg[19]/Q
+Endpoint:      cpuregs_reg[16][29]/SI
+Beginpoint:    cpuregs_reg[16][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -16.5ps
+Hold Slack:    -3.0ps
 
-Node: mem_addr[19]
-Net:  mem_addr[19]
-  Setup Slack:   7418.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC832_mem_addr_19/Y
-Net:  mem_addr[19]
-  Setup Slack:   7418.4ps
+Node: cpuregs_reg[16][29]/SI
+Net:  cpuregs[16][29]
+  Setup Slack:   9245.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC832_mem_addr_19/A
-Net:  FE_PHN831_mem_addr_19
-  Setup Slack:   7418.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2998_mem_addr_19/Y
-Net:  FE_PHN831_mem_addr_19
-  Setup Slack:   7418.4ps
+Node: FE_PHC1201_cpuregs_16_29/Y
+Net:  cpuregs[16][29]
+  Setup Slack:   8241.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2998_mem_addr_19/A
-Net:  FE_PHN2998_mem_addr_19
-  Setup Slack:   7418.4ps
+Node: FE_PHC1201_cpuregs_16_29/A
+Net:  FE_PHN1201_cpuregs_16_29
+  Setup Slack:   8241.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1413_mem_addr_19/Y
-Net:  FE_PHN2998_mem_addr_19
-  Setup Slack:   7418.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1413_mem_addr_19/A
-Net:  FE_PHN1413_mem_addr_19
-  Setup Slack:   7418.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[19]/Q
-Net:  FE_PHN1413_mem_addr_19
-  Setup Slack:   7418.4ps
+Node: cpuregs_reg[16][29]/Q
+Net:  FE_PHN1201_cpuregs_16_29
+  Setup Slack:   8241.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -887,49 +411,35 @@ Net:  FE_PHN1413_mem_addr_19
 
 
 // Path 12
-Endpoint:      pcpi_rs1[19]
-Beginpoint:    reg_op1_reg[19]/Q
+Endpoint:      cpuregs_reg[4][3]/SI
+Beginpoint:    cpuregs_reg[4][3]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -15.5ps
+Hold Slack:    -2.4ps
 
-Node: pcpi_rs1[19]
-Net:  pcpi_rs1[19]
-  Setup Slack:   7508.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC128_pcpi_rs1_19/Y
-Net:  pcpi_rs1[19]
-  Setup Slack:   5596.6ps
+Node: cpuregs_reg[4][3]/SI
+Net:  cpuregs[4][3]
+  Setup Slack:   9232.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC128_pcpi_rs1_19/A
-Net:  FE_PHN755_FE_OFN42_pcpi_rs1_19
-  Setup Slack:   5596.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC755_FE_OFN42_pcpi_rs1_19/Y
-Net:  FE_PHN755_FE_OFN42_pcpi_rs1_19
-  Setup Slack:   5596.6ps
+Node: FE_PHC1658_cpuregs_4_3/Y
+Net:  cpuregs[4][3]
+  Setup Slack:   8269.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC755_FE_OFN42_pcpi_rs1_19/A
-Net:  FE_OFN42_pcpi_rs1_19
-  Setup Slack:   5596.6ps
+Node: FE_PHC1658_cpuregs_4_3/A
+Net:  FE_PHN1658_cpuregs_4_3
+  Setup Slack:   8269.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[19]/Q
-Net:  FE_OFN42_pcpi_rs1_19
-  Setup Slack:   5596.6ps
+Node: cpuregs_reg[4][3]/Q
+Net:  FE_PHN1658_cpuregs_4_3
+  Setup Slack:   8269.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -937,49 +447,49 @@ Net:  FE_OFN42_pcpi_rs1_19
 
 
 // Path 13
-Endpoint:      trap
-Beginpoint:    trap_reg/Q
+Endpoint:      instr_and_reg/D
+Beginpoint:    instr_and_reg/Q
 Analysis View: fast_hold_view
-Hold Slack:    -15.1ps
+Hold Slack:    -2.3ps
 
-Node: trap
-Net:  trap
-  Setup Slack:   7574.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3068_trap/Y
-Net:  trap
-  Setup Slack:   7574.7ps
+Node: instr_and_reg/D
+Net:  n_1632
+  Setup Slack:   7803.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3068_trap/A
-Net:  FE_PHN3067_trap
-  Setup Slack:   7574.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3083_trap/Y
-Net:  FE_PHN3067_trap
-  Setup Slack:   7574.7ps
+Node: FE_PHC736_n_1632/Y
+Net:  n_1632
+  Setup Slack:   7803.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3083_trap/A
-Net:  FE_PHN3083_trap
-  Setup Slack:   7574.7ps
+Node: FE_PHC736_n_1632/A
+Net:  FE_PHN736_n_1632
+  Setup Slack:   7803.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: trap_reg/Q
-Net:  FE_PHN3083_trap
-  Setup Slack:   7574.7ps
+Node: g87706/Y
+Net:  FE_PHN736_n_1632
+  Setup Slack:   7803.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      NoCellSelected(2)
+Node: g87706/A0N
+Net:  instr_and
+  Setup Slack:   9276.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      InvalidCell
+Node: instr_and_reg/Q
+Net:  instr_and
+  Setup Slack:   6376.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -987,49 +497,35 @@ Net:  FE_PHN3083_trap
 
 
 // Path 14
-Endpoint:      pcpi_rs1[5]
-Beginpoint:    reg_op1_reg[5]/Q
+Endpoint:      cpuregs_reg[17][25]/SI
+Beginpoint:    cpuregs_reg[17][25]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -14.9ps
+Hold Slack:    -2.3ps
 
-Node: pcpi_rs1[5]
-Net:  pcpi_rs1[5]
-  Setup Slack:   7460.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC142_pcpi_rs1_5/Y
-Net:  pcpi_rs1[5]
-  Setup Slack:   2908.3ps
+Node: cpuregs_reg[17][25]/SI
+Net:  cpuregs[17][25]
+  Setup Slack:   9240.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC142_pcpi_rs1_5/A
-Net:  FE_OFN56_pcpi_rs1_5
-  Setup Slack:   2908.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC771_FE_OFN56_pcpi_rs1_5/Y
-Net:  FE_OFN56_pcpi_rs1_5
-  Setup Slack:   2908.3ps
+Node: FE_PHC1115_cpuregs_17_25/Y
+Net:  cpuregs[17][25]
+  Setup Slack:   8334.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC771_FE_OFN56_pcpi_rs1_5/A
-Net:  FE_PHN771_FE_OFN56_pcpi_rs1_5
-  Setup Slack:   2908.3ps
+Node: FE_PHC1115_cpuregs_17_25/A
+Net:  FE_PHN1115_cpuregs_17_25
+  Setup Slack:   8334.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[5]/Q
-Net:  FE_PHN771_FE_OFN56_pcpi_rs1_5
-  Setup Slack:   2908.3ps
+Node: cpuregs_reg[17][25]/Q
+Net:  FE_PHN1115_cpuregs_17_25
+  Setup Slack:   8334.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1037,63 +533,35 @@ Net:  FE_PHN771_FE_OFN56_pcpi_rs1_5
 
 
 // Path 15
-Endpoint:      mem_addr[23]
-Beginpoint:    mem_addr_reg[23]/Q
+Endpoint:      cpuregs_reg[15][27]/SI
+Beginpoint:    cpuregs_reg[15][27]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -14.7ps
+Hold Slack:    -2.3ps
 
-Node: mem_addr[23]
-Net:  mem_addr[23]
-  Setup Slack:   7475.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3081_mem_addr_23/Y
-Net:  mem_addr[23]
-  Setup Slack:   7475.9ps
+Node: cpuregs_reg[15][27]/SI
+Net:  cpuregs[15][27]
+  Setup Slack:   9238.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3081_mem_addr_23/A
-Net:  FE_PHN3087_mem_addr_23
-  Setup Slack:   7475.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3087_mem_addr_23/Y
-Net:  FE_PHN3087_mem_addr_23
-  Setup Slack:   7475.9ps
+Node: FE_PHC1684_cpuregs_15_27/Y
+Net:  cpuregs[15][27]
+  Setup Slack:   8637.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3087_mem_addr_23/A
-Net:  FE_PHN3081_mem_addr_23
-  Setup Slack:   7475.9ps
+Node: FE_PHC1684_cpuregs_15_27/A
+Net:  FE_PHN1684_cpuregs_15_27
+  Setup Slack:   8637.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC2984_mem_addr_23/Y
-Net:  FE_PHN3081_mem_addr_23
-  Setup Slack:   7475.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2984_mem_addr_23/A
-Net:  FE_PHN2984_mem_addr_23
-  Setup Slack:   7475.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[23]/Q
-Net:  FE_PHN2984_mem_addr_23
-  Setup Slack:   7475.9ps
+Node: cpuregs_reg[15][27]/Q
+Net:  FE_PHN1684_cpuregs_15_27
+  Setup Slack:   8637.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1101,91 +569,35 @@ Net:  FE_PHN2984_mem_addr_23
 
 
 // Path 16
-Endpoint:      pcpi_rs1[11]
-Beginpoint:    reg_op1_reg[11]/Q
+Endpoint:      cpuregs_reg[1][2]/D
+Beginpoint:    cpuregs_reg[1][2]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -13.9ps
+Hold Slack:    -2.3ps
 
-Node: pcpi_rs1[11]
-Net:  pcpi_rs1[11]
-  Setup Slack:   7533.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC136_pcpi_rs1_11/Y
-Net:  pcpi_rs1[11]
-  Setup Slack:   4146.2ps
+Node: cpuregs_reg[1][2]/D
+Net:  cpuregs[1][2]
+  Setup Slack:   9243.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC136_pcpi_rs1_11/A
-Net:  FE_PHN3048_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3048_FE_OFN50_pcpi_rs1_11/Y
-Net:  FE_PHN3048_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
+Node: FE_PHC1738_cpuregs_1_2/Y
+Net:  cpuregs[1][2]
+  Setup Slack:   8401.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3048_FE_OFN50_pcpi_rs1_11/A
-Net:  FE_PHN3058_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
+Node: FE_PHC1738_cpuregs_1_2/A
+Net:  FE_PHN1738_cpuregs_1_2
+  Setup Slack:   8401.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3058_FE_OFN50_pcpi_rs1_11/Y
-Net:  FE_PHN3058_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3058_FE_OFN50_pcpi_rs1_11/A
-Net:  FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3090_FE_OFN50_pcpi_rs1_11/Y
-Net:  FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3090_FE_OFN50_pcpi_rs1_11/A
-Net:  FE_PHN3090_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC764_FE_OFN50_pcpi_rs1_11/Y
-Net:  FE_PHN3090_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC764_FE_OFN50_pcpi_rs1_11/A
-Net:  FE_PHN764_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op1_reg[11]/Q
-Net:  FE_PHN764_FE_OFN50_pcpi_rs1_11
-  Setup Slack:   4146.2ps
+Node: cpuregs_reg[1][2]/Q
+Net:  FE_PHN1738_cpuregs_1_2
+  Setup Slack:   8401.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1193,49 +605,49 @@ Net:  FE_PHN764_FE_OFN50_pcpi_rs1_11
 
 
 // Path 17
-Endpoint:      pcpi_rs1[14]
-Beginpoint:    reg_op1_reg[14]/Q
+Endpoint:      instr_sll_reg/D
+Beginpoint:    instr_sll_reg/Q
 Analysis View: fast_hold_view
-Hold Slack:    -13.7ps
+Hold Slack:    -2.2ps
 
-Node: pcpi_rs1[14]
-Net:  pcpi_rs1[14]
-  Setup Slack:   7466.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC133_pcpi_rs1_14/Y
-Net:  pcpi_rs1[14]
-  Setup Slack:   4322.5ps
+Node: instr_sll_reg/D
+Net:  n_1616
+  Setup Slack:   7785.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC133_pcpi_rs1_14/A
-Net:  FE_PHN759_FE_OFN47_pcpi_rs1_14
-  Setup Slack:   4322.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC759_FE_OFN47_pcpi_rs1_14/Y
-Net:  FE_PHN759_FE_OFN47_pcpi_rs1_14
-  Setup Slack:   4322.5ps
+Node: FE_PHC1781_n_1616/Y
+Net:  n_1616
+  Setup Slack:   7785.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC759_FE_OFN47_pcpi_rs1_14/A
-Net:  FE_OFN47_pcpi_rs1_14
-  Setup Slack:   4322.5ps
+Node: FE_PHC1781_n_1616/A
+Net:  FE_PHN1781_n_1616
+  Setup Slack:   7785.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[14]/Q
-Net:  FE_OFN47_pcpi_rs1_14
-  Setup Slack:   4322.5ps
+Node: g87728/Y
+Net:  FE_PHN1781_n_1616
+  Setup Slack:   7785.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      NoCellSelected(2)
+Node: g87728/A0N
+Net:  instr_sll
+  Setup Slack:   9247.3ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      InvalidCell
+Node: instr_sll_reg/Q
+Net:  instr_sll
+  Setup Slack:   6359.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1243,77 +655,35 @@ Net:  FE_OFN47_pcpi_rs1_14
 
 
 // Path 18
-Endpoint:      mem_addr[31]
-Beginpoint:    mem_addr_reg[31]/Q
+Endpoint:      cpuregs_reg[13][16]/SI
+Beginpoint:    cpuregs_reg[13][16]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -13.3ps
+Hold Slack:    -2.2ps
 
-Node: mem_addr[31]
-Net:  mem_addr[31]
-  Setup Slack:   7456.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC903_mem_addr_31/Y
-Net:  mem_addr[31]
-  Setup Slack:   7456.3ps
+Node: cpuregs_reg[13][16]/SI
+Net:  cpuregs[13][16]
+  Setup Slack:   9249.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC903_mem_addr_31/A
-Net:  FE_PHN902_mem_addr_31
-  Setup Slack:   7456.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3000_mem_addr_31/Y
-Net:  FE_PHN902_mem_addr_31
-  Setup Slack:   7456.3ps
+Node: FE_PHC1674_cpuregs_13_16/Y
+Net:  cpuregs[13][16]
+  Setup Slack:   8609.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3000_mem_addr_31/A
-Net:  FE_PHN3000_mem_addr_31
-  Setup Slack:   7456.3ps
+Node: FE_PHC1674_cpuregs_13_16/A
+Net:  FE_PHN1674_cpuregs_13_16
+  Setup Slack:   8609.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1433_mem_addr_31/Y
-Net:  FE_PHN3000_mem_addr_31
-  Setup Slack:   7456.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1433_mem_addr_31/A
-Net:  FE_PHN1433_mem_addr_31
-  Setup Slack:   7456.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2246_mem_addr_31/Y
-Net:  FE_PHN1433_mem_addr_31
-  Setup Slack:   7456.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2246_mem_addr_31/A
-Net:  FE_PHN2246_mem_addr_31
-  Setup Slack:   7456.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[31]/Q
-Net:  FE_PHN2246_mem_addr_31
-  Setup Slack:   7456.3ps
+Node: cpuregs_reg[13][16]/Q
+Net:  FE_PHN1674_cpuregs_13_16
+  Setup Slack:   8609.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1321,77 +691,35 @@ Net:  FE_PHN2246_mem_addr_31
 
 
 // Path 19
-Endpoint:      mem_wdata[2]
-Beginpoint:    mem_wdata_reg[2]/Q
+Endpoint:      cpuregs_reg[15][30]/SI
+Beginpoint:    cpuregs_reg[15][30]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -12.7ps
+Hold Slack:    -1.6ps
 
-Node: mem_wdata[2]
-Net:  mem_wdata[2]
-  Setup Slack:   7545.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC879_mem_wdata_2/Y
-Net:  mem_wdata[2]
-  Setup Slack:   7545.2ps
+Node: cpuregs_reg[15][30]/SI
+Net:  FE_PHN1209_cpuregs_15_30
+  Setup Slack:   9245.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC879_mem_wdata_2/A
-Net:  FE_PHN3075_mem_wdata_2
-  Setup Slack:   7545.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3075_mem_wdata_2/Y
-Net:  FE_PHN3075_mem_wdata_2
-  Setup Slack:   7545.2ps
+Node: FE_PHC1209_cpuregs_15_30/Y
+Net:  FE_PHN1209_cpuregs_15_30
+  Setup Slack:   9245.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3075_mem_wdata_2/A
-Net:  FE_PHN878_mem_wdata_2
-  Setup Slack:   7545.2ps
+Node: FE_PHC1209_cpuregs_15_30/A
+Net:  cpuregs[15][30]
+  Setup Slack:   9245.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3023_mem_wdata_2/Y
-Net:  FE_PHN878_mem_wdata_2
-  Setup Slack:   7545.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3023_mem_wdata_2/A
-Net:  FE_PHN3023_mem_wdata_2
-  Setup Slack:   7545.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1399_mem_wdata_2/Y
-Net:  FE_PHN3023_mem_wdata_2
-  Setup Slack:   7545.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1399_mem_wdata_2/A
-Net:  FE_PHN1399_mem_wdata_2
-  Setup Slack:   7545.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[2]/Q
-Net:  FE_PHN1399_mem_wdata_2
-  Setup Slack:   7545.2ps
+Node: cpuregs_reg[15][30]/Q
+Net:  cpuregs[15][30]
+  Setup Slack:   8454.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1399,63 +727,35 @@ Net:  FE_PHN1399_mem_wdata_2
 
 
 // Path 20
-Endpoint:      pcpi_rs1[2]
-Beginpoint:    reg_op1_reg[2]/Q
+Endpoint:      cpuregs_reg[30][6]/SI
+Beginpoint:    cpuregs_reg[30][6]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -12.7ps
+Hold Slack:    -1.5ps
 
-Node: pcpi_rs1[2]
-Net:  pcpi_rs1[2]
-  Setup Slack:   7511.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC145_pcpi_rs1_2/Y
-Net:  pcpi_rs1[2]
-  Setup Slack:   2309.1ps
+Node: cpuregs_reg[30][6]/SI
+Net:  cpuregs[30][6]
+  Setup Slack:   9234.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC145_pcpi_rs1_2/A
-Net:  FE_PHN1454_FE_OFN59_pcpi_rs1_2
-  Setup Slack:   2309.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1454_FE_OFN59_pcpi_rs1_2/Y
-Net:  FE_PHN1454_FE_OFN59_pcpi_rs1_2
-  Setup Slack:   2309.1ps
+Node: FE_PHC1713_cpuregs_30_6/Y
+Net:  cpuregs[30][6]
+  Setup Slack:   8524.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC1454_FE_OFN59_pcpi_rs1_2/A
-Net:  FE_OFN59_pcpi_rs1_2
-  Setup Slack:   2309.1ps
+Node: FE_PHC1713_cpuregs_30_6/A
+Net:  FE_PHN1713_cpuregs_30_6
+  Setup Slack:   8524.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC743_FE_OFN59_pcpi_rs1_2/Y
-Net:  FE_OFN59_pcpi_rs1_2
-  Setup Slack:   2309.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC743_FE_OFN59_pcpi_rs1_2/A
-Net:  FE_PHN743_FE_OFN59_pcpi_rs1_2
-  Setup Slack:   2309.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op1_reg[2]/Q
-Net:  FE_PHN743_FE_OFN59_pcpi_rs1_2
-  Setup Slack:   2309.1ps
+Node: cpuregs_reg[30][6]/Q
+Net:  FE_PHN1713_cpuregs_30_6
+  Setup Slack:   8524.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1463,49 +763,35 @@ Net:  FE_PHN743_FE_OFN59_pcpi_rs1_2
 
 
 // Path 21
-Endpoint:      pcpi_rs1[12]
-Beginpoint:    reg_op1_reg[12]/Q
+Endpoint:      cpuregs_reg[31][21]/SI
+Beginpoint:    cpuregs_reg[31][21]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -11.5ps
+Hold Slack:    -1.4ps
 
-Node: pcpi_rs1[12]
-Net:  pcpi_rs1[12]
-  Setup Slack:   7493.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC135_pcpi_rs1_12/Y
-Net:  pcpi_rs1[12]
-  Setup Slack:   4325.7ps
+Node: cpuregs_reg[31][21]/SI
+Net:  FE_PHN1184_cpuregs_31_21
+  Setup Slack:   9258.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC135_pcpi_rs1_12/A
-Net:  FE_OFN49_pcpi_rs1_12
-  Setup Slack:   4325.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC765_FE_OFN49_pcpi_rs1_12/Y
-Net:  FE_OFN49_pcpi_rs1_12
-  Setup Slack:   4325.7ps
+Node: FE_PHC1184_cpuregs_31_21/Y
+Net:  FE_PHN1184_cpuregs_31_21
+  Setup Slack:   9258.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC765_FE_OFN49_pcpi_rs1_12/A
-Net:  FE_PHN765_FE_OFN49_pcpi_rs1_12
-  Setup Slack:   4325.7ps
+Node: FE_PHC1184_cpuregs_31_21/A
+Net:  cpuregs[31][21]
+  Setup Slack:   9258.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[12]/Q
-Net:  FE_PHN765_FE_OFN49_pcpi_rs1_12
-  Setup Slack:   4325.7ps
+Node: cpuregs_reg[31][21]/Q
+Net:  cpuregs[31][21]
+  Setup Slack:   8640.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1513,63 +799,35 @@ Net:  FE_PHN765_FE_OFN49_pcpi_rs1_12
 
 
 // Path 22
-Endpoint:      mem_addr[4]
-Beginpoint:    mem_addr_reg[4]/Q
+Endpoint:      cpuregs_reg[23][29]/SI
+Beginpoint:    cpuregs_reg[23][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -11.5ps
+Hold Slack:    -1.4ps
 
-Node: mem_addr[4]
-Net:  mem_addr[4]
-  Setup Slack:   7519.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC797_mem_addr_4/Y
-Net:  mem_addr[4]
-  Setup Slack:   7519.0ps
+Node: cpuregs_reg[23][29]/SI
+Net:  cpuregs[23][29]
+  Setup Slack:   9242.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC797_mem_addr_4/A
-Net:  FE_PHN796_mem_addr_4
-  Setup Slack:   7519.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2992_mem_addr_4/Y
-Net:  FE_PHN796_mem_addr_4
-  Setup Slack:   7519.0ps
+Node: FE_PHC1156_cpuregs_23_29/Y
+Net:  cpuregs[23][29]
+  Setup Slack:   8409.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2992_mem_addr_4/A
-Net:  FE_PHN2992_mem_addr_4
-  Setup Slack:   7519.0ps
+Node: FE_PHC1156_cpuregs_23_29/A
+Net:  FE_PHN1156_cpuregs_23_29
+  Setup Slack:   8409.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1393_mem_addr_4/Y
-Net:  FE_PHN2992_mem_addr_4
-  Setup Slack:   7519.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1393_mem_addr_4/A
-Net:  FE_PHN1393_mem_addr_4
-  Setup Slack:   7519.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[4]/Q
-Net:  FE_PHN1393_mem_addr_4
-  Setup Slack:   7519.0ps
+Node: cpuregs_reg[23][29]/Q
+Net:  FE_PHN1156_cpuregs_23_29
+  Setup Slack:   8409.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1577,63 +835,35 @@ Net:  FE_PHN1393_mem_addr_4
 
 
 // Path 23
-Endpoint:      mem_la_wdata[7]
-Beginpoint:    reg_op2_reg[7]/Q
+Endpoint:      cpuregs_reg[13][18]/SI
+Beginpoint:    cpuregs_reg[13][18]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -10.8ps
+Hold Slack:    -1.3ps
 
-Node: mem_la_wdata[7]
-Net:  mem_la_wdata[7]
-  Setup Slack:   7494.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC99_mem_la_wdata_7/Y
-Net:  mem_la_wdata[7]
-  Setup Slack:   3088.8ps
+Node: cpuregs_reg[13][18]/SI
+Net:  cpuregs[13][18]
+  Setup Slack:   9243.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC99_mem_la_wdata_7/A
-Net:  FE_PHN1375_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1375_FE_OFN13_mem_la_wdata_7/Y
-Net:  FE_PHN1375_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
+Node: FE_PHC1719_cpuregs_13_18/Y
+Net:  cpuregs[13][18]
+  Setup Slack:   8493.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC1375_FE_OFN13_mem_la_wdata_7/A
-Net:  FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
+Node: FE_PHC1719_cpuregs_13_18/A
+Net:  FE_PHN1719_cpuregs_13_18
+  Setup Slack:   8493.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC719_FE_OFN13_mem_la_wdata_7/Y
-Net:  FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC719_FE_OFN13_mem_la_wdata_7/A
-Net:  FE_PHN719_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[7]/Q
-Net:  FE_PHN719_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
+Node: cpuregs_reg[13][18]/Q
+Net:  FE_PHN1719_cpuregs_13_18
+  Setup Slack:   8493.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1641,77 +871,35 @@ Net:  FE_PHN719_FE_OFN13_mem_la_wdata_7
 
 
 // Path 24
-Endpoint:      mem_wstrb[3]
-Beginpoint:    mem_wstrb_reg[3]/Q
+Endpoint:      cpuregs_reg[14][17]/SI
+Beginpoint:    cpuregs_reg[14][17]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -10.5ps
+Hold Slack:    -1.3ps
 
-Node: mem_wstrb[3]
-Net:  mem_wstrb[3]
-  Setup Slack:   7609.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3046_mem_wstrb_3/Y
-Net:  mem_wstrb[3]
-  Setup Slack:   7609.5ps
+Node: cpuregs_reg[14][17]/SI
+Net:  cpuregs[14][17]
+  Setup Slack:   9241.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3046_mem_wstrb_3/A
-Net:  FE_PHN3045_mem_wstrb_3
-  Setup Slack:   7609.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3054_mem_wstrb_3/Y
-Net:  FE_PHN3045_mem_wstrb_3
-  Setup Slack:   7609.5ps
+Node: FE_PHC1501_cpuregs_14_17/Y
+Net:  cpuregs[14][17]
+  Setup Slack:   8540.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3054_mem_wstrb_3/A
-Net:  FE_PHN3054_mem_wstrb_3
-  Setup Slack:   7609.5ps
+Node: FE_PHC1501_cpuregs_14_17/A
+Net:  FE_PHN1501_cpuregs_14_17
+  Setup Slack:   8540.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC3064_mem_wstrb_3/Y
-Net:  FE_PHN3054_mem_wstrb_3
-  Setup Slack:   7609.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3064_mem_wstrb_3/A
-Net:  FE_PHN3066_mem_wstrb_3
-  Setup Slack:   7609.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3066_mem_wstrb_3/Y
-Net:  FE_PHN3066_mem_wstrb_3
-  Setup Slack:   7609.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3066_mem_wstrb_3/A
-Net:  FE_PHN3064_mem_wstrb_3
-  Setup Slack:   7609.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wstrb_reg[3]/Q
-Net:  FE_PHN3064_mem_wstrb_3
-  Setup Slack:   7609.5ps
+Node: cpuregs_reg[14][17]/Q
+Net:  FE_PHN1501_cpuregs_14_17
+  Setup Slack:   8540.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1719,63 +907,35 @@ Net:  FE_PHN3064_mem_wstrb_3
 
 
 // Path 25
-Endpoint:      pcpi_rs1[9]
-Beginpoint:    reg_op1_reg[9]/Q
+Endpoint:      cpuregs_reg[8][3]/SI
+Beginpoint:    cpuregs_reg[8][3]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -10.4ps
+Hold Slack:    -1.2ps
 
-Node: pcpi_rs1[9]
-Net:  pcpi_rs1[9]
-  Setup Slack:   7423.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC138_pcpi_rs1_9/Y
-Net:  pcpi_rs1[9]
-  Setup Slack:   3689.4ps
+Node: cpuregs_reg[8][3]/SI
+Net:  FE_PHN1653_cpuregs_8_3
+  Setup Slack:   9214.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC138_pcpi_rs1_9/A
-Net:  FE_PHN1382_FE_OFN52_pcpi_rs1_9
-  Setup Slack:   3689.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1382_FE_OFN52_pcpi_rs1_9/Y
-Net:  FE_PHN1382_FE_OFN52_pcpi_rs1_9
-  Setup Slack:   3689.4ps
+Node: FE_PHC2574_cpuregs_8_3/Y
+Net:  FE_PHN1653_cpuregs_8_3
+  Setup Slack:   8224.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC1382_FE_OFN52_pcpi_rs1_9/A
-Net:  FE_OFN52_pcpi_rs1_9
-  Setup Slack:   3689.4ps
+Node: FE_PHC2574_cpuregs_8_3/A
+Net:  FE_PHN2574_cpuregs_8_3
+  Setup Slack:   8224.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1480_FE_OFN52_pcpi_rs1_9/Y
-Net:  FE_OFN52_pcpi_rs1_9
-  Setup Slack:   3689.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1480_FE_OFN52_pcpi_rs1_9/A
-Net:  FE_PHN1480_FE_OFN52_pcpi_rs1_9
-  Setup Slack:   3689.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op1_reg[9]/Q
-Net:  FE_PHN1480_FE_OFN52_pcpi_rs1_9
-  Setup Slack:   3689.4ps
+Node: cpuregs_reg[8][3]/Q
+Net:  FE_PHN2574_cpuregs_8_3
+  Setup Slack:   8224.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1783,49 +943,35 @@ Net:  FE_PHN1480_FE_OFN52_pcpi_rs1_9
 
 
 // Path 26
-Endpoint:      pcpi_rs1[23]
-Beginpoint:    reg_op1_reg[23]/Q
+Endpoint:      cpuregs_reg[11][25]/D
+Beginpoint:    cpuregs_reg[11][25]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -10.4ps
+Hold Slack:    -1.1ps
 
-Node: pcpi_rs1[23]
-Net:  pcpi_rs1[23]
-  Setup Slack:   7463.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC124_pcpi_rs1_23/Y
-Net:  pcpi_rs1[23]
-  Setup Slack:   5950.8ps
+Node: cpuregs_reg[11][25]/D
+Net:  cpuregs[11][25]
+  Setup Slack:   9238.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC124_pcpi_rs1_23/A
-Net:  FE_OFN38_pcpi_rs1_23
-  Setup Slack:   5950.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC766_FE_OFN38_pcpi_rs1_23/Y
-Net:  FE_OFN38_pcpi_rs1_23
-  Setup Slack:   5950.8ps
+Node: FE_PHC1431_cpuregs_11_25/Y
+Net:  cpuregs[11][25]
+  Setup Slack:   8358.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC766_FE_OFN38_pcpi_rs1_23/A
-Net:  FE_PHN766_FE_OFN38_pcpi_rs1_23
-  Setup Slack:   5950.8ps
+Node: FE_PHC1431_cpuregs_11_25/A
+Net:  FE_PHN1431_cpuregs_11_25
+  Setup Slack:   8358.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[23]/Q
-Net:  FE_PHN766_FE_OFN38_pcpi_rs1_23
-  Setup Slack:   5950.8ps
+Node: cpuregs_reg[11][25]/Q
+Net:  FE_PHN1431_cpuregs_11_25
+  Setup Slack:   8358.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1833,63 +979,35 @@ Net:  FE_PHN766_FE_OFN38_pcpi_rs1_23
 
 
 // Path 27
-Endpoint:      pcpi_rs1[21]
-Beginpoint:    reg_op1_reg[21]/Q
+Endpoint:      cpuregs_reg[4][2]/SI
+Beginpoint:    cpuregs_reg[4][2]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -10.0ps
+Hold Slack:    -1.1ps
 
-Node: pcpi_rs1[21]
-Net:  pcpi_rs1[21]
-  Setup Slack:   7365.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC630_pcpi_rs1_21/Y
-Net:  pcpi_rs1[21]
-  Setup Slack:   5665.5ps
+Node: cpuregs_reg[4][2]/SI
+Net:  cpuregs[4][2]
+  Setup Slack:   9242.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC630_pcpi_rs1_21/A
-Net:  FE_PHN2185_FE_OFN40_pcpi_rs1_21
-  Setup Slack:   5665.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2185_FE_OFN40_pcpi_rs1_21/Y
-Net:  FE_PHN2185_FE_OFN40_pcpi_rs1_21
-  Setup Slack:   5665.5ps
+Node: FE_PHC1660_cpuregs_4_2/Y
+Net:  cpuregs[4][2]
+  Setup Slack:   8420.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2185_FE_OFN40_pcpi_rs1_21/A
-Net:  FE_OFN40_pcpi_rs1_21
-  Setup Slack:   5665.5ps
+Node: FE_PHC1660_cpuregs_4_2/A
+Net:  FE_PHN1660_cpuregs_4_2
+  Setup Slack:   8420.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1395_FE_OFN40_pcpi_rs1_21/Y
-Net:  FE_OFN40_pcpi_rs1_21
-  Setup Slack:   5665.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1395_FE_OFN40_pcpi_rs1_21/A
-Net:  FE_PHN1395_FE_OFN40_pcpi_rs1_21
-  Setup Slack:   5665.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op1_reg[21]/Q
-Net:  FE_PHN1395_FE_OFN40_pcpi_rs1_21
-  Setup Slack:   5665.5ps
+Node: cpuregs_reg[4][2]/Q
+Net:  FE_PHN1660_cpuregs_4_2
+  Setup Slack:   8420.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1897,63 +1015,35 @@ Net:  FE_PHN1395_FE_OFN40_pcpi_rs1_21
 
 
 // Path 28
-Endpoint:      mem_addr[11]
-Beginpoint:    mem_addr_reg[11]/Q
+Endpoint:      cpuregs_reg[26][21]/SI
+Beginpoint:    cpuregs_reg[26][21]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -9.5ps
+Hold Slack:    -1.1ps
 
-Node: mem_addr[11]
-Net:  mem_addr[11]
-  Setup Slack:   7485.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2871_mem_addr_11/Y
-Net:  mem_addr[11]
-  Setup Slack:   7485.5ps
+Node: cpuregs_reg[26][21]/SI
+Net:  FE_PHN1466_cpuregs_26_21
+  Setup Slack:   9220.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2871_mem_addr_11/A
-Net:  FE_PHN2870_mem_addr_11
-  Setup Slack:   7485.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2944_mem_addr_11/Y
-Net:  FE_PHN2870_mem_addr_11
-  Setup Slack:   7485.5ps
+Node: FE_PHC2508_cpuregs_26_21/Y
+Net:  FE_PHN1466_cpuregs_26_21
+  Setup Slack:   8439.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2944_mem_addr_11/A
-Net:  FE_PHN2944_mem_addr_11
-  Setup Slack:   7485.5ps
+Node: FE_PHC2508_cpuregs_26_21/A
+Net:  FE_PHN2508_cpuregs_26_21
+  Setup Slack:   8439.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC2757_mem_addr_11/Y
-Net:  FE_PHN2944_mem_addr_11
-  Setup Slack:   7485.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2757_mem_addr_11/A
-Net:  FE_PHN2757_mem_addr_11
-  Setup Slack:   7485.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[11]/Q
-Net:  FE_PHN2757_mem_addr_11
-  Setup Slack:   7485.5ps
+Node: cpuregs_reg[26][21]/Q
+Net:  FE_PHN2508_cpuregs_26_21
+  Setup Slack:   8439.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -1961,63 +1051,35 @@ Net:  FE_PHN2757_mem_addr_11
 
 
 // Path 29
-Endpoint:      mem_addr[7]
-Beginpoint:    mem_addr_reg[7]/Q
+Endpoint:      cpuregs_reg[5][13]/SI
+Beginpoint:    cpuregs_reg[5][13]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -9.2ps
+Hold Slack:    -0.9ps
 
-Node: mem_addr[7]
-Net:  mem_addr[7]
-  Setup Slack:   7468.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2869_mem_addr_7/Y
-Net:  mem_addr[7]
-  Setup Slack:   7468.7ps
+Node: cpuregs_reg[5][13]/SI
+Net:  cpuregs[5][13]
+  Setup Slack:   9239.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2869_mem_addr_7/A
-Net:  FE_PHN2868_mem_addr_7
-  Setup Slack:   7468.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2945_mem_addr_7/Y
-Net:  FE_PHN2868_mem_addr_7
-  Setup Slack:   7468.7ps
+Node: FE_PHC1708_cpuregs_5_13/Y
+Net:  cpuregs[5][13]
+  Setup Slack:   8469.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2945_mem_addr_7/A
-Net:  FE_PHN2945_mem_addr_7
-  Setup Slack:   7468.7ps
+Node: FE_PHC1708_cpuregs_5_13/A
+Net:  FE_PHN1708_cpuregs_5_13
+  Setup Slack:   8469.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC2739_mem_addr_7/Y
-Net:  FE_PHN2945_mem_addr_7
-  Setup Slack:   7468.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2739_mem_addr_7/A
-Net:  FE_PHN2739_mem_addr_7
-  Setup Slack:   7468.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[7]/Q
-Net:  FE_PHN2739_mem_addr_7
-  Setup Slack:   7468.7ps
+Node: cpuregs_reg[5][13]/Q
+Net:  FE_PHN1708_cpuregs_5_13
+  Setup Slack:   8469.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2025,49 +1087,35 @@ Net:  FE_PHN2739_mem_addr_7
 
 
 // Path 30
-Endpoint:      pcpi_rs1[7]
-Beginpoint:    reg_op1_reg[7]/Q
+Endpoint:      cpuregs_reg[19][29]/D
+Beginpoint:    cpuregs_reg[19][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -9.1ps
+Hold Slack:    -0.9ps
 
-Node: pcpi_rs1[7]
-Net:  pcpi_rs1[7]
-  Setup Slack:   7492.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC140_pcpi_rs1_7/Y
-Net:  pcpi_rs1[7]
-  Setup Slack:   3327.6ps
+Node: cpuregs_reg[19][29]/D
+Net:  cpuregs[19][29]
+  Setup Slack:   9247.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC140_pcpi_rs1_7/A
-Net:  FE_PHN760_FE_OFN54_pcpi_rs1_7
-  Setup Slack:   3327.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC760_FE_OFN54_pcpi_rs1_7/Y
-Net:  FE_PHN760_FE_OFN54_pcpi_rs1_7
-  Setup Slack:   3327.6ps
+Node: FE_PHC1189_cpuregs_19_29/Y
+Net:  cpuregs[19][29]
+  Setup Slack:   8377.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC760_FE_OFN54_pcpi_rs1_7/A
-Net:  FE_OFN54_pcpi_rs1_7
-  Setup Slack:   3327.6ps
+Node: FE_PHC1189_cpuregs_19_29/A
+Net:  FE_PHN1189_cpuregs_19_29
+  Setup Slack:   8377.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[7]/Q
-Net:  FE_OFN54_pcpi_rs1_7
-  Setup Slack:   3327.6ps
+Node: cpuregs_reg[19][29]/Q
+Net:  FE_PHN1189_cpuregs_19_29
+  Setup Slack:   8377.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2075,63 +1123,35 @@ Net:  FE_OFN54_pcpi_rs1_7
 
 
 // Path 31
-Endpoint:      pcpi_rs2[7]
-Beginpoint:    reg_op2_reg[7]/Q
+Endpoint:      cpuregs_reg[24][29]/SI
+Beginpoint:    cpuregs_reg[24][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -8.7ps
+Hold Slack:    -0.9ps
 
-Node: pcpi_rs2[7]
-Net:  mem_la_wdata[7]
-  Setup Slack:   7492.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC99_mem_la_wdata_7/Y
-Net:  mem_la_wdata[7]
-  Setup Slack:   3088.8ps
+Node: cpuregs_reg[24][29]/SI
+Net:  cpuregs[24][29]
+  Setup Slack:   9246.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC99_mem_la_wdata_7/A
-Net:  FE_PHN1375_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1375_FE_OFN13_mem_la_wdata_7/Y
-Net:  FE_PHN1375_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
+Node: FE_PHC1145_cpuregs_24_29/Y
+Net:  cpuregs[24][29]
+  Setup Slack:   8142.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC1375_FE_OFN13_mem_la_wdata_7/A
-Net:  FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
+Node: FE_PHC1145_cpuregs_24_29/A
+Net:  FE_PHN1145_cpuregs_24_29
+  Setup Slack:   8142.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC719_FE_OFN13_mem_la_wdata_7/Y
-Net:  FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC719_FE_OFN13_mem_la_wdata_7/A
-Net:  FE_PHN719_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[7]/Q
-Net:  FE_PHN719_FE_OFN13_mem_la_wdata_7
-  Setup Slack:   3088.8ps
+Node: cpuregs_reg[24][29]/Q
+Net:  FE_PHN1145_cpuregs_24_29
+  Setup Slack:   8142.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2139,49 +1159,35 @@ Net:  FE_PHN719_FE_OFN13_mem_la_wdata_7
 
 
 // Path 32
-Endpoint:      mem_la_wdata[2]
-Beginpoint:    reg_op2_reg[2]/Q
+Endpoint:      cpuregs_reg[10][29]/D
+Beginpoint:    cpuregs_reg[10][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -8.4ps
+Hold Slack:    -0.8ps
 
-Node: mem_la_wdata[2]
-Net:  mem_la_wdata[2]
-  Setup Slack:   7453.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC110_mem_la_wdata_2/Y
-Net:  mem_la_wdata[2]
-  Setup Slack:   2080.1ps
+Node: cpuregs_reg[10][29]/D
+Net:  cpuregs[10][29]
+  Setup Slack:   9233.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC110_mem_la_wdata_2/A
-Net:  FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC724_FE_OFN24_mem_la_wdata_2/Y
-Net:  FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
+Node: FE_PHC1539_cpuregs_10_29/Y
+Net:  cpuregs[10][29]
+  Setup Slack:   8404.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC724_FE_OFN24_mem_la_wdata_2/A
-Net:  FE_PHN724_FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
+Node: FE_PHC1539_cpuregs_10_29/A
+Net:  FE_PHN1539_cpuregs_10_29
+  Setup Slack:   8404.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op2_reg[2]/Q
-Net:  FE_PHN724_FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
+Node: cpuregs_reg[10][29]/Q
+Net:  FE_PHN1539_cpuregs_10_29
+  Setup Slack:   8404.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2189,77 +1195,35 @@ Net:  FE_PHN724_FE_OFN24_mem_la_wdata_2
 
 
 // Path 33
-Endpoint:      pcpi_rs2[11]
-Beginpoint:    reg_op2_reg[11]/Q
+Endpoint:      cpuregs_reg[27][3]/SI
+Beginpoint:    cpuregs_reg[27][3]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -8.3ps
+Hold Slack:    -0.8ps
 
-Node: pcpi_rs2[11]
-Net:  pcpi_rs2[11]
-  Setup Slack:   7512.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC166_pcpi_rs2_11/Y
-Net:  pcpi_rs2[11]
-  Setup Slack:   3911.8ps
+Node: cpuregs_reg[27][3]/SI
+Net:  FE_PHN1211_cpuregs_27_3
+  Setup Slack:   9225.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC166_pcpi_rs2_11/A
-Net:  FE_PHN729_FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC729_FE_OFN80_pcpi_rs2_11/Y
-Net:  FE_PHN729_FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
+Node: FE_PHC2480_cpuregs_27_3/Y
+Net:  FE_PHN1211_cpuregs_27_3
+  Setup Slack:   8445.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC729_FE_OFN80_pcpi_rs2_11/A
-Net:  FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
+Node: FE_PHC2480_cpuregs_27_3/A
+Net:  FE_PHN2480_cpuregs_27_3
+  Setup Slack:   8445.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1407_FE_OFN80_pcpi_rs2_11/Y
-Net:  FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1407_FE_OFN80_pcpi_rs2_11/A
-Net:  FE_PHN1407_FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1472_FE_OFN80_pcpi_rs2_11/Y
-Net:  FE_PHN1407_FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1472_FE_OFN80_pcpi_rs2_11/A
-Net:  FE_PHN1472_FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[11]/Q
-Net:  FE_PHN1472_FE_OFN80_pcpi_rs2_11
-  Setup Slack:   3911.8ps
+Node: cpuregs_reg[27][3]/Q
+Net:  FE_PHN2480_cpuregs_27_3
+  Setup Slack:   8445.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2267,49 +1231,35 @@ Net:  FE_PHN1472_FE_OFN80_pcpi_rs2_11
 
 
 // Path 34
-Endpoint:      pcpi_rs1[8]
-Beginpoint:    reg_op1_reg[8]/Q
+Endpoint:      cpuregs_reg[23][17]/SI
+Beginpoint:    cpuregs_reg[23][17]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -8.2ps
+Hold Slack:    -0.6ps
 
-Node: pcpi_rs1[8]
-Net:  pcpi_rs1[8]
-  Setup Slack:   7449.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC139_pcpi_rs1_8/Y
-Net:  pcpi_rs1[8]
-  Setup Slack:   3489.7ps
+Node: cpuregs_reg[23][17]/SI
+Net:  cpuregs[23][17]
+  Setup Slack:   9245.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC139_pcpi_rs1_8/A
-Net:  FE_OFN53_pcpi_rs1_8
-  Setup Slack:   3489.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC772_FE_OFN53_pcpi_rs1_8/Y
-Net:  FE_OFN53_pcpi_rs1_8
-  Setup Slack:   3489.7ps
+Node: FE_PHC1703_cpuregs_23_17/Y
+Net:  cpuregs[23][17]
+  Setup Slack:   8500.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC772_FE_OFN53_pcpi_rs1_8/A
-Net:  FE_PHN772_FE_OFN53_pcpi_rs1_8
-  Setup Slack:   3489.7ps
+Node: FE_PHC1703_cpuregs_23_17/A
+Net:  FE_PHN1703_cpuregs_23_17
+  Setup Slack:   8500.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: reg_op1_reg[8]/Q
-Net:  FE_PHN772_FE_OFN53_pcpi_rs1_8
-  Setup Slack:   3489.7ps
+Node: cpuregs_reg[23][17]/Q
+Net:  FE_PHN1703_cpuregs_23_17
+  Setup Slack:   8500.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2317,77 +1267,35 @@ Net:  FE_PHN772_FE_OFN53_pcpi_rs1_8
 
 
 // Path 35
-Endpoint:      mem_la_wdata[3]
-Beginpoint:    reg_op2_reg[3]/Q
+Endpoint:      cpuregs_reg[12][19]/SI
+Beginpoint:    cpuregs_reg[12][19]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -7.9ps
+Hold Slack:    -0.4ps
 
-Node: mem_la_wdata[3]
-Net:  mem_la_wdata[3]
-  Setup Slack:   7507.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC109_mem_la_wdata_3/Y
-Net:  mem_la_wdata[3]
-  Setup Slack:   2343.9ps
+Node: cpuregs_reg[12][19]/SI
+Net:  cpuregs[12][19]
+  Setup Slack:   9231.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_OFC109_mem_la_wdata_3/A
-Net:  FE_PHN1374_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1374_FE_OFN23_mem_la_wdata_3/Y
-Net:  FE_PHN1374_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
+Node: FE_PHC1707_cpuregs_12_19/Y
+Net:  cpuregs[12][19]
+  Setup Slack:   8509.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC1374_FE_OFN23_mem_la_wdata_3/A
-Net:  FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
+Node: FE_PHC1707_cpuregs_12_19/A
+Net:  FE_PHN1707_cpuregs_12_19
+  Setup Slack:   8509.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1476_FE_OFN23_mem_la_wdata_3/Y
-Net:  FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1476_FE_OFN23_mem_la_wdata_3/A
-Net:  FE_PHN1476_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC725_FE_OFN23_mem_la_wdata_3/Y
-Net:  FE_PHN1476_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC725_FE_OFN23_mem_la_wdata_3/A
-Net:  FE_PHN725_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[3]/Q
-Net:  FE_PHN725_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
+Node: cpuregs_reg[12][19]/Q
+Net:  FE_PHN1707_cpuregs_12_19
+  Setup Slack:   8509.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2395,63 +1303,35 @@ Net:  FE_PHN725_FE_OFN23_mem_la_wdata_3
 
 
 // Path 36
-Endpoint:      mem_addr[9]
-Beginpoint:    mem_addr_reg[9]/Q
+Endpoint:      cpuregs_reg[15][22]/SI
+Beginpoint:    cpuregs_reg[15][22]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -7.8ps
+Hold Slack:    -0.3ps
 
-Node: mem_addr[9]
-Net:  mem_addr[9]
-  Setup Slack:   7476.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC866_mem_addr_9/Y
-Net:  mem_addr[9]
-  Setup Slack:   7476.7ps
+Node: cpuregs_reg[15][22]/SI
+Net:  FE_PHN1198_cpuregs_15_22
+  Setup Slack:   9245.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC866_mem_addr_9/A
-Net:  FE_PHN865_mem_addr_9
-  Setup Slack:   7476.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3020_mem_addr_9/Y
-Net:  FE_PHN865_mem_addr_9
-  Setup Slack:   7476.7ps
+Node: FE_PHC1198_cpuregs_15_22/Y
+Net:  FE_PHN1198_cpuregs_15_22
+  Setup Slack:   9245.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3020_mem_addr_9/A
-Net:  FE_PHN3020_mem_addr_9
-  Setup Slack:   7476.7ps
+Node: FE_PHC1198_cpuregs_15_22/A
+Net:  cpuregs[15][22]
+  Setup Slack:   9245.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1400_mem_addr_9/Y
-Net:  FE_PHN3020_mem_addr_9
-  Setup Slack:   7476.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1400_mem_addr_9/A
-Net:  FE_PHN1400_mem_addr_9
-  Setup Slack:   7476.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[9]/Q
-Net:  FE_PHN1400_mem_addr_9
-  Setup Slack:   7476.7ps
+Node: cpuregs_reg[15][22]/Q
+Net:  cpuregs[15][22]
+  Setup Slack:   8437.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2459,63 +1339,35 @@ Net:  FE_PHN1400_mem_addr_9
 
 
 // Path 37
-Endpoint:      mem_addr[5]
-Beginpoint:    mem_addr_reg[5]/Q
+Endpoint:      cpuregs_reg[10][27]/D
+Beginpoint:    cpuregs_reg[10][27]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -7.7ps
+Hold Slack:    -0.3ps
 
-Node: mem_addr[5]
-Net:  mem_addr[5]
-  Setup Slack:   7451.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC837_mem_addr_5/Y
-Net:  mem_addr[5]
-  Setup Slack:   7451.3ps
+Node: cpuregs_reg[10][27]/D
+Net:  cpuregs[10][27]
+  Setup Slack:   9236.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC837_mem_addr_5/A
-Net:  FE_PHN3025_mem_addr_5
-  Setup Slack:   7451.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3025_mem_addr_5/Y
-Net:  FE_PHN3025_mem_addr_5
-  Setup Slack:   7451.3ps
+Node: FE_PHC1691_cpuregs_10_27/Y
+Net:  cpuregs[10][27]
+  Setup Slack:   8220.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3025_mem_addr_5/A
-Net:  FE_PHN836_mem_addr_5
-  Setup Slack:   7451.3ps
+Node: FE_PHC1691_cpuregs_10_27/A
+Net:  FE_PHN1691_cpuregs_10_27
+  Setup Slack:   8220.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1415_mem_addr_5/Y
-Net:  FE_PHN836_mem_addr_5
-  Setup Slack:   7451.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1415_mem_addr_5/A
-Net:  FE_PHN1415_mem_addr_5
-  Setup Slack:   7451.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[5]/Q
-Net:  FE_PHN1415_mem_addr_5
-  Setup Slack:   7451.3ps
+Node: cpuregs_reg[10][27]/Q
+Net:  FE_PHN1691_cpuregs_10_27
+  Setup Slack:   8220.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2523,63 +1375,35 @@ Net:  FE_PHN1415_mem_addr_5
 
 
 // Path 38
-Endpoint:      mem_wdata[1]
-Beginpoint:    mem_wdata_reg[1]/Q
+Endpoint:      cpuregs_reg[27][27]/SI
+Beginpoint:    cpuregs_reg[27][27]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -7.4ps
+Hold Slack:    -0.3ps
 
-Node: mem_wdata[1]
-Net:  mem_wdata[1]
-  Setup Slack:   7431.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2947_mem_wdata_1/Y
-Net:  mem_wdata[1]
-  Setup Slack:   7431.7ps
+Node: cpuregs_reg[27][27]/SI
+Net:  cpuregs[27][27]
+  Setup Slack:   9233.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC2947_mem_wdata_1/A
-Net:  FE_PHN3097_mem_wdata_1
-  Setup Slack:   7431.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3097_mem_wdata_1/Y
-Net:  FE_PHN3097_mem_wdata_1
-  Setup Slack:   7431.7ps
+Node: FE_PHC1642_cpuregs_27_27/Y
+Net:  cpuregs[27][27]
+  Setup Slack:   8420.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3097_mem_wdata_1/A
-Net:  FE_PHN2946_mem_wdata_1
-  Setup Slack:   7431.7ps
+Node: FE_PHC1642_cpuregs_27_27/A
+Net:  FE_PHN1642_cpuregs_27_27
+  Setup Slack:   8420.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC2867_mem_wdata_1/Y
-Net:  FE_PHN2946_mem_wdata_1
-  Setup Slack:   7431.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2867_mem_wdata_1/A
-Net:  FE_PHN2867_mem_wdata_1
-  Setup Slack:   7431.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[1]/Q
-Net:  FE_PHN2867_mem_wdata_1
-  Setup Slack:   7431.7ps
+Node: cpuregs_reg[27][27]/Q
+Net:  FE_PHN1642_cpuregs_27_27
+  Setup Slack:   8420.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2587,77 +1411,35 @@ Net:  FE_PHN2867_mem_wdata_1
 
 
 // Path 39
-Endpoint:      mem_wdata[29]
-Beginpoint:    mem_wdata_reg[29]/Q
+Endpoint:      count_instr_reg[13]/D
+Beginpoint:    count_instr_reg[13]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -6.9ps
+Hold Slack:    -0.1ps
 
-Node: mem_wdata[29]
-Net:  mem_wdata[29]
-  Setup Slack:   7499.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC842_mem_wdata_29/Y
-Net:  mem_wdata[29]
-  Setup Slack:   7499.9ps
+Node: count_instr_reg[13]/D
+Net:  n_1215
+  Setup Slack:   7812.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC842_mem_wdata_29/A
-Net:  FE_PHN841_mem_wdata_29
-  Setup Slack:   7499.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3034_mem_wdata_29/Y
-Net:  FE_PHN841_mem_wdata_29
-  Setup Slack:   7499.9ps
+Node: g89500/Y
+Net:  n_1215
+  Setup Slack:   7812.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
-Node: FE_PHC3034_mem_wdata_29/A
-Net:  FE_PHN3034_mem_wdata_29
-  Setup Slack:   7499.9ps
+Node: g89500/A0
+Net:  count_instr[13]
+  Setup Slack:   9254.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_PHC1439_mem_wdata_29/Y
-Net:  FE_PHN3034_mem_wdata_29
-  Setup Slack:   7499.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1439_mem_wdata_29/A
-Net:  FE_PHN1439_mem_wdata_29
-  Setup Slack:   7499.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2566_mem_wdata_29/Y
-Net:  FE_PHN1439_mem_wdata_29
-  Setup Slack:   7499.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2566_mem_wdata_29/A
-Net:  FE_PHN2566_mem_wdata_29
-  Setup Slack:   7499.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[29]/Q
-Net:  FE_PHN2566_mem_wdata_29
-  Setup Slack:   7499.9ps
+Node: count_instr_reg[13]/Q
+Net:  count_instr[13]
+  Setup Slack:   7470.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -2665,633 +1447,35 @@ Net:  FE_PHN2566_mem_wdata_29
 
 
 // Path 40
-Endpoint:      pcpi_rs2[2]
-Beginpoint:    reg_op2_reg[2]/Q
+Endpoint:      is_lb_lh_lw_lbu_lhu_reg/D
+Beginpoint:    is_lb_lh_lw_lbu_lhu_reg/Q
 Analysis View: fast_hold_view
-Hold Slack:    -6.7ps
+Hold Slack:    -0.1ps
 
-Node: pcpi_rs2[2]
-Net:  mem_la_wdata[2]
-  Setup Slack:   7451.7ps
+Node: is_lb_lh_lw_lbu_lhu_reg/D
+Net:  is_lb_lh_lw_lbu_lhu
+  Setup Slack:   9241.1ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      NoCellSelected(2)
+Node: FE_PHC1765_is_lb_lh_lw_lbu_lhu/Y
+Net:  is_lb_lh_lw_lbu_lhu
+  Setup Slack:   7095.4ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      NoCellSelected(2)
+Node: FE_PHC1765_is_lb_lh_lw_lbu_lhu/A
+Net:  FE_PHN1765_is_lb_lh_lw_lbu_lhu
+  Setup Slack:   7095.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
-Node: FE_OFC110_mem_la_wdata_2/Y
-Net:  mem_la_wdata[2]
-  Setup Slack:   2080.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC110_mem_la_wdata_2/A
-Net:  FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC724_FE_OFN24_mem_la_wdata_2/Y
-Net:  FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC724_FE_OFN24_mem_la_wdata_2/A
-Net:  FE_PHN724_FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[2]/Q
-Net:  FE_PHN724_FE_OFN24_mem_la_wdata_2
-  Setup Slack:   2080.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 41
-Endpoint:      mem_wdata[5]
-Beginpoint:    mem_wdata_reg[5]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.4ps
-
-Node: mem_wdata[5]
-Net:  mem_wdata[5]
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2866_mem_wdata_5/Y
-Net:  mem_wdata[5]
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2866_mem_wdata_5/A
-Net:  FE_PHN3079_mem_wdata_5
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3079_mem_wdata_5/Y
-Net:  FE_PHN3079_mem_wdata_5
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3079_mem_wdata_5/A
-Net:  FE_PHN2865_mem_wdata_5
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2745_mem_wdata_5/Y
-Net:  FE_PHN2865_mem_wdata_5
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2745_mem_wdata_5/A
-Net:  FE_PHN2745_mem_wdata_5
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_wdata_reg[5]/Q
-Net:  FE_PHN2745_mem_wdata_5
-  Setup Slack:   7399.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 42
-Endpoint:      pcpi_rs2[8]
-Beginpoint:    reg_op2_reg[8]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.3ps
-
-Node: pcpi_rs2[8]
-Net:  pcpi_rs2[8]
-  Setup Slack:   7482.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC169_pcpi_rs2_8/Y
-Net:  pcpi_rs2[8]
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC169_pcpi_rs2_8/A
-Net:  FE_PHN734_FE_OFN83_pcpi_rs2_8
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC734_FE_OFN83_pcpi_rs2_8/Y
-Net:  FE_PHN734_FE_OFN83_pcpi_rs2_8
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC734_FE_OFN83_pcpi_rs2_8/A
-Net:  FE_OFN83_pcpi_rs2_8
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1377_FE_OFN83_pcpi_rs2_8/Y
-Net:  FE_OFN83_pcpi_rs2_8
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1377_FE_OFN83_pcpi_rs2_8/A
-Net:  FE_PHN1377_FE_OFN83_pcpi_rs2_8
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[8]/Q
-Net:  FE_PHN1377_FE_OFN83_pcpi_rs2_8
-  Setup Slack:   3296.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 43
-Endpoint:      cpuregs_reg[21][21]/SI
-Beginpoint:    cpuregs_reg[21][21]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.2ps
-
-Node: cpuregs_reg[21][21]/SI
-Net:  cpuregs[21][21]
-  Setup Slack:   9255.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1259_cpuregs_21_21/Y
-Net:  cpuregs[21][21]
-  Setup Slack:   8515.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1259_cpuregs_21_21/A
-Net:  FE_PHN1259_cpuregs_21_21
-  Setup Slack:   8515.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: cpuregs_reg[21][21]/Q
-Net:  FE_PHN1259_cpuregs_21_21
-  Setup Slack:   8515.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 44
-Endpoint:      mem_la_wdata[0]
-Beginpoint:    reg_op2_reg[0]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.2ps
-
-Node: mem_la_wdata[0]
-Net:  mem_la_wdata[0]
-  Setup Slack:   7380.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC113_mem_la_wdata_0/Y
-Net:  mem_la_wdata[0]
-  Setup Slack:   6585.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC113_mem_la_wdata_0/A
-Net:  FE_OFN27_mem_la_wdata_0
-  Setup Slack:   6585.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC112_mem_la_wdata_0/Y
-Net:  FE_OFN27_mem_la_wdata_0
-  Setup Slack:   6585.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC112_mem_la_wdata_0/A
-Net:  FE_OFN26_mem_la_wdata_0
-  Setup Slack:   6585.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC727_FE_OFN26_mem_la_wdata_0/Y
-Net:  FE_OFN26_mem_la_wdata_0
-  Setup Slack:   1955.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC727_FE_OFN26_mem_la_wdata_0/A
-Net:  FE_PHN727_FE_OFN26_mem_la_wdata_0
-  Setup Slack:   1955.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[0]/Q
-Net:  FE_PHN727_FE_OFN26_mem_la_wdata_0
-  Setup Slack:   1955.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 45
-Endpoint:      pcpi_rs1[10]
-Beginpoint:    reg_op1_reg[10]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.2ps
-
-Node: pcpi_rs1[10]
-Net:  pcpi_rs1[10]
-  Setup Slack:   7460.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC137_pcpi_rs1_10/Y
-Net:  pcpi_rs1[10]
-  Setup Slack:   3901.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC137_pcpi_rs1_10/A
-Net:  FE_PHN762_FE_OFN51_pcpi_rs1_10
-  Setup Slack:   3901.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC762_FE_OFN51_pcpi_rs1_10/Y
-Net:  FE_PHN762_FE_OFN51_pcpi_rs1_10
-  Setup Slack:   3901.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC762_FE_OFN51_pcpi_rs1_10/A
-Net:  FE_OFN51_pcpi_rs1_10
-  Setup Slack:   3901.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op1_reg[10]/Q
-Net:  FE_OFN51_pcpi_rs1_10
-  Setup Slack:   3901.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 46
-Endpoint:      pcpi_rs2[3]
-Beginpoint:    reg_op2_reg[3]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.2ps
-
-Node: pcpi_rs2[3]
-Net:  mem_la_wdata[3]
-  Setup Slack:   7505.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC109_mem_la_wdata_3/Y
-Net:  mem_la_wdata[3]
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC109_mem_la_wdata_3/A
-Net:  FE_PHN1374_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1374_FE_OFN23_mem_la_wdata_3/Y
-Net:  FE_PHN1374_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1374_FE_OFN23_mem_la_wdata_3/A
-Net:  FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1476_FE_OFN23_mem_la_wdata_3/Y
-Net:  FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1476_FE_OFN23_mem_la_wdata_3/A
-Net:  FE_PHN1476_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC725_FE_OFN23_mem_la_wdata_3/Y
-Net:  FE_PHN1476_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC725_FE_OFN23_mem_la_wdata_3/A
-Net:  FE_PHN725_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[3]/Q
-Net:  FE_PHN725_FE_OFN23_mem_la_wdata_3
-  Setup Slack:   2343.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 47
-Endpoint:      mem_addr[13]
-Beginpoint:    mem_addr_reg[13]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -5.8ps
-
-Node: mem_addr[13]
-Net:  mem_addr[13]
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC818_mem_addr_13/Y
-Net:  mem_addr[13]
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC818_mem_addr_13/A
-Net:  FE_PHN817_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3016_mem_addr_13/Y
-Net:  FE_PHN817_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3016_mem_addr_13/A
-Net:  FE_PHN3016_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC1410_mem_addr_13/Y
-Net:  FE_PHN3016_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC1410_mem_addr_13/A
-Net:  FE_PHN1410_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC2108_mem_addr_13/Y
-Net:  FE_PHN1410_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2108_mem_addr_13/A
-Net:  FE_PHN2108_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: mem_addr_reg[13]/Q
-Net:  FE_PHN2108_mem_addr_13
-  Setup Slack:   7510.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 48
-Endpoint:      pcpi_rs2[22]
-Beginpoint:    reg_op2_reg[22]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -5.8ps
-
-Node: pcpi_rs2[22]
-Net:  pcpi_rs2[22]
-  Setup Slack:   7503.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3027_pcpi_rs2_22/Y
-Net:  pcpi_rs2[22]
-  Setup Slack:   7503.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3027_pcpi_rs2_22/A
-Net:  FE_PHN3065_pcpi_rs2_22
-  Setup Slack:   7503.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3065_pcpi_rs2_22/Y
-Net:  FE_PHN3065_pcpi_rs2_22
-  Setup Slack:   7503.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3065_pcpi_rs2_22/A
-Net:  FE_PHN3026_pcpi_rs2_22
-  Setup Slack:   7503.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC3051_pcpi_rs2_22/Y
-Net:  FE_PHN3026_pcpi_rs2_22
-  Setup Slack:   6266.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC3051_pcpi_rs2_22/A
-Net:  FE_PHN3051_pcpi_rs2_22
-  Setup Slack:   6266.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[22]/Q
-Net:  FE_PHN3051_pcpi_rs2_22
-  Setup Slack:   6266.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 49
-Endpoint:      cpuregs_reg[19][3]/D
-Beginpoint:    cpuregs_reg[19][3]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -5.5ps
-
-Node: cpuregs_reg[19][3]/D
-Net:  cpuregs[19][3]
-  Setup Slack:   9269.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2061_cpuregs_19_3/Y
-Net:  cpuregs[19][3]
-  Setup Slack:   8484.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC2061_cpuregs_19_3/A
-Net:  FE_PHN2649_cpuregs_19_3
-  Setup Slack:   8484.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: cpuregs_reg[19][3]/Q
-Net:  FE_PHN2649_cpuregs_19_3
-  Setup Slack:   8484.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 50
-Endpoint:      pcpi_rs2[28]
-Beginpoint:    reg_op2_reg[28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -5.5ps
-
-Node: pcpi_rs2[28]
-Net:  pcpi_rs2[28]
-  Setup Slack:   7460.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_OFC150_pcpi_rs2_28/Y
-Net:  pcpi_rs2[28]
-  Setup Slack:   6480.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_OFC150_pcpi_rs2_28/A
-Net:  FE_OFN64_pcpi_rs2_28
-  Setup Slack:   6480.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: FE_PHC750_FE_OFN64_pcpi_rs2_28/Y
-Net:  FE_OFN64_pcpi_rs2_28
-  Setup Slack:   6480.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC750_FE_OFN64_pcpi_rs2_28/A
-Net:  FE_PHN750_FE_OFN64_pcpi_rs2_28
-  Setup Slack:   6480.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: reg_op2_reg[28]/Q
-Net:  FE_PHN750_FE_OFN64_pcpi_rs2_28
-  Setup Slack:   6480.4ps
+Node: is_lb_lh_lw_lbu_lhu_reg/Q
+Net:  FE_PHN1765_is_lb_lh_lw_lbu_lhu
+  Setup Slack:   7095.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize

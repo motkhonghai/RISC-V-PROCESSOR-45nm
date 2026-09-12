@@ -8266,20 +8266,20 @@
 "object":"/designs/picorv32/instances_seq/reg_op1_reg[29]",
 "type":"instance"},
 {"index": "1", 
- "date": "Sat Sep 12 07:54:51 UTC 2026",
- "seconds": 1789199691.4702919,
+ "date": "Sat Sep 12 14:55:59 UTC 2026",
+ "seconds": 1789224959.9381979,
  "netlist": "fv/picorv32/fv_map.v.gz", 
  "netlist_exists": "1", 
  "netlist_normalize": "/home/icd1/workspace/RISC-V-PROCESSOR-45nm/fv/picorv32/fv_map.v.gz", 
- "netlist_mtime": "1789199686", 
- "netlist_timestamp": "Sat Sep 12 07:54:46 UTC 2026", 
+ "netlist_mtime": "1789224954", 
+ "netlist_timestamp": "Sat Sep 12 14:55:54 UTC 2026", 
  "netlist_size": "88716", 
- "netlist_cksum": "1811111452", 
+ "netlist_cksum": "1543931130", 
  "design_name": "picorv32", 
  "synth_workdir": "/home/icd1/workspace/RISC-V-PROCESSOR-45nm", 
  "synthesis_command":"",
  "current_label": "fv_map", 
  "previous_label": "rtl", 
- "write_verif_file_runtime": 5.321904 
+ "write_verif_file_runtime": 5.363642 
  }
 ]

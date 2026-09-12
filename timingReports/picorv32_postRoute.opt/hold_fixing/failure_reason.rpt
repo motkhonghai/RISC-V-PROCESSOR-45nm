@@ -1,748 +1,132 @@
 
 
 // Path 1
-Endpoint:      cpuregs_reg[17][9]/SI
-Beginpoint:    cpuregs_reg[17][9]/Q
+Endpoint:      cpuregs_reg[19][14]/D
+Beginpoint:    cpuregs_reg[19][14]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -9.0ps
+Hold Slack:    -4.8ps
 
-Node: cpuregs_reg[17][9]/SI
-Net:  cpuregs[17][9]
-  Setup Slack:   9281.3ps
+Node: cpuregs_reg[19][14]/D
+Net:  cpuregs[19][14]
+  Setup Slack:   9263.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      DegradeRouteCong
     ResizeLegal
       NoCellSelected(2)
-Node: FE_PHC1613_cpuregs_17_9/Y
-Net:  cpuregs[17][9]
-  Setup Slack:   8448.6ps
+Node: FE_PHC1636_cpuregs_19_14/Y
+Net:  cpuregs[19][14]
+  Setup Slack:   8560.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      NoLegalLoc(8)
     ResizeLegal
-      NoLegalLoc(28), HoldSlackDegraded(18)
-Node: FE_PHC1613_cpuregs_17_9/A
-Net:  FE_PHN1613_cpuregs_17_9
-  Setup Slack:   8448.6ps
+      NoLegalLoc(24), HoldSlackDegraded(22)
+Node: FE_PHC1636_cpuregs_19_14/A
+Net:  FE_PHN1636_cpuregs_19_14
+  Setup Slack:   8560.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
       NoLegalLoc(10)
     ResizeLegal
       NoCellSelected
-Node: cpuregs_reg[17][9]/Q
-Net:  FE_PHN1613_cpuregs_17_9
-  Setup Slack:   8448.6ps
+Node: cpuregs_reg[19][14]/Q
+Net:  FE_PHN1636_cpuregs_19_14
+  Setup Slack:   8560.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      DegradeRouteCong
     ResizeLegal
       NoCellSelected(2)
 
 
 // Path 2
-Endpoint:      cpuregs_reg[25][9]/SI
-Beginpoint:    cpuregs_reg[25][9]/Q
+Endpoint:      cpuregs_reg[22][27]/SI
+Beginpoint:    cpuregs_reg[22][27]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -8.5ps
+Hold Slack:    -3.2ps
 
-Node: cpuregs_reg[25][9]/SI
-Net:  cpuregs[25][9]
-  Setup Slack:   9276.5ps
+Node: cpuregs_reg[22][27]/SI
+Net:  cpuregs[22][27]
+  Setup Slack:   9254.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      DegradeRouteCong
     ResizeLegal
       NoCellSelected(2)
-Node: FE_PHC1931_cpuregs_25_9/Y
-Net:  cpuregs[25][9]
-  Setup Slack:   8443.2ps
+Node: FE_PHC1338_cpuregs_22_27/Y
+Net:  cpuregs[22][27]
+  Setup Slack:   8526.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      NoLegalLoc(8)
     ResizeLegal
-      NoLegalLoc(28), HoldSlackDegraded(18)
-Node: FE_PHC1931_cpuregs_25_9/A
-Net:  FE_PHN1931_cpuregs_25_9
-  Setup Slack:   8443.2ps
+      NoLegalLoc(24), HoldSlackDegraded(22)
+Node: FE_PHC1338_cpuregs_22_27/A
+Net:  FE_PHN1338_cpuregs_22_27
+  Setup Slack:   8526.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
       NoLegalLoc(10)
     ResizeLegal
       NoCellSelected
-Node: cpuregs_reg[25][9]/Q
-Net:  FE_PHN1931_cpuregs_25_9
-  Setup Slack:   8443.2ps
+Node: cpuregs_reg[22][27]/Q
+Net:  FE_PHN1338_cpuregs_22_27
+  Setup Slack:   8526.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      DegradeRouteCong
     ResizeLegal
       NoCellSelected(2)
 
 
 // Path 3
-Endpoint:      cpuregs_reg[16][9]/SI
-Beginpoint:    cpuregs_reg[16][9]/Q
+Endpoint:      cpuregs_reg[19][29]/D
+Beginpoint:    cpuregs_reg[19][29]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -8.2ps
+Hold Slack:    -0.2ps
 
-Node: cpuregs_reg[16][9]/SI
-Net:  cpuregs[16][9]
-  Setup Slack:   9278.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1276_cpuregs_16_9/Y
-Net:  cpuregs[16][9]
-  Setup Slack:   8423.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoLegalLoc(28), HoldSlackDegraded(18)
-Node: FE_PHC1276_cpuregs_16_9/A
-Net:  FE_PHN1276_cpuregs_16_9
-  Setup Slack:   8423.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[16][9]/Q
-Net:  FE_PHN1276_cpuregs_16_9
-  Setup Slack:   8423.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 4
-Endpoint:      cpuregs_reg[25][28]/SI
-Beginpoint:    cpuregs_reg[25][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -7.9ps
-
-Node: cpuregs_reg[25][28]/SI
-Net:  cpuregs[25][28]
-  Setup Slack:   9272.7ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1714_cpuregs_25_28/Y
-Net:  cpuregs[25][28]
-  Setup Slack:   8414.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(20)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1714_cpuregs_25_28/A
-Net:  FE_PHN1714_cpuregs_25_28
-  Setup Slack:   8414.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[25][28]/Q
-Net:  FE_PHN1714_cpuregs_25_28
-  Setup Slack:   8414.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 5
-Endpoint:      cpuregs_reg[18][28]/SI
-Beginpoint:    cpuregs_reg[18][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -7.7ps
-
-Node: cpuregs_reg[18][28]/SI
-Net:  cpuregs[18][28]
-  Setup Slack:   9276.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1689_cpuregs_18_28/Y
-Net:  cpuregs[18][28]
-  Setup Slack:   8541.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1689_cpuregs_18_28/A
-Net:  FE_PHN1689_cpuregs_18_28
-  Setup Slack:   8541.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[18][28]/Q
-Net:  FE_PHN1689_cpuregs_18_28
-  Setup Slack:   8541.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 6
-Endpoint:      cpuregs_reg[24][28]/SI
-Beginpoint:    cpuregs_reg[24][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -7.6ps
-
-Node: cpuregs_reg[24][28]/SI
-Net:  cpuregs[24][28]
-  Setup Slack:   9274.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1778_cpuregs_24_28/Y
-Net:  cpuregs[24][28]
-  Setup Slack:   8392.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(20)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1778_cpuregs_24_28/A
-Net:  FE_PHN1778_cpuregs_24_28
-  Setup Slack:   8392.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[24][28]/Q
-Net:  FE_PHN1778_cpuregs_24_28
-  Setup Slack:   8392.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 7
-Endpoint:      cpuregs_reg[23][28]/SI
-Beginpoint:    cpuregs_reg[23][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -7.1ps
-
-Node: cpuregs_reg[23][28]/SI
-Net:  cpuregs[23][28]
-  Setup Slack:   9268.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1685_cpuregs_23_28/Y
-Net:  cpuregs[23][28]
-  Setup Slack:   8592.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1685_cpuregs_23_28/A
-Net:  FE_PHN1685_cpuregs_23_28
-  Setup Slack:   8592.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[23][28]/Q
-Net:  FE_PHN1685_cpuregs_23_28
-  Setup Slack:   8592.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 8
-Endpoint:      cpuregs_reg[19][28]/D
-Beginpoint:    cpuregs_reg[19][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.6ps
-
-Node: cpuregs_reg[19][28]/D
-Net:  cpuregs[19][28]
-  Setup Slack:   9268.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1694_cpuregs_19_28/Y
-Net:  cpuregs[19][28]
-  Setup Slack:   8553.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1694_cpuregs_19_28/A
-Net:  FE_PHN1694_cpuregs_19_28
-  Setup Slack:   8553.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[19][28]/Q
-Net:  FE_PHN1694_cpuregs_19_28
-  Setup Slack:   8553.9ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 9
-Endpoint:      cpuregs_reg[22][28]/SI
-Beginpoint:    cpuregs_reg[22][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -6.5ps
-
-Node: cpuregs_reg[22][28]/SI
-Net:  cpuregs[22][28]
-  Setup Slack:   9267.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1692_cpuregs_22_28/Y
-Net:  cpuregs[22][28]
-  Setup Slack:   8570.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1692_cpuregs_22_28/A
-Net:  FE_PHN1692_cpuregs_22_28
-  Setup Slack:   8570.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[22][28]/Q
-Net:  FE_PHN1692_cpuregs_22_28
-  Setup Slack:   8570.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 10
-Endpoint:      cpuregs_reg[27][28]/SI
-Beginpoint:    cpuregs_reg[27][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -5.6ps
-
-Node: cpuregs_reg[27][28]/SI
-Net:  cpuregs[27][28]
-  Setup Slack:   9265.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1858_cpuregs_27_28/Y
-Net:  cpuregs[27][28]
-  Setup Slack:   8492.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1858_cpuregs_27_28/A
-Net:  FE_PHN1858_cpuregs_27_28
-  Setup Slack:   8492.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[27][28]/Q
-Net:  FE_PHN1858_cpuregs_27_28
-  Setup Slack:   8492.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 11
-Endpoint:      cpuregs_reg[20][27]/SI
-Beginpoint:    cpuregs_reg[20][27]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -4.4ps
-
-Node: cpuregs_reg[20][27]/SI
-Net:  cpuregs[20][27]
-  Setup Slack:   9258.2ps
+Node: cpuregs_reg[19][29]/D
+Net:  cpuregs[19][29]
+  Setup Slack:   9242.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
       DegradeRouteCong
     ResizeLegal
       NoCellSelected(2)
-Node: FE_PHC1990_cpuregs_20_27/Y
-Net:  cpuregs[20][27]
-  Setup Slack:   8625.8ps
+Node: FE_PHC1189_cpuregs_19_29/Y
+Net:  cpuregs[19][29]
+  Setup Slack:   8415.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
-      NoLegalLoc(10)
+      NoLegalLoc(8)
     ResizeLegal
       NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1990_cpuregs_20_27/A
-Net:  FE_PHN1990_cpuregs_20_27
-  Setup Slack:   8625.8ps
+Node: FE_PHC1189_cpuregs_19_29/A
+Net:  FE_PHN1189_cpuregs_19_29
+  Setup Slack:   8415.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
       NoLegalLoc(10)
     ResizeLegal
       NoCellSelected
-Node: cpuregs_reg[20][27]/Q
-Net:  FE_PHN1990_cpuregs_20_27
-  Setup Slack:   8625.8ps
+Node: cpuregs_reg[19][29]/Q
+Net:  FE_PHN1189_cpuregs_19_29
+  Setup Slack:   8415.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     LegalSingleBuffer
       DegradeRouteCong
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 12
-Endpoint:      cpuregs_reg[26][9]/SI
-Beginpoint:    cpuregs_reg[26][9]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -4.4ps
-
-Node: cpuregs_reg[26][9]/SI
-Net:  cpuregs[26][9]
-  Setup Slack:   9257.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC2008_cpuregs_26_9/Y
-Net:  cpuregs[26][9]
-  Setup Slack:   8528.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(18)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC2008_cpuregs_26_9/A
-Net:  FE_PHN2008_cpuregs_26_9
-  Setup Slack:   8528.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[26][9]/Q
-Net:  FE_PHN2008_cpuregs_26_9
-  Setup Slack:   8528.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 13
-Endpoint:      cpuregs_reg[21][9]/SI
-Beginpoint:    cpuregs_reg[21][9]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -4.1ps
-
-Node: cpuregs_reg[21][9]/SI
-Net:  cpuregs[21][9]
-  Setup Slack:   9255.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1992_cpuregs_21_9/Y
-Net:  cpuregs[21][9]
-  Setup Slack:   8526.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(8)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1992_cpuregs_21_9/A
-Net:  FE_PHN1992_cpuregs_21_9
-  Setup Slack:   8526.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[21][9]/Q
-Net:  FE_PHN1992_cpuregs_21_9
-  Setup Slack:   8526.1ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 14
-Endpoint:      cpuregs_reg[26][28]/SI
-Beginpoint:    cpuregs_reg[26][28]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -3.4ps
-
-Node: cpuregs_reg[26][28]/SI
-Net:  cpuregs[26][28]
-  Setup Slack:   9254.0ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1981_cpuregs_26_28/Y
-Net:  cpuregs[26][28]
-  Setup Slack:   8499.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(8)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1981_cpuregs_26_28/A
-Net:  FE_PHN1981_cpuregs_26_28
-  Setup Slack:   8499.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[26][28]/Q
-Net:  FE_PHN1981_cpuregs_26_28
-  Setup Slack:   8499.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 15
-Endpoint:      cpuregs_reg[18][13]/SI
-Beginpoint:    cpuregs_reg[18][13]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -2.6ps
-
-Node: cpuregs_reg[18][13]/SI
-Net:  cpuregs[18][13]
-  Setup Slack:   9245.4ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1948_cpuregs_18_13/Y
-Net:  cpuregs[18][13]
-  Setup Slack:   8523.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(8)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1948_cpuregs_18_13/A
-Net:  FE_PHN1948_cpuregs_18_13
-  Setup Slack:   8523.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[18][13]/Q
-Net:  FE_PHN1948_cpuregs_18_13
-  Setup Slack:   8523.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 16
-Endpoint:      cpuregs_reg[20][9]/SI
-Beginpoint:    cpuregs_reg[20][9]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -1.5ps
-
-Node: cpuregs_reg[20][9]/SI
-Net:  cpuregs[20][9]
-  Setup Slack:   9245.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1999_cpuregs_20_9/Y
-Net:  cpuregs[20][9]
-  Setup Slack:   8537.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(8)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1999_cpuregs_20_9/A
-Net:  FE_PHN1999_cpuregs_20_9
-  Setup Slack:   8537.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[20][9]/Q
-Net:  FE_PHN1999_cpuregs_20_9
-  Setup Slack:   8537.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-
-
-// Path 17
-Endpoint:      cpuregs_reg[19][13]/D
-Beginpoint:    cpuregs_reg[19][13]/Q
-Analysis View: fast_hold_view
-Hold Slack:    -1.2ps
-
-Node: cpuregs_reg[19][13]/D
-Net:  cpuregs[19][13]
-  Setup Slack:   9244.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected(2)
-Node: FE_PHC1847_cpuregs_19_13/Y
-Net:  cpuregs[19][13]
-  Setup Slack:   8544.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(8)
-    ResizeLegal
-      NoLegalLoc(24), HoldSlackDegraded(22)
-Node: FE_PHC1847_cpuregs_19_13/A
-Net:  FE_PHN1847_cpuregs_19_13
-  Setup Slack:   8544.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
-    ResizeLegal
-      NoCellSelected
-Node: cpuregs_reg[19][13]/Q
-Net:  FE_PHN1847_cpuregs_19_13
-  Setup Slack:   8544.8ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    LegalSingleBuffer
-      NoLegalLoc(10)
     ResizeLegal
       NoCellSelected(2)

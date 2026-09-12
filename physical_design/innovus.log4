@@ -1,0 +1,1098 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.13-s088_1, built Thu Mar 26 12:37:48 PDT 2026
+Options:	-stylus 
+Date:		Sat Sep 12 22:00:17 2026
+Host:		eda (x86_64 w/Linux 4.18.0-553.137.1.el8_10.x86_64) (12cores*24cpus*Intel(R) Xeon(R) CPU E5-2673 v3 @ 2.40GHz 30720KB)
+OS:		AlmaLinux 8.10 (Cerulean Leopard)
+
+License:
+		[22:00:18.435049] Configured Lic search path (25.01-s002): /home/icd1/cadence/lisence/cadence.dat
+
+		invs	Innovus Implementation System	INVS100	25.1
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+
+
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_378170_4d7aacd4-902f-45cb-8f70-02407e5b8b5b_eda_icd1_i0OIFS.
+
+Change the soft stacksize limit to 0.2%RAM (31 mbytes). Set global soft_stack_size_limit to change the value.
+Info: Process UID = 378170 / 4d7aacd4-902f-45cb-8f70-02407e5b8b5b / PxkFZwwDwz
+
+**INFO:  MMMC transition support version v31-84 
+
+@innovus 1> source run_full.tcl 
+#@ Begin verbose source (pre): source run_full.tcl 
+@file 1: ###############################################################################
+@file 2: # Full physical-design flow: run stages 1 through 7 in one Innovus session
+@file 3: # Run: innovus -stylus -files run_full.tcl
+@file 4: ###############################################################################
+@file 5:
+@file 6: ###############################
+@file 7: # Setup - global variables
+@file 8: ###############################
+@file 9: set PROJECT_PATH /home/icd1/workspace/RISC-V-PROCESSOR-45nm
+@file 10: cd $PROJECT_PATH
+@file 11: set SCRIPT_PATH  ${PROJECT_PATH}/physical_design
+@file 12:
+@file 13: ###############################
+@file 14: # Stage 1: Design initialization
+@file 15: ###############################
+@file 16: source ${SCRIPT_PATH}/1_init_design.tcl
+#@ Begin verbose source /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/1_init_design.tcl (pre)
+@file 1: ###############################################################################
+@file 2: # Stage 1: Design initialization
+@file 3: # Run: innovus -stylus -files 1_init_design.tcl
+@file 4: ###############################################################################
+@file 5:
+@file 6: ###############################
+@file 7: # Setup - global variables
+@file 8: ###############################
+@file 9: set STAGE  1_init_design
+@file 10: set DESIGN picorv32
+@file 11:
+@file 12: set PROJECT_PATH /home/icd1/workspace/RISC-V-PROCESSOR-45nm
+@file 13: cd $PROJECT_PATH
+@file 14:
+@file 15: set INPUT_DB    ${PROJECT_PATH}/synthesis/outputs/mmmc/INVS
+@file 16: set OUTPUT_PATH ${PROJECT_PATH}/physical_design/outputs/mmmc
+@file 17: set REPORT_PATH ${PROJECT_PATH}/physical_design/reports/mmmc/1_init_design
+@file 18: set OUTPUT_DB   ${PROJECT_PATH}/physical_design/outputs/mmmc/picorv32_init
+@file 19:
+@file 20: set PROCESS_NODE 45
+@file 21: set TOP_ROUTING_LAYER Metal11
+@file 22: set CTS_BUFFER_CELLS [list CLKBUFX8 CLKBUFX16 CLKBUFX20]
+@file 23: set CTS_INVERTER_CELLS [list CLKINVX8 CLKINVX16 CLKINVX20]
+@file 24: set FILLER_CELLS [list FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1]
+@file 25: set TIE_CELLS [list TIELO TIEHI]
+@file 26:
+@file 27: file mkdir $OUTPUT_PATH
+@file 28: file mkdir $REPORT_PATH
+@file 29:
+@@file 30: set_db init_power_nets  VDD
+@@file 31: set_db init_ground_nets VSS
+@file 32:
+@file 33: ###############################
+@file 34: # Check input
+@file 35: ###############################
+@file 36: if {![file exists $INPUT_DB]} {...}
+@file 39:
+@file 40: ###############################
+@file 41: # Read Genus MMMC handoff
+@file 42: ###############################
+@@file 43: read_db -common $INPUT_DB
+(stylus_db): ::init_mmmc_version set to version 2 from SQL db.
+(stylus_db): Load Metric file ...
+#% Begin Load Metric file (date=09/12 22:01:07, mem=2198.8M)
+#% End Load Metric file (date=09/12 22:01:07, total cpu=0:00:00.0, real=0:00:00.0, peak res=2200.6M, current mem=2200.6M)
+#% Begin Load Common DB (date=09/12 22:01:07, mem=2200.6M)
+(stylus_db): Begin loading Common DB 'INVS' (Created by Genus(TM) Synthesis Solution 25.13-s071_1) ...
+(stylus_db): Initialized SQLite db version 0.2 ..
+(stylus_db): Sourcing .globals file  ...
+(stylus_db): setting init_mmmc_version to 2
+(stylus_db): Setting Library Root attributes ...
+(stylus_db): Set 6 timing library and user attributes of Root 
+(stylus_db): Load Flow-Kit settings ...
+% Begin Load Flow-Kit settings (date=09/12 22:01:08, mem=2201.1M)
+% End Load Flow-Kit settings (date=09/12 22:01:08, total cpu=0:00:00.0, real=0:00:00.0, peak res=2201.1M, current mem=2201.1M)
+% Begin Load MMMC data (date=09/12 22:01:08, mem=2201.1M)
+(stylus_db): Reading MMMC file ...
+Reading slow_libset timing library '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/lib/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/icd1/workspace/RISC-V-PROCESSOR-45nm/lib/slow_vdd1v0_basicCells.lib)
+Read 480 cells in library 'slow_vdd1v0' 
+Reading fast_libset timing library '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/lib/fast_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/icd1/workspace/RISC-V-PROCESSOR-45nm/lib/fast_vdd1v0_basicCells.lib)
+Read 480 cells in library 'fast_vdd1v0' 
+% End Load MMMC data (date=09/12 22:01:10, total cpu=0:00:02.0, real=0:00:02.0, peak res=2282.5M, current mem=2212.4M)
+% Begin Load LEF files (date=09/12 22:01:10, mem=2212.4M)
+(stylus_db): Load LEF files ...
+
+Loading LEF file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/lef/gsclib045_tech.lef ...
+Set DBUPerIGU to M2 pitch 400.
+
+Loading LEF file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/lef/gsclib045_macro.lef ...
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+% End Load LEF files (date=09/12 22:01:10, total cpu=0:00:00.3, real=0:00:00.0, peak res=2222.3M, current mem=2222.3M)
+(stylus_db): Load Verilog Netlist ...
+% Begin Load netlist data ... (date=09/12 22:01:10, mem=2222.3M)
+*** Begin netlist parsing (mem=2222.3M) ***
+Created 480 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.v.gz'
+
+*** Memory Usage v#1 (Current mem = 2241.270M, initial mem = 991.746M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=2241.3M) ***
+% End Load netlist data ... (date=09/12 22:01:10, total cpu=0:00:00.1, real=0:00:00.0, peak res=2241.3M, current mem=2241.3M)
+Top level cell is picorv32.
+Hooked 960 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell picorv32 ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 1055 modules.
+** info: there are 5752 stdCell insts.
+** info: there are 5752 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#1 (Current mem = 2295.250M, initial mem = 991.746M) ***
+(stylus_db): Init Design
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 318
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: CLKBUFX2 BUFX2 CLKBUFX3 BUFX3 CLKBUFX4 BUFX4 CLKBUFX6 BUFX6 CLKBUFX8 BUFX8 CLKBUFX12 BUFX12 CLKBUFX16 BUFX16 CLKBUFX20 BUFX20
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVXL INVX1 INVX2 CLKINVX1 INVX3 CLKINVX2 INVX4 CLKINVX4 CLKINVX3 INVX6 CLKINVX6 INVX8 CLKINVX8 INVX12 CLKINVX12 INVX16 CLKINVX16 INVX20 CLKINVX20
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Reading timing constraints file '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/modes/functional/functional.sdc.gz' ...
+Current (total cpu=0:01:04, real=0:00:56.0, peak res=2898.1M, current mem=2898.1M)
+picorv32
+INFO (CTE): Constraints read successfully.
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+set_clock_uncertainty                             | 2              | 0              
+set_input_transition                              | 202            | 0              
+set_units                                         | 2              | 0              
+current_design                                    | 4              | 0              
+get_ports                                         | 1326           | 0              
+create_clock                                      | 1              | 0              
+get_clocks                                        | 819            | 0              
+set_load                                          | 307            | 0              
+set_input_delay                                   | 202            | 0              
+set_clock_gating_check                            | 1              | 0              
+set_output_delay                                  | 614            | 0              
+set_max_fanout                                    | 1              | 0              
+set_clock_transition                              | 1              | 0              
+set_max_transition                                | 1              | 0              
+set_max_capacitance                               | 1              | 0              
+------------------------------------------------------------------------------------
+Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=2913.1M, current mem=2913.1M)
+Current (total cpu=0:01:04, real=0:00:56.0, peak res=2913.1M, current mem=2913.1M)
+Reading latency file '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/views/slow_setup_view/latency.sdc.gz' ...
+Reading latency file '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/views/fast_hold_view/latency.sdc.gz' ...
+**WARN: (TA-976):	Path groups asserted by the group_path/set_path_adjust_group constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path/set_path_adjust_group constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path/set_path_adjust_group entry will be ignored. You can enter the group_path/set_path_adjust_group constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
+(stylus_db): Initialized design 'picorv32'
+(stylus_db): Setting Root attributes ...
+(stylus_db): Set 8 attributes of Root 
+(stylus_db): Silicon Drift settings not enabled or skipped...
+% Begin Set DB preserves (date=09/12 22:01:13, mem=2932.6M)
+(stylus_db): Setting preserves on design objects ...
+(stylus_db): Set 1 preserves of design objects
+% End Set DB preserves (date=09/12 22:01:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=2932.6M, current mem=2932.6M)
+% Begin Load Timing views and constraints (date=09/12 22:01:13, mem=2932.6M)
+fast_hold_view slow_setup_view
+(stylus_db): Read MMMC timing views ...
+% End Load Timing views and constraints (date=09/12 22:01:13, total cpu=0:00:00.1, real=0:00:00.0, peak res=2932.6M, current mem=2932.6M)
+(stylus_db): Couldn't commit power-intent, (picorv32.cpf or picorv32.upf doesn't exists)
+% Begin Set route_types (date=09/12 22:01:13, mem=2932.6M)
+(stylus_db): Setting route_types  ...
+% End Set route_types (date=09/12 22:01:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=2932.6M, current mem=2932.6M)
+% Begin Set power_domain attributes (date=09/12 22:01:13, mem=2932.6M)
+(stylus_db): Setting power_domain attributes ...
+% End Set power_domain attributes (date=09/12 22:01:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=2932.6M, current mem=2932.6M)
+(stylus_db): Load additional timing constraints ...
+% Begin Load Additional Timing constraints (date=09/12 22:01:13, mem=2932.6M)
+fast_delay_corner slow_delay_corner
+Loading timing derate file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/delayCorner/fast_delay_corner/timingderate.sdc ...
+Current (total cpu=0:01:04, real=0:00:56.0, peak res=2932.7M, current mem=2932.7M)
+Loading timing derate file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/delayCorner/slow_delay_corner/timingderate.sdc ...
+Current (total cpu=0:01:04, real=0:00:56.0, peak res=2932.7M, current mem=2932.7M)
+Loading path adjust file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/pathadjust.sdc.gz ...
+Current (total cpu=0:01:04, real=0:00:56.0, peak res=2932.7M, current mem=2932.7M)
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2933.0M, current mem=2933.0M)
+Current (total cpu=0:01:05, real=0:00:56.0, peak res=2933.0M, current mem=2933.0M)
+Loading disable latch loop file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc/INVS/cmn/picorv32.mmmc/disablelatchloop.sdc ...
+Current (total cpu=0:01:05, real=0:00:56.0, peak res=2933.0M, current mem=2933.0M)
+% End Load Additional Timing constraints (date=09/12 22:01:13, total cpu=0:00:00.3, real=0:00:00.0, peak res=2933.0M, current mem=2933.0M)
+% Begin Set message attributes (date=09/12 22:01:13, mem=2933.0M)
+(stylus_db): Setting attributes on Synthesis message objects ...
+% End Set message attributes (date=09/12 22:01:13, total cpu=0:00:00.0, real=0:00:00.0, peak res=2933.0M, current mem=2933.0M)
+% Begin Generate Vias (date=09/12 22:01:13, mem=2933.0M)
+(stylus_db): Generate advanced rule Vias ...
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Via generation completed.
+% End Generate Vias (date=09/12 22:01:14, total cpu=0:00:00.1, real=0:00:01.0, peak res=2941.7M, current mem=2940.2M)
+% Begin Set attributes (date=09/12 22:01:14, mem=2940.2M)
+(stylus_db): Setting attributes on design objects ...
+(stylus_db): Set 5108 attributes of design objects
+% End Set attributes (date=09/12 22:01:14, total cpu=0:00:00.1, real=0:00:00.0, peak res=2940.6M, current mem=2940.6M)
+Extraction setup Started for TopCell picorv32 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For post_route extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+/home/icd1/workspace/RISC-V-PROCESSOR-45nm/QRC_Tech/gpdk045.tch
+Generating auto layer map file.
+Completed (cpu: 0:00:02.8 real: 0:00:04.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: slow_setup_view
+    RC-Corner Name        : rc_typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/QRC_Tech/gpdk045.tch'
+ 
+ Analysis View: fast_hold_view
+    RC-Corner Name        : rc_typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 
+    RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+    RC-Corner Technology file: '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/QRC_Tech/gpdk045.tch'
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for post_route extraction mode's extract_rc_effort_level (extract_rc_effort_level option of set_db) changed to 'medium'.
+% Begin Load Min Layer Data (date=09/12 22:01:18, mem=2981.8M)
+Read 0 nets
+% End Load Min Layer Data (date=09/12 22:01:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=2981.8M, current mem=2981.8M)
++----------------------------------------------------------------+
+    Summary of 'read_db INVS'                     
++----------------------------------------------------------------+
+    Generated by         :     Innovus 25.13-s088_1
+    Generated on         :     Sat Sep 12 22:01:18 +07 2026
+    Design               :     picorv32
+    process_node         :     90   
+    db units             :     2000 
+    tech_mfg_grid        :     0.005
+    bbox                 :     {0.0 0.0 167.96 165.87}
+    core_bbox            :     {0.0 0.0 167.96 165.87}
++----------------------------------------------------------------+
+    Object Type          :     Count
++-----------------------------------+
+    timing_libraries     :     2    
+    library_sets         :     2    
+    lib_cells            :     960  
+    setup_analysis_views :     1    
+    hold_analysis_views  :     1    
+    rc_corners           :     1    
+    delay_corners        :     2    
+    constraint_modes     :     1    
+    clocks               :     2    
++-----------------------------------+
+    base_cells           :     574  
+    modules              :     0    
+    insts                :     5752 
+    ports                :     409  
+    nets                 :     6184 
+    hnets                :     6184 
+    pins                 :     23691
+    pg_nets              :     2    
++-----------------------------------+
+    layers               :     36   
+    via_defs             :     119  
+    via_def_rule         :     16   
+    sites                :     4    
+    core_rows            :     97   
+    track_patterns       :     22   
+    route_rules          :     2    
++-----------------------------------+
+#% End Load Common DB (date=09/12 22:01:18, total cpu=0:00:08.9, real=0:00:11.0, peak res=2994.4M, current mem=2983.6M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+WARNING   TA-976               1  Path groups asserted by the group_path/s...
+WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+*** Message Summary: 6 warning(s), 0 error(s)
+
+@file 44: set PD_DATABASE_LOADED true
+@file 45:
+@file 46: # Path groups exported inside a mode-specific SDC are ignored by Innovus
+@file 47: # (TA-976). Recreate them here as global path groups for all active views.
+@file 48: set DATA_INPUTS [all_inputs -no_clocks]
+@file 49: set REGISTERS   [all_registers]
+@file 50:
+@file 51: if {[sizeof_collection $REGISTERS] > 0} {
+@@file 52: group_path -name I2C -from $DATA_INPUTS -to $REGISTERS
+@@file 53: group_path -name R2R -from $REGISTERS -to $REGISTERS
+@@file 54: group_path -name C2O -from $REGISTERS -to [all_outputs]
+@file 55: }
+@file 56:
+@@file 57: group_path -name I2O -from $DATA_INPUTS -to [all_outputs]
+@file 58:
+@file 59: ###############################
+@file 60: # Configure Innovus
+@file 61: ###############################
+@@file 62: set_db design_process_node $PROCESS_NODE
+**WARN: (IMPDB-6501):	"set_db design_process_node" will be obsoleted in future release. Remove it from the script to avoid the interruption of running the script in future.
+##  Process: 45            (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(extract_rc_cap_filter_mode option of the set_db) is 'relative_and_coupling' for all engines.
+	The accuracy mode for post_route extract_rc_effort_level low extraction will be set to 'high'.
+	Default value for EffortLevel(extract_rc_effort_level option of the set_db) in post_route extraction mode is 'medium'.
+@@file 63: set_db timing_analysis_cppr both
+@@file 64: set_db timing_analysis_type ocv
+@@file 65: set_db design_top_routing_layer $TOP_ROUTING_LAYER
+@@file 66: set_db cts_buffer_cells $CTS_BUFFER_CELLS
+@@file 67: set_db cts_inverter_cells $CTS_INVERTER_CELLS
+@@file 68: set_db add_fillers_cells $FILLER_CELLS
+@@file 69: set_db add_tieoffs_cells $TIE_CELLS
+@file 70:
+@file 71: puts "MMMC analysis views: [get_db analysis_views]"
+MMMC analysis views: analysis_view:picorv32/fast_hold_view analysis_view:picorv32/slow_setup_view
+@file 72:
+@file 73: ###############################
+@file 74: # Save design
+@file 75: ###############################
+@@file 76: write_db $OUTPUT_DB
+#% Begin save design ... (date=09/12 22:01:18, mem=2994.8M)
+fast_libset slow_libset
+rc_typical
+INFO: Current data have to be saved into a temporary db: 'picorv32_init.tmp' first. It will be renamed to the correct name 'picorv32_init' after the old db was deleted.
+% Begin Save ccopt configuration ... (date=09/12 22:01:18, mem=2994.8M)
+% End Save ccopt configuration ... (date=09/12 22:01:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=2996.0M, current mem=2996.0M)
+% Begin Save netlist data ... (date=09/12 22:01:18, mem=2996.0M)
+Writing Binary DB to /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/picorv32.v.bin in single-threaded mode...
+% End Save netlist data ... (date=09/12 22:01:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=2998.4M, current mem=2996.4M)
+Saving symbol-table file ...
+Saving congestion map file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/picorv32.route.congmap.gz ...
+% Begin Save AAE data ... (date=09/12 22:01:18, mem=2996.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=09/12 22:01:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=3017.7M, current mem=2996.6M)
+Saving preference file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving root attributes to be loaded post write_db ...
+Saving global file ...
+Saving root attributes to be loaded previous write_db ...
+% Begin Save floorplan data ... (date=09/12 22:01:20, mem=3005.6M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=09/12 22:01:20, total cpu=0:00:00.0, real=0:00:00.0, peak res=3007.3M, current mem=3007.3M)
+*info - save blackBox cells to lef file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/picorv32.bbox.lef
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=09/12 22:01:20, mem=3007.3M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=09/12 22:01:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=3008.0M, current mem=3008.0M)
+% Begin Save routing data ... (date=09/12 22:01:21, mem=3008.0M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=3009.2M) ***
+% End Save routing data ... (date=09/12 22:01:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=3008.3M, current mem=3008.3M)
+Saving property file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/picorv32.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=3012.8M) ***
+Saving preRoute extracted patterns in file '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/picorv32.techData.gz' ...
+Saving preRoute extraction data in directory '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init.tmp/extraction/' ...
+% Begin Save power constraints data ... (date=09/12 22:01:21, mem=3012.7M)
+% End Save power constraints data ... (date=09/12 22:01:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=3012.7M, current mem=3012.7M)
+rc_typical
+rc_typical
+rc_typical
+Generated self-contained design picorv32_init.tmp
+#% End save design ... (date=09/12 22:01:21, total cpu=0:00:02.7, real=0:00:03.0, peak res=3067.6M, current mem=3039.2M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+@file 77:
+@file 78: puts "Done $STAGE"
+Done 1_init_design
+@file 79: puts "Saved database: $OUTPUT_DB"
+Saved database: /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_init
+#@ End verbose source /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/1_init_design.tcl
+@file 17:
+@file 18: ###############################
+@file 19: # Stage 2: Floorplan and power
+@file 20: ###############################
+@file 21: source ${SCRIPT_PATH}/2_floorplan_power.tcl
+#@ Begin verbose source /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/2_floorplan_power.tcl (pre)
+@file 1: ###############################################################################
+@file 2: # Stage 2: Floorplan, I/O placement and power planning
+@file 3: # Run: innovus -stylus -files 2_floorplan_power.tcl
+@file 4: ###############################################################################
+@file 5:
+@file 6: ###############################
+@file 7: # Setup - global variables
+@file 8: ###############################
+@file 9: set STAGE  2_floorplan_power
+@file 10: set DESIGN picorv32
+@file 11:
+@file 12: set PROJECT_PATH /home/icd1/workspace/RISC-V-PROCESSOR-45nm
+@file 13: cd $PROJECT_PATH
+@file 14:
+@file 15: set INPUT_DB    ${PROJECT_PATH}/physical_design/outputs/mmmc/picorv32_init
+@file 16: set OUTPUT_PATH ${PROJECT_PATH}/physical_design/outputs/mmmc
+@file 17: set REPORT_PATH ${PROJECT_PATH}/physical_design/reports/mmmc/2_floorplan_power
+@file 18: set OUTPUT_DB   ${PROJECT_PATH}/physical_design/outputs/mmmc/picorv32_floorplan_power
+@file 19: set IO_FILE     ${PROJECT_PATH}/physical_design/pins_mmmc.io
+@file 20:
+@file 21: set POWER_NET       VDD
+@file 22: set GROUND_NET      VSS
+@file 23:
+@file 24: # 900 sites x 106 rows; about 60% initial utilization at 19514.52 um^2.
+@file 25: set CORE_SITE       CoreSite
+@file 26: set CORE_WIDTH      180.0
+@file 27: set CORE_HEIGHT     181.26
+@file 28: # Ring needs 0.6 offset + 2 * 2.0 width + 1.0 spacing = 5.6 um per side.
+@file 29: set CORE_MARGIN     10.0
+@file 30:
+@file 31: file mkdir $OUTPUT_PATH
+@file 32: file mkdir $REPORT_PATH
+@file 33:
+@file 34: ###############################
+@file 35: # Use in-memory design or read input database
+@file 36: ###############################
+@file 37: # run_full.tcl keeps the design in memory. A standalone stage reloads the
+@file 38: # checkpoint written by its predecessor.
+@file 39: if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
+@file 40: puts "Use design already loaded in memory"
+Use design already loaded in memory
+@file 41: }
+@file 48:
+@file 49: ###############################
+@file 50: # Create floorplan with room for power rings inside the die
+@file 51: ###############################
+@file 52: # -core_size: width height left bottom right top (um).
+@file 53: # Do not predict/reshape afterwards: that can remove the ring margin.
+@@file 54: create_floorplan -site $CORE_SITE -core_size \
+    $CORE_WIDTH $CORE_HEIGHT \
+    $CORE_MARGIN $CORE_MARGIN $CORE_MARGIN $CORE_MARGIN
+**WARN: (IMPFP-4026):	Adjusting core to 'Bottom' to 10.070000 due to track/row misalignment. To force the value, specify the -no_snap_to_grid option or use floorplan_set_snap_rule command to specify the die/core to different grid.
+**WARN: (IMPFP-4026):	Adjusting core to 'Top' to 10.070000 due to track/row misalignment. To force the value, specify the -no_snap_to_grid option or use floorplan_set_snap_rule command to specify the die/core to different grid.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current create_floorplan objects are automatically derived based on specified new create_floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+@file 57:
+@file 58: ###############################
+@file 59: # Create or read I/O constraint
+@file 60: ###############################
+@file 61: if {![file exists $IO_FILE]} {...}
+@file 64:
+@@file 65: read_io_file $IO_FILE
+Reading IO assignment file "/home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/pins_mmmc.io" ...
+@file 66:
+@file 67: ###############################
+@file 68: # Finish floorplan
+@file 69: ###############################
+@@file 70: set_db finish_floorplan_active_objs [list macro soft_blockage core]
+@file 71: # No fixed 20 um halo: this block has no SRAM macros.
+@file 72:
+@file 73: ###############################
+@file 74: # Connect global power nets
+@file 75: ###############################
+@@file 76: connect_global_net $POWER_NET  -type pg_pin -pin $POWER_NET  -inst_base_name *
+@@file 77: connect_global_net $GROUND_NET -type pg_pin -pin $GROUND_NET -inst_base_name *
+@@file 78: connect_global_net $POWER_NET  -type tie_hi
+@@file 79: connect_global_net $GROUND_NET -type tie_lo
+@file 80:
+@file 81: ###############################
+@file 82: # Create power rings
+@file 83: ###############################
+@@file 84: set_db add_rings_skip_shared_inner_ring none
+@@file 85: set_db add_rings_avoid_short true
+add_rings command will avoid shorts while creating rings.
+@@file 86: set_db add_rings_ignore_rows false
+add_rings command will consider rows while creating rings.
+@@file 87: set_db add_rings_extend_over_row false
+add_rings command will disallow rings to go over rows.
+@file 88:
+@@file 89: add_rings \
+    -type core_rings \
+    -nets [list $POWER_NET $GROUND_NET] \
+    -follow core \
+    -layer [list bottom Metal11 top Metal11 right Metal10 left Metal10] \
+    -width 2.0 \
+    -spacing 1.0 \
+    -offset 0.6 \
+    -jog_distance 0.6 \
+    -threshold 0.6
+#% Begin add_rings (date=09/12 22:01:21, mem=3040.6M)
+
+
+viaInitial starts at Sat Sep 12 22:01:22 2026
+viaInitial ends at Sat Sep 12 22:01:22 2026
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3041.1M)
+Ring generation is complete.
+vias are now being generated.
+add_rings created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal10|        4       |       NA       |
+|  Via10 |        8       |        0       |
+| Metal11|        4       |       NA       |
++--------+----------------+----------------+
+#% End add_rings (date=09/12 22:01:22, total cpu=0:00:00.1, real=0:00:00.0, peak res=3044.1M, current mem=3044.1M)
+@file 99:
+@file 100: ###############################
+@file 101: # Create power stripes
+@file 102: ###############################
+@@file 103: add_stripes \
+    -nets [list $POWER_NET $GROUND_NET] \
+    -layer Metal10 \
+    -width 1.0 \
+    -spacing 1.5 \
+    -set_to_set_distance 20.0 \
+    -merge_stripes_value 0.6 \
+    -max_same_layer_jog_length 0.44 \
+    -pad_core_ring_bottom_layer_limit Metal9 \
+    -pad_core_ring_top_layer_limit Metal11 \
+    -block_ring_bottom_layer_limit Metal9 \
+    -block_ring_top_layer_limit Metal11
+#% Begin add_stripes (date=09/12 22:01:22, mem=3044.1M)
+
+Initialize fgc environment(mem: 3044.1M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3044.1M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3044.3M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3044.3M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3044.3M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-354):	The power planner did not generate the vertical stripe at 10.500000 7.470000 10.500000 191.929993 with width 1.000000 due to one of these reasons: the stripe would merge with rings, the stripe could not connect to any legal target, the stripe net is not contained by the power doamin, or the stripe would break the design rule.
+Type 'man IMPPP-354' for more detail.
+Stripe generation is complete.
+vias are now being generated.
+add_stripes created 17 wires.
+ViaGen created 34 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal10|       17       |       NA       |
+|  Via10 |       34       |        0       |
++--------+----------------+----------------+
+#% End add_stripes (date=09/12 22:01:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=3045.3M, current mem=3045.3M)
+@file 115:
+@file 116: ###############################
+@file 117: # Route power nets
+@file 118: ###############################
+@@file 119: route_special \
+    -connect core_pin \
+    -nets [list $POWER_NET $GROUND_NET] \
+    -layer_change_range [list Metal1(1) Metal11(11)] \
+    -crossover_via_layer_range [list Metal1(1) Metal11(11)] \
+    -target_via_layer_range [list Metal1(1) Metal11(11)] \
+    -core_pin_target first_after_row_end \
+    -allow_jogging true \
+    -allow_layer_change true
+#% Begin route_special (date=09/12 22:01:22, mem=3045.3M)
+*** Begin SPECIAL ROUTE on Sat Sep 12 22:01:22 2026 ***
+SPECIAL ROUTE ran on directory: /home/icd1/workspace/RISC-V-PROCESSOR-45nm
+SPECIAL ROUTE ran on machine: eda (Linux 4.18.0-553.137.1.el8_10.x86_64 Xeon 3.10Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD VSS"
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 11
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteTopLayerLimit set to 11
+srouteTopTargetLayerLimit set to 11
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1274.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
+Read in 24 layers, 11 routing layers, 1 overlap layer
+Read in 2 nondefault rules, 0 used
+Read in 574 macros, 91 used
+Read in 91 components
+  91 core components: 91 unplaced, 0 placed, 0 fixed
+Read in 409 physical pins
+  409 physical pins: 0 unplaced, 409 placed, 0 fixed
+Read in 296 nets
+Read in 2 special nets, 2 routed
+Read in 591 terminals
+2 nets selected.
+
+Begin power routing ...
+CPU time for VDD FollowPin 0 seconds
+CPU time for VSS FollowPin 0 seconds
+  Number of Core ports routed: 214
+  Number of Followpin connections: 107
+End power routing: cpu: 0:00:01, real: 0:00:01, peak: 1325.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 409 io pins ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+route_special created 321 wires.
+ViaGen created 10107 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal1 |       321      |       NA       |
+|  Via1  |      1123      |        0       |
+|  Via2  |      1123      |        0       |
+|  Via3  |      1123      |        0       |
+|  Via4  |      1123      |        0       |
+|  Via5  |      1123      |        0       |
+|  Via6  |      1123      |        0       |
+|  Via7  |      1123      |        0       |
+|  Via8  |      1123      |        0       |
+|  Via9  |      1123      |        0       |
++--------+----------------+----------------+
+#% End route_special (date=09/12 22:01:23, total cpu=0:00:01.1, real=0:00:01.0, peak res=3100.8M, current mem=3083.8M)
+@file 128:
+@file 129: ###############################
+@file 130: # Report and save design
+@file 131: ###############################
+@@file 132: report_timing -late -max_paths 20 > ${REPORT_PATH}/timing.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 0
+AAE DB initialization (MEM=3100.562500 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: picorv32
+# Design Mode: 45nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=3159.08)
+Total number of fetched objects 5957
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+End delay calculation. (MEM=3200.04 CPU=0:00:01.1 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3179.24 CPU=0:00:01.3 REAL=0:00:01.0)
+@@file 133: write_db $OUTPUT_DB
+#% Begin save design ... (date=09/12 22:01:26, mem=3170.0M)
+fast_libset slow_libset
+rc_typical
+INFO: Current data have to be saved into a temporary db: 'picorv32_floorplan_power.tmp' first. It will be renamed to the correct name 'picorv32_floorplan_power' after the old db was deleted.
+% Begin Save ccopt configuration ... (date=09/12 22:01:26, mem=3170.0M)
+% End Save ccopt configuration ... (date=09/12 22:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=3170.3M, current mem=3170.3M)
+% Begin Save netlist data ... (date=09/12 22:01:26, mem=3170.3M)
+Writing Binary DB to /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/picorv32.v.bin in single-threaded mode...
+% End Save netlist data ... (date=09/12 22:01:26, total cpu=0:00:00.0, real=0:00:00.0, peak res=3170.3M, current mem=3170.3M)
+Saving symbol-table file ...
+Saving congestion map file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/picorv32.route.congmap.gz ...
+% Begin Save AAE data ... (date=09/12 22:01:26, mem=3170.3M)
+Saving AAE Data ...
+% End Save AAE data ... (date=09/12 22:01:26, total cpu=0:00:00.1, real=0:00:00.0, peak res=3224.3M, current mem=3171.2M)
+Saving preference file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving root attributes to be loaded post write_db ...
+Saving global file ...
+Saving root attributes to be loaded previous write_db ...
+% Begin Save floorplan data ... (date=09/12 22:01:28, mem=3174.8M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=09/12 22:01:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=3174.9M, current mem=3174.9M)
+Saving PG file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/picorv32.pg.gz, version#2, (Created by Innovus v25.13-s088_1 on Sat Sep 12 22:01:28 2026)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:01.0 mem=3174.9M) ***
+*info - save blackBox cells to lef file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/picorv32.bbox.lef
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=09/12 22:01:29, mem=3174.9M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=09/12 22:01:29, total cpu=0:00:00.0, real=0:00:00.0, peak res=3175.1M, current mem=3175.1M)
+% Begin Save routing data ... (date=09/12 22:01:29, mem=3175.1M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=3175.8M) ***
+% End Save routing data ... (date=09/12 22:01:29, total cpu=0:00:00.0, real=0:00:00.0, peak res=3175.1M, current mem=3174.6M)
+Saving property file /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/picorv32.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=3177.2M) ***
+Saving preRoute extracted patterns in file '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/picorv32.techData.gz' ...
+Saving preRoute extraction data in directory '/home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power.tmp/extraction/' ...
+% Begin Save power constraints data ... (date=09/12 22:01:29, mem=3176.7M)
+% End Save power constraints data ... (date=09/12 22:01:29, total cpu=0:00:00.0, real=0:00:00.0, peak res=3176.7M, current mem=3176.7M)
+rc_typical
+rc_typical
+rc_typical
+Generated self-contained design picorv32_floorplan_power.tmp
+#% End save design ... (date=09/12 22:01:29, total cpu=0:00:02.7, real=0:00:04.0, peak res=3224.3M, current mem=3187.3M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+@file 134:
+@file 135: puts "Done $STAGE"
+Done 2_floorplan_power
+@file 136: puts "Saved database: $OUTPUT_DB"
+Saved database: /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/outputs/mmmc/picorv32_floorplan_power
+#@ End verbose source /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/2_floorplan_power.tcl
+@file 22:
+@file 23: ###############################
+@file 24: # Stage 3: Placement
+@file 25: ###############################
+@file 26: source ${SCRIPT_PATH}/3_placement.tcl
+#@ Begin verbose source /home/icd1/workspace/RISC-V-PROCESSOR-45nm/physical_design/3_placement.tcl (pre)
+@file 1: ###############################################################################
+@file 2: # Stage 3: Placement and pre-CTS optimization
+@file 3: # Run: innovus -stylus -files 3_placement.tcl
+@file 4: ###############################################################################
+@file 5:
+@file 6: ###############################
+@file 7: # Setup - global variables
+@file 8: ###############################
+@file 9: set STAGE  3_placement
+@file 10: set DESIGN picorv32
+@file 11:
+@file 12: set PROJECT_PATH /home/icd1/workspace/RISC-V-PROCESSOR-45nm
+@file 13: cd $PROJECT_PATH
+@file 14:
+@file 15: set INPUT_DB    ${PROJECT_PATH}/physical_design/outputs/mmmc/picorv32_floorplan_power
+@file 16: set OUTPUT_PATH ${PROJECT_PATH}/physical_design/outputs/mmmc
+@file 17: set REPORT_PATH ${PROJECT_PATH}/physical_design/reports/mmmc/3_placement
+@file 18: set OUTPUT_DB   ${PROJECT_PATH}/physical_design/outputs/mmmc/picorv32_place
+@file 19:
+@file 20: file mkdir $OUTPUT_PATH
+@file 21: file mkdir $REPORT_PATH
+@file 22:
+@file 23: ###############################
+@file 24: # Use in-memory design or read input database
+@file 25: ###############################
+@file 26: if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
+@file 27: puts "Use design already loaded in memory"
+Use design already loaded in memory
+@file 28: }
+@file 35:
+@file 36: ###############################
+@file 37: # Place standard cells and optimize
+@file 38: ###############################
+@@file 39: place_opt_design
+#% Begin place_opt_design (date=09/12 22:01:30, mem=3187.3M)
+% Begin place_opt_design (date=09/12 22:01:30, mem=3187.3M)
+**INFO: User settings:
+setDelayCalMode -enable_hier_save_restore_flow              false
+setDelayCalMode -engine                                     aae
+design_bottom_routing_layer                                 Metal2
+design_process_node                                         45
+design_top_routing_layer                                    Metal11
+extract_rc_coupling_cap_threshold                           0.1
+extract_rc_pre_place_site_size                              1.91
+extract_rc_pre_place_wire_length_slope                      1.9
+extract_rc_pre_place_wire_length_y0                         2.0
+extract_rc_relative_cap_threshold                           1.0
+extract_rc_shrink_factor                                    1.0
+extract_rc_total_cap_threshold                              0.0
+multibit_aware_seq_mapping                                  auto
+opt_multi_bit_flop_name_prefix                              CDN_MBIT_
+opt_multi_bit_flop_name_separator                           _MB_
+getDelayCalMode -enable_hier_save_restore_flow              false
+getDelayCalMode -engine                                     aae
+Info: Logic Synthesis step was not run from RTL in this session / on this DB.
+Info: Synthesize design with physical option was not run earlier in this session / on this DB.
+Info: place_opt_design is not being run for the first time in this session
+Info: place_opt_design has been started with standard effort
+Checking for testpoints in the design....
+Info: There is no testpoint present in the design. Skipping physical test point optimization.
+
+*** place_opt_design #1 [begin] () : totSession cpu/real = 0:01:17.9/0:01:09.8 (1.1), mem = 3188.1M
+No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+'set_default_switching_activity' finished successfully.
+*** Starting GigaPlace ***
+There is no track adjustment
+Starting place_opt_design V2 flow
+#optDebug: fT-E <X 2 3 1 0>
+*** GlobalPlace #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:18.1/0:01:10.0 (1.1), mem = 3214.2M
+**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined for 10.53% flops. Placement and timing QoR can be severely impacted in this case!
+It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
+*** Starting delete buffer tree (mem=3196.8M) ***
+
+Buffer/Inverters difference: -388
+*** Finished delete buffer tree (cpu=0:00:00.5 real=0:00:01.0 mem=3184.8M) ***
+**Info: 'set_db add_tieoffs_cells' setting is detected. The placed tie cells will be deleted from the design before placement. You can use command 'addTieHiLo' to add them back later in the flow.
+  Deleted 0 logical insts of cell TIELO
+  Deleted 0 logical insts of cell TIEHI
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+No user-set net weight.
+Net fanout histogram:
+2		: 3092 (55.5%) nets
+3		: 622 (11.2%) nets
+4     -	14	: 1680 (30.2%) nets
+15    -	39	: 168 (3.0%) nets
+40    -	79	: 5 (0.1%) nets
+80    -	159	: 1 (0.0%) nets
+160   -	319	: 0 (0.0%) nets
+320   -	639	: 0 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 1 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Scan chains were not defined.
+#std cell=5364 (0 fixed + 5364 movable) #buf cell=0 #inv cell=264 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=5569 #term=23150 #term/net=4.16, #fixedIo=409, #floatIo=0, #fixedPin=0, #floatPin=236
+stdCell: 5364 single + 0 double + 0 multi
+Total standard cell length = 11.1136 (mm), area = 0.0190 (mm^2)
+Average module density = 0.582.
+Density for the design = 0.582.
+       = stdcell_area 55568 sites (19004 um^2) / alloc_area 95400 sites (32627 um^2).
+Pin Density = 0.2427.
+            = total # of pins 23150 / total area 95400.
+[spp] 0
+Clock gating cells determined by native netlist tracing.
+=== lastAutoLevel = 8 
+Iteration  1: Total net bbox = 4.594e+04 (2.28e+04 2.31e+04)
+              Est.  stn bbox = 5.275e+04 (2.62e+04 2.66e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3195.1M
+Iteration  2: Total net bbox = 4.594e+04 (2.28e+04 2.31e+04)
+              Est.  stn bbox = 5.275e+04 (2.62e+04 2.66e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3195.1M
+*** Finished SKP initialization (cpu=0:00:02.2, real=0:00:02.0)***
+SKP will use view:
+  slow_setup_view
+Iteration  3: Total net bbox = 3.632e+04 (1.81e+04 1.82e+04)
+              Est.  stn bbox = 4.521e+04 (2.25e+04 2.27e+04)
+              cpu = 0:00:02.9 real = 0:00:03.0 mem = 3264.0M
+Iteration  4: Total net bbox = 7.954e+04 (3.84e+04 4.11e+04)
+              Est.  stn bbox = 1.067e+05 (5.53e+04 5.14e+04)
+              cpu = 0:00:02.2 real = 0:00:02.0 mem = 3279.0M
+Iteration  5: Total net bbox = 7.954e+04 (3.84e+04 4.11e+04)
+              Est.  stn bbox = 1.067e+05 (5.53e+04 5.14e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3279.0M
+Iteration  6: Total net bbox = 9.581e+04 (4.87e+04 4.71e+04)
+              Est.  stn bbox = 1.310e+05 (7.24e+04 5.85e+04)
+              cpu = 0:00:01.3 real = 0:00:02.0 mem = 3267.7M
+
+[NR-eGR] Started Early Global Route kernel ( Curr Mem: 3182.82 MB )
+Iteration  7: Total net bbox = 1.001e+05 (5.26e+04 4.75e+04)
+              Est.  stn bbox = 1.358e+05 (7.67e+04 5.91e+04)
+              cpu = 0:00:00.2 real = 0:00:00.0 mem = 3275.6M
+Iteration  8: Total net bbox = 1.001e+05 (5.26e+04 4.75e+04)
+              Est.  stn bbox = 1.358e+05 (7.67e+04 5.91e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3275.6M
+Iteration  9: Total net bbox = 1.042e+05 (5.48e+04 4.94e+04)
+              Est.  stn bbox = 1.409e+05 (7.97e+04 6.12e+04)
+              cpu = 0:00:01.6 real = 0:00:01.0 mem = 3277.6M
+Iteration 10: Total net bbox = 1.042e+05 (5.48e+04 4.94e+04)
+              Est.  stn bbox = 1.409e+05 (7.97e+04 6.12e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3277.6M
+Iteration 11: Total net bbox = 1.030e+05 (5.34e+04 4.96e+04)
+              Est.  stn bbox = 1.376e+05 (7.67e+04 6.10e+04)
+              cpu = 0:00:04.6 real = 0:00:05.0 mem = 3277.1M
+Iteration 12: Total net bbox = 1.030e+05 (5.34e+04 4.96e+04)
+              Est.  stn bbox = 1.376e+05 (7.67e+04 6.10e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 3277.1M
+Finished Global Placement (cpu=0:00:13.0, real=0:00:14.0, mem=3277.1M)
+0 delay mode for cte disabled.
+Info: 0 clock gating cells identified, 0 (on average) moved 0/5
+**INFO user setting to run inv-resyn!
+INV-Resyn: there are 264 deletable inverters
+[Inverter Restructure]: Starting analysis of design 'picorv32' of instances=5364 and nets=5805.
+[Inverter Restructure]: Found 5371 root-nets and 264 deletable inverters for buffering analysis.
+[Inverter Restructure]: minFanout is 7
+inv-resyn real minFanout is 7
+[Inverter Restructure]: Exp #added inverter: 26
+ratio is 0.04924 
+NBF resyn would process 13 inverters
+INV-Resyn: the clusterSize is: 50, and the hpwlLimit is: 205200 (60, 3420)
+*** Starting nbf clustering (mem=3238.7M) ***
+
+Buffer/Inverters difference: 13
+Number of created clusters: 39
+*** Finished nbf clustering (cpu=0:00:01.6 real=0:00:02.0 mem=3348.0M) ***
+Begin: Reorder Scan Chains
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+End: Reorder Scan Chains
+*** Starting place_detail (0:01:34 mem=3346.6M) ***
+Total net bbox length = 1.033e+05 (5.358e+04 4.971e+04) (ext = 9.886e+03)
+Move report: Detail placement moved 5376 insts, mean move: 0.53 um, max move: 18.06 um 
+	Max move on inst (g90621): (64.03, 47.69) --> (49.40, 51.11)
+	Runtime: CPU: 0:00:01.0 REAL: 0:00:01.0 MEM: 3359.2MB
+Summary Report:
+Instances moved: 5376 (out of 5377 movable)
+Instances flipped: 0
+Mean displacement: 0.53 um
+Max displacement: 18.06 um (Instance: g90621) (64.034, 47.6865) -> (49.4, 51.11)
+	Length: 2 sites, height: 1 rows, site name: CoreSite, cell type: INVX1
+Physical-only instances moved: 0 (out of 0 movable physical-only)
+Total net bbox length = 1.032e+05 (5.347e+04 4.974e+04) (ext = 9.920e+03)
+Runtime: CPU: 0:00:01.0 REAL: 0:00:01.0 MEM: 3359.2MB
+*** Finished place_detail (0:01:35 mem=3359.2M) ***
+*** Finished Initial Placement (cpu=0:00:15.8, real=0:00:17.0, mem=3346.9M) ***
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   final
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   global_place
+
+*** Start incrementalPlace ***
+No Views given, use default active views for adaptive view pruning
+Active views:
+  slow_setup_view
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] Metal1 has single uniform track structure
+[NR-eGR] Metal2 has single uniform track structure
+[NR-eGR] Metal3 has single uniform track structure
+[NR-eGR] Metal4 has single uniform track structure
+[NR-eGR] Metal5 has single uniform track structure
+[NR-eGR] Metal6 has single uniform track structure
+[NR-eGR] Metal7 has single uniform track structure
+[NR-eGR] Metal8 has single uniform track structure
+[NR-eGR] Metal9 has single uniform track structure
+[NR-eGR] Metal10 has single uniform track structure
+[NR-eGR] Metal11 has single uniform track structure
+[NR-eGR] Read 19200 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 0
+[NR-eGR] #PG Blockages       : 19200
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] #prerouted nets         : 0
+[NR-eGR] #prerouted special nets : 0
+[NR-eGR] #prerouted wires        : 0
+[NR-eGR] Read 5582 nets ( ignored 0 )
+[NR-eGR] Handle net priority by net group ordering
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] == Routing rule table ==
+[NR-eGR]  ID  Name       #Nets 
+[NR-eGR] ----------------------
+[NR-eGR]   0  (Default)   5582 
+[NR-eGR] Layer group 1: route 5582 net(s) in layer range [2, 11]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 1.191750e+05um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer               (1)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]  Metal1 ( 1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal2 ( 2)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal6 ( 6)         1( 0.01%)   ( 0.01%) 
+[NR-eGR]  Metal7 ( 7)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal8 ( 8)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal9 ( 9)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal10 (10)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal11 (11)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         1( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.24 sec, Real: 0.46 sec, Curr Mem: 3233.48 MB )
+Early Global Route congestion estimation runtime: 0.47 seconds, mem = 3358.8M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] Connected 0 must-join pins/ports (post-process)
+[NR-eGR] Total eGR-routed clock nets wire length: 5655um, number of vias: 4512
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR]                  Length (um)   Vias 
+[NR-eGR] ------------------------------------
+[NR-eGR]  Metal1   (1H)             0  22940 
+[NR-eGR]  Metal2   (2V)         44688  36259 
+[NR-eGR]  Metal3   (3H)         52747   2023 
+[NR-eGR]  Metal4   (4V)         18017   1235 
+[NR-eGR]  Metal5   (5H)          9644     25 
+[NR-eGR]  Metal6   (6V)           198      8 
+[NR-eGR]  Metal7   (7H)             1      8 
+[NR-eGR]  Metal8   (8V)           216      6 
+[NR-eGR]  Metal9   (9H)             8      0 
+[NR-eGR]  Metal10  (10V)            0      0 
+[NR-eGR]  Metal11  (11H)            0      0 
+[NR-eGR] ------------------------------------
+[NR-eGR]           Total       125519  62504 
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total half perimeter of net bounding box: 103210um
+[NR-eGR] Total length: 125519um, number of vias: 62504
+[NR-eGR] --------------------------------------------------------------------------
+Early Global Route wiring runtime: 0.18 seconds, mem = 3362.9M
+Tdgp not enabled or already been cleared! skip clearing
+
+*** Finished incrementalPlace (cpu=0:00:00.4, real=0:00:01.0)***
+**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined for 10.53% flops. Placement and timing QoR can be severely impacted in this case!
+It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
+***** Total cpu  0:0:17
+***** Total real time  0:0:19
+Tdgp not enabled or already been cleared! skip clearing
+**place_design ... cpu = 0: 0:17, real = 0: 0:19, mem = 3354.3M **
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   final
+UM: Running design category ...
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:          17.86             19                                      place_design
+*** GlobalPlace #1 [finish] (place_opt_design #1) : cpu/real = 0:00:17.9/0:00:19.5 (0.9), totSession cpu/real = 0:01:36.0/0:01:29.6 (1.1), mem = 3355.6M
+Enable CTE adjustment.
+Enable Layer aware incrSKP.
+**opt_design ... cpu = 0:00:00, real = 0:00:00, mem = 3354.7M, totSessionCpu=0:01:36 **
+GigaOpt running with 1 threads.
+*** InitOpt #1 [begin] (place_opt_design #1) : totSession cpu/real = 0:01:36.0/0:01:29.6 (1.1), mem = 3354.7M
+**INFO: set_db design_flow_effort standard -> setting 'set_db opt_all_end_points true' for the duration of this command.
+Updating RC Grid density data for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+AAE DB initialization (MEM=3357.574219 CPU=0:00:00.0 REAL=0:00:00.0) 
+fast_libset slow_libset
+Info: Using SynthesisEngine executable '/home/icd1/cadence/installs/DDI251/INNOVUS251/bin/innovus_'.
+      (normalized executable '/home/admin/cadence/installs/DDI251/INNOVUS251/bin/innovus_')
+      SynthesisEngine workers will not check out additional licenses.
+
+*** INTERRUPTED *** [signal 15]
+Innovus terminated by external (TERM) signal.
+
+*** Memory Usage v#1 (Current mem = 3350.070M, initial mem = 991.746M) ***
+*** Message Summary: 15 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:36, real=0:01:52, mem=3350.1M) ---
