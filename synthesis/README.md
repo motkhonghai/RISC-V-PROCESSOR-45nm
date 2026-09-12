@@ -40,8 +40,6 @@ RISC-V-PROCESSOR/
 │   └── gsclib045_macro.lef
 ├── QRC_Tech/
 │   └── gpdk045.tch
-├── captable/
-│   └── cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl
 ├── constraints/
 │   └── picorv32.sdc
 └── synthesis/
@@ -91,7 +89,7 @@ Cần kiểm tra:
 
 - Cadence Genus đã được cài đặt và có license hợp lệ.
 - Lệnh `genus` có trong biến môi trường `PATH`.
-- Tất cả file RTL, Liberty, LEF, SDC, QRC và capTbl tồn tại.
+- Tất cả file RTL, Liberty, LEF, SDC và QRC tồn tại.
 - Thư mục project có quyền đọc và ghi.
 - Phiên bản Genus hỗ trợ Stylus/Common UI.
 
@@ -167,7 +165,7 @@ read_mmmc $MMMC_FILE
 - `slow_setup_view` cho setup.
 - `fast_hold_view` cho hold.
 - Constraint mode `functional` đọc `constraints/picorv32.sdc`.
-- RC corner dùng cả capTbl và QRC technology file.
+- RC corner dùng QRC technology file `gpdk045.tch`.
 
 LEF phải được đọc đúng thứ tự:
 
@@ -181,9 +179,8 @@ read_physical -lefs [list \
 Technology LEF được đọc trước để khai báo layer, via và site. Macro LEF được
 đọc sau để cung cấp kích thước, pin và obstruction của standard cells.
 
-CapTbl hiện tại khai báo process `cln28hpl` 28 nm trong khi Liberty, LEF và
-QRC là GPDK045. Flow vẫn nạp capTbl theo cấu hình yêu cầu, nhưng không được xem
-kết quả RC/timing này là signoff 45 nm.
+Flow không dùng capTbl từ process khác. Chỉ thêm capTbl nếu có bảng GPDK045
+được characterize đúng cho RC corner cần phân tích.
 
 ## 8. Nạp và elaborate RTL
 

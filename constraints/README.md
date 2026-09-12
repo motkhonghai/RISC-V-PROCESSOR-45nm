@@ -143,6 +143,5 @@ I/O không có delay trước khi đánh giá timing.
 5. Clock domain và phương pháp đồng bộ IRQ/PCPI.
 6. PVT và RC corners đúng với PDK 45 nm.
 
-CapTbl hiện tại tự nhận dạng là `cln28hpl` 28 nm trong khi Liberty, LEF và QRC
-là GPDK045. Nó đang được nạp theo yêu cầu của flow, nhưng kết quả RC từ tổ hợp
-này không được xem là dữ liệu signoff 45 nm.
+RC corner hiện chỉ dùng `gpdk045.tch`. Không thêm capTbl từ process khác;
+chỉ dùng capTbl nếu có bảng GPDK045 được characterize đúng cho RC corner.

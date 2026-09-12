@@ -1,6 +1,5 @@
 set PROJECT_PATH    /home/icd1/workspace/RISC-V-PROCESSOR-45nm
 set LIB_PATH        ${PROJECT_PATH}/lib
-set CAPTABLE_PATH   ${PROJECT_PATH}/captable
 set QRC_PATH        ${PROJECT_PATH}/QRC_Tech
 set CONSTRAINT_PATH ${PROJECT_PATH}/constraints
 
@@ -42,7 +41,6 @@ create_timing_condition \
 
 create_rc_corner \
     -name rc_typical \
-    -cap_table ${CAPTABLE_PATH}/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl \
     -qrc_tech ${QRC_PATH}/gpdk045.tch \
     -pre_route_res 1.0 \
     -pre_route_cap 1.0 \
