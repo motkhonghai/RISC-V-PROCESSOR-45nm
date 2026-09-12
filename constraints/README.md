@@ -4,11 +4,11 @@
 
 File constraints chính:
 
-`/home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/constraints/picorv32.sdc`
+`/home/icd1/workspace/RISC-V-PROCESSOR-45nm/constraints/picorv32.sdc`
 
 File này được nạp bằng đường dẫn tuyệt đối trong:
 
-`/home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/mmmc.view`
+`/home/icd1/workspace/RISC-V-PROCESSOR-45nm/mmmc.view`
 
 Đơn vị lấy từ Liberty đang sử dụng:
 

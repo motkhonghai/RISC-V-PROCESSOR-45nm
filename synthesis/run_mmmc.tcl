@@ -1,10 +1,10 @@
 ###############################################################################
 # Genus Stylus MMMC synthesis flow for the PicoRV32 core
 # Run with:
-# genus -stylus -files /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/run_mmmc.tcl
+# genus -stylus -files /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/run_mmmc.tcl
 ###############################################################################
 
-set PROJECT_PATH    /home/icd1/workspace/RISC-V-PROCESSOR-45nm/
+set PROJECT_PATH    /home/icd1/workspace/RISC-V-PROCESSOR-45nm
 set SYNTHESIS_PATH  ${PROJECT_PATH}/synthesis
 set RTL_PATH        ${PROJECT_PATH}/rtl
 set LIB_PATH        ${PROJECT_PATH}/lib
@@ -87,42 +87,31 @@ time_info ELABORATION
 
 set HAS_REGISTERS [expr {[llength [all_registers]] > 0}]
 
-if {$HAS_REGISTERS} {
-    define_cost_group -name I2C -design $DESIGN
-    define_cost_group -name R2R -design $DESIGN
-    define_cost_group -name C2O -design $DESIGN
-}
-define_cost_group -name I2O -design $DESIGN
-
 foreach VIEW [get_db analysis_views -if {.is_setup == true}] {
     if {$HAS_REGISTERS} {
-        path_group \
-            -from [all_inputs] \
-            -to [all_registers] \
-            -group I2C \
+        group_path \
             -name I2C \
+            -from [all_inputs -no_clocks] \
+            -to [all_registers] \
             -view $VIEW
 
-        path_group \
+        group_path \
+            -name R2R \
             -from [all_registers] \
             -to [all_registers] \
-            -group R2R \
-            -name R2R \
             -view $VIEW
 
-        path_group \
+        group_path \
+            -name C2O \
             -from [all_registers] \
             -to [all_outputs] \
-            -group C2O \
-            -name C2O \
             -view $VIEW
     }
 
-    path_group \
-        -from [all_inputs] \
-        -to [all_outputs] \
-        -group I2O \
+    group_path \
         -name I2O \
+        -from [all_inputs -no_clocks] \
+        -to [all_outputs] \
         -view $VIEW
 }
 
@@ -197,8 +186,17 @@ report_power \
 report_qor \
     > ${REPORTS_PATH}/picorv32_qor.rpt
 
-report_timing -max_paths 50 \
-    > ${REPORTS_PATH}/picorv32_timing.rpt
+report_timing \
+    -view slow_setup_view \
+    -late \
+    -max_paths 50 \
+    > ${REPORTS_PATH}/picorv32_setup_timing.rpt
+
+report_timing \
+    -view fast_hold_view \
+    -early \
+    -max_paths 50 \
+    > ${REPORTS_PATH}/picorv32_hold_timing.rpt
 
 ###############################################################################
 # Netlist, constraints, databases and Innovus handoff

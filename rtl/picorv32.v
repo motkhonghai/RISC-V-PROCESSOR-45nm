@@ -211,7 +211,7 @@ module picorv32 #(
 	end
 `endif
 
-	task empty_statement;
+	task automatic empty_statement;
 		// This task is used by the `assert directive in non-formal mode to
 		// avoid empty statement (which are unsupported by plain Verilog syntax).
 		begin end

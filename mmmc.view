@@ -1,4 +1,4 @@
-set PROJECT_PATH    /home/icd1/workspace/RISC-V-PROCESSOR-45nm/
+set PROJECT_PATH    /home/icd1/workspace/RISC-V-PROCESSOR-45nm
 set LIB_PATH        ${PROJECT_PATH}/lib
 set CAPTABLE_PATH   ${PROJECT_PATH}/captable
 set QRC_PATH        ${PROJECT_PATH}/QRC_Tech

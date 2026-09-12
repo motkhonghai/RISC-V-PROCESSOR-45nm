@@ -4,7 +4,7 @@
 
 Script chính:
 
-`/home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/run_mmmc.tcl`
+`/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/run_mmmc.tcl`
 
 Script thực hiện synthesis RTL `picorv32` bằng Cadence Genus Stylus với hai
 timing corner:
@@ -57,7 +57,7 @@ Hai thư mục output và report được script tự tạo nếu chưa tồn t�
 Script chỉ cố định thư mục cha một lần:
 
 ```tcl
-set PROJECT_PATH /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR
+set PROJECT_PATH /home/icd1/workspace/RISC-V-PROCESSOR-45nm
 ```
 
 Các đường dẫn còn lại được tạo từ thư mục cha:
@@ -110,15 +110,15 @@ Không chạy script bằng `tclsh`, vì các lệnh như `set_db`, `read_mmmc`,
 Chạy trực tiếp ở chế độ Stylus:
 
 ```bash
-genus -stylus -files /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/run_mmmc.tcl
+genus -stylus -files /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/run_mmmc.tcl
 ```
 
 Để lưu log từ shell:
 
 ```bash
 genus -stylus \
-  -files /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/run_mmmc.tcl \
-  |& tee /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/genus_mmmc.log
+  -files /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/run_mmmc.tcl \
+  |& tee /home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/genus_mmmc.log
 ```
 
 Nếu muốn Genus tự thoát sau khi chạy batch, bỏ dấu `#` trước lệnh `quit` ở
@@ -235,8 +235,10 @@ Flow tạo bốn cost group:
 | `C2O` | Register đến output |
 | `I2O` | Input đến output |
 
-Các group giúp Genus tối ưu và báo cáo riêng từng loại đường timing. Path group
-liên quan tới register chỉ được tạo khi design thực sự có register.
+Các group được tạo bằng lệnh Stylus `group_path`, giúp Genus tối ưu và báo cáo
+riêng từng loại đường timing. Group liên quan tới register chỉ được tạo khi
+design thực sự có register. Clock port được loại khỏi nhóm input bằng option
+`all_inputs -no_clocks`.
 
 ## 11. Ba giai đoạn synthesis
 
@@ -273,11 +275,12 @@ Các report chính:
 | `picorv32_area.rpt` | Diện tích cell |
 | `picorv32_power.rpt` | Ước lượng công suất |
 | `picorv32_qor.rpt` | Tổng hợp quality of results |
-| `picorv32_timing.rpt` | 50 timing path quan trọng |
+| `picorv32_setup_timing.rpt` | 50 setup path của `slow_setup_view` |
+| `picorv32_hold_timing.rpt` | 50 hold path của `fast_hold_view` |
 
 Thư mục đầy đủ:
 
-`/home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/reports/mmmc`
+`/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/reports/mmmc`
 
 Ưu tiên kiểm tra theo thứ tự:
 
@@ -285,14 +288,14 @@ Thư mục đầy đủ:
 2. `picorv32_check_design.rpt`.
 3. `picorv32_check_timing_intent.rpt`.
 4. `picorv32_qor.rpt`.
-5. `picorv32_timing.rpt`.
+5. `picorv32_setup_timing.rpt` và `picorv32_hold_timing.rpt`.
 6. Area và power report.
 
 ## 13. Output và handoff sang Innovus
 
 Thư mục output:
 
-`/home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/outputs/mmmc`
+`/home/icd1/workspace/RISC-V-PROCESSOR-45nm/synthesis/outputs/mmmc`
 
 Các file quan trọng:
 
@@ -315,7 +318,7 @@ write_db \
 Trong flow physical design, Innovus có thể nạp handoff bằng:
 
 ```tcl
-set PROJECT_PATH           /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR
+set PROJECT_PATH           /home/icd1/workspace/RISC-V-PROCESSOR-45nm
 set SYNTHESIS_OUTPUTS_PATH ${PROJECT_PATH}/synthesis/outputs/mmmc
 
 cd $PROJECT_PATH
