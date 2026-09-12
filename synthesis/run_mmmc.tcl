@@ -4,7 +4,7 @@
 # genus -stylus -files /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR/synthesis/run_mmmc.tcl
 ###############################################################################
 
-set PROJECT_PATH    /home/tienpnh/workspace/cadence/RISC-V-PROCESSOR
+set PROJECT_PATH    /home/icd1/workspace/RISC-V-PROCESSOR-45nm/
 set SYNTHESIS_PATH  ${PROJECT_PATH}/synthesis
 set RTL_PATH        ${PROJECT_PATH}/rtl
 set LIB_PATH        ${PROJECT_PATH}/lib
