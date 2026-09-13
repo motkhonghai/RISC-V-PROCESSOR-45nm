@@ -11,7 +11,7 @@
 ::db::check_and_set_root_attr delaycal_ignore_net_load false
 ::db::check_and_set_root_attr design_bottom_routing_layer Metal2
 ::db::check_and_set_root_attr design_top_routing_layer Metal11
-::db::check_and_set_root_attr extract_design_signature 150678780
+::db::check_and_set_root_attr extract_design_signature 159979579
 ::db::check_and_set_root_attr extract_qrc_n2p_accuracy_enhancement true
 ::db::check_and_set_root_attr extract_rc_coupled true
 ::db::check_and_set_root_attr extract_rc_coupling_cap_threshold 0.1
@@ -36,16 +36,15 @@
 ::db::check_and_set_root_attr opt_drv true
 ::db::check_and_set_root_attr opt_drv_margin 0.0
 ::db::check_and_set_root_attr opt_hier_trial_route_honor_read_only false
+::db::check_and_set_root_attr opt_hold_target_slack 0.01
 ::db::check_and_set_root_attr opt_multi_bit_flop_name_prefix CDN_MBIT_
 ::db::check_and_set_root_attr opt_multi_bit_flop_name_separator _MB_
+::db::check_and_set_root_attr opt_post_route_area_reclaim hold_and_setup_aware
 ::db::check_and_set_root_attr opt_preserve_all_sequential false
 ::db::check_and_set_root_attr opt_resize_flip_flops true
 ::db::check_and_set_root_attr opt_setup_target_slack 0.0
 ::db::check_and_set_root_attr opt_skew_eco_route false
 ::db::check_and_set_root_attr opt_verbose true
-::db::check_and_set_root_attr opt_view_pruning_hold_target_slack_auto_flow 0
-::db::check_and_set_root_attr opt_view_pruning_hold_views_active_list { fast_hold_view }
-::db::check_and_set_root_attr opt_view_pruning_hold_views_persistent_list { fast_hold_view}
 ::db::check_and_set_root_attr opt_view_pruning_setup_views_active_list { slow_setup_view }
 ::db::check_and_set_root_attr opt_view_pruning_setup_views_persistent_list { slow_setup_view}
 ::db::check_and_set_root_attr opt_view_pruning_tdgr_setup_views_persistent_list { slow_setup_view}

@@ -6,7 +6,7 @@ Begin: Design checking
 ----------------------------------------------------------------------------------------------------
 | CHKLIBRARY-2      | warning   | 94          | Cell '%s' timing information is missing.           |
 ----------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 3015.7M)
+		(Real time: 0:00:00.0, Memory: 2928.7M)
 
         Checking 'netlist' category...
         Messages issued during checks:
@@ -17,28 +17,19 @@ Begin: Design checking
 | CHKNETLIST-12     | warning   | 1           | Input pin '%s' is constant.                        |
 | CHKNETLIST-5      | warning   | 67          | Input port '%s' is unload.                         |
 ----------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 3015.7M)
+		(Real time: 0:00:00.0, Memory: 2928.7M)
 
         Checking 'synthesis' category...
         No issues found during checks.
-		(Real time: 0:00:00.0, Memory: 3015.7M)
-
-        Checking 'power_intent' category...
-        Messages issued during checks:
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-| ID                | Severity  | Count       | Description                                                                                                |
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-| IMPMSMV-7402      | error     | 1           | No power intent is loaded. Make sure a power intent file is loaded successfully before using this command. |
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 3016.1M)
+		(Real time: 0:00:00.0, Memory: 2928.7M)
 
         Checking 'timing' category...
         No issues found during checks.
-		(Real time: 0:00:01.0, Memory: 3058.3M)
+		(Real time: 0:00:01.0, Memory: 2971.3M)
 
         Checking 'hierarchical' category...
         No issues found during checks.
-		(Real time: 0:00:00.0, Memory: 3058.3M)
+		(Real time: 0:00:00.0, Memory: 2971.3M)
 
         Checking 'assign_statements' category...
         Messages issued during checks:
@@ -48,11 +39,11 @@ Begin: Design checking
 | ASN-1             | warning   | 8           | The net '%s' has connections that will produce an assign statement in the output Verilog netlist.                   |
 | ASN-3             | warning   | 106         | The net '%s' has tie connections (1'b0 / 1'b1) that will produce an assign statement in the output Verilog netlist. |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 3058.4M)
+		(Real time: 0:00:00.0, Memory: 2971.5M)
 
         Checking 'extract_rc' category...
         No issues found during checks.
-		(Real time: 0:00:00.0, Memory: 3074.5M)
+		(Real time: 0:00:01.0, Memory: 2987.1M)
 
-**INFO: Identified 1 error(s) and 382 warning(s) during 'check_design -type {library netlist synthesis power_intent timing hierarchical assign_statements extract_rc}'.
+**INFO: Identified 0 error(s) and 382 warning(s) during 'check_design -type {library netlist synthesis timing hierarchical assign_statements extract_rc}'.
 End: Design checking

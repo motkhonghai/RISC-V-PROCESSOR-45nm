@@ -11,18 +11,17 @@ catch { setAnalysisMode -clkSrcPath true }
 catch { setAnalysisMode -clockPropagation sdcControl }
 catch { setAnalysisMode -cppr both }
 catch { setAnalysisMode -usefulSkew true }
-catch { setOptMode -opt_view_pruning_hold_views_active_list { fast_hold_view } }
 catch { setOptMode -opt_view_pruning_setup_views_active_list { slow_setup_view } }
-catch { setOptMode -opt_view_pruning_hold_views_persistent_list { fast_hold_view} }
 catch { setOptMode -opt_view_pruning_setup_views_persistent_list { slow_setup_view} }
 catch { setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list { slow_setup_view} }
-catch { setOptMode -opt_view_pruning_hold_target_slack_auto_flow 0 }
 catch { setOptMode -opt_delete_insts true }
 catch { setOptMode -opt_drv_margin 0 }
 catch { setOptMode -opt_drv true }
+catch { setOptMode -opt_hold_target_slack 0.01 }
 catch { setOptMode -opt_multi_bit_flop_name_prefix CDN_MBIT_ }
 catch { setOptMode -opt_multi_bit_flop_name_separator _MB_ }
 catch { setOptMode -opt_resize_flip_flops true }
+catch { setOptMode -opt_post_route_area_reclaim holdAndSetupAware }
 catch { setOptMode -opt_preserve_all_sequential false }
 catch { setOptMode -opt_setup_target_slack 0 }
 catch { setOptMode -opt_verbose true }
@@ -36,7 +35,7 @@ catch {setNanoRouteMode -quiet -route_detail_post_route_spread_wire "auto"}
 catch {setNanoRouteMode -quiet -drouteStartIteration 0}
 catch {setNanoRouteMode -quiet -route_detail_use_lef_pin_taper_rule true}
 catch {setNanoRouteMode -quiet -route_detail_use_min_spacing_for_blockage auto}
-catch {setNanoRouteMode -quiet -extract_design_signature 150678780}
+catch {setNanoRouteMode -quiet -extract_design_signature 159979579}
 catch {setNanoRouteMode -quiet -extract_qrc_n2p_accuracy_enhancement true}
 catch {setNanoRouteMode -quiet -extract_rc_model_file "${::IMEX::libVar}/misc/rc_model.bin"}
 catch {setNanoRouteMode -quiet -route_extract_third_party_compatible false}
@@ -48,7 +47,7 @@ catch {setNanoRouteMode -quiet -route_re_insert_filler_cell_list "FILL64 FILL32 
 catch {setNanoRouteMode -quiet -route_re_insert_filler_cell_list_from_file false}
 catch {setNanoRouteMode -quiet -route_strict_honor_route_rule "false"}
 catch {setNanoRouteMode -quiet -route_with_si_post_route_fix false}
-catch {setNanoRouteMode -quiet -timingEngine ".timing_file_363325_92dec0cd-f7d9-472b-a0e9-c6a943fce4b3.tif.gz"}
+catch {setNanoRouteMode -quiet -timingEngine ".timing_file_379783_f0b52b27-5487-409c-adce-ca51c9757ce4.tif.gz"}
 
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
 catch { setUsefulSkewMode -opt_skew_eco_route false }
