@@ -6,7 +6,7 @@ Begin: Design checking
 ----------------------------------------------------------------------------------------------------
 | CHKLIBRARY-2      | warning   | 94          | Cell '%s' timing information is missing.           |
 ----------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 2928.7M)
+		(Real time: 0:00:00.0, Memory: 2910.1M)
 
         Checking 'netlist' category...
         Messages issued during checks:
@@ -17,19 +17,19 @@ Begin: Design checking
 | CHKNETLIST-12     | warning   | 1           | Input pin '%s' is constant.                        |
 | CHKNETLIST-5      | warning   | 67          | Input port '%s' is unload.                         |
 ----------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 2928.7M)
+		(Real time: 0:00:00.0, Memory: 2910.1M)
 
         Checking 'synthesis' category...
         No issues found during checks.
-		(Real time: 0:00:00.0, Memory: 2928.7M)
+		(Real time: 0:00:00.0, Memory: 2910.1M)
 
         Checking 'timing' category...
         No issues found during checks.
-		(Real time: 0:00:01.0, Memory: 2971.3M)
+		(Real time: 0:00:00.0, Memory: 2954.0M)
 
         Checking 'hierarchical' category...
         No issues found during checks.
-		(Real time: 0:00:00.0, Memory: 2971.3M)
+		(Real time: 0:00:00.0, Memory: 2954.0M)
 
         Checking 'assign_statements' category...
         Messages issued during checks:
@@ -39,11 +39,11 @@ Begin: Design checking
 | ASN-1             | warning   | 8           | The net '%s' has connections that will produce an assign statement in the output Verilog netlist.                   |
 | ASN-3             | warning   | 106         | The net '%s' has tie connections (1'b0 / 1'b1) that will produce an assign statement in the output Verilog netlist. |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-		(Real time: 0:00:00.0, Memory: 2971.5M)
+		(Real time: 0:00:00.0, Memory: 2954.1M)
 
         Checking 'extract_rc' category...
         No issues found during checks.
-		(Real time: 0:00:01.0, Memory: 2987.1M)
+		(Real time: 0:00:01.0, Memory: 2969.7M)
 
 **INFO: Identified 0 error(s) and 382 warning(s) during 'check_design -type {library netlist synthesis timing hierarchical assign_statements extract_rc}'.
 End: Design checking
