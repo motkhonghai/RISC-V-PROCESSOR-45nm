@@ -1,0 +1,109 @@
+Begin: Design checking
+        Checking 'library' category...
+        Messages issued during checks:
+----------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                        |
+----------------------------------------------------------------------------------------------------
+| CHKLIBRARY-2      | warning   | 94          | Cell '%s' timing information is missing.           |
+----------------------------------------------------------------------------------------------------
+		(Real time: 0:00:00.0, Memory: 2997.8M)
+
+        Checking 'netlist' category...
+        Messages issued during checks:
+----------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                        |
+----------------------------------------------------------------------------------------------------
+| CHKNETLIST-10     | warning   | 106         | Output port '%s' is constant.                      |
+| CHKNETLIST-12     | warning   | 1           | Input pin '%s' is constant.                        |
+| CHKNETLIST-5      | warning   | 67          | Input port '%s' is unload.                         |
+----------------------------------------------------------------------------------------------------
+		(Real time: 0:00:00.0, Memory: 2997.8M)
+
+        Checking 'synthesis' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 2997.8M)
+
+        Checking 'power_intent' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 2997.8M)
+
+        Checking 'timing' category...
+        No issues found during checks.
+		(Real time: 0:00:01.0, Memory: 3040.2M)
+
+        Checking 'hierarchical' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 3040.2M)
+
+        Checking 'pin_assign' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 3040.2M)
+
+        Checking 'budget' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 3040.2M)
+
+        Checking 'assign_statements' category...
+        Messages issued during checks:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                                                                                         |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| ASN-1             | warning   | 8           | The net '%s' has connections that will produce an assign statement in the output Verilog netlist.                   |
+| ASN-3             | warning   | 106         | The net '%s' has tie connections (1'b0 / 1'b1) that will produce an assign statement in the output Verilog netlist. |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		(Real time: 0:00:00.0, Memory: 3040.2M)
+
+        Checking 'extract_rc' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 3055.5M)
+
+        Checking 'place' category...
+        Messages issued during checks:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                                                                                                                            |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| IMPPP-4422        | error     | 20          | Followpin wire is missing at row (%f %f) (%f %f). Expected wire for %s. This may cause PG connectivity issues for cells that are placed at this locati |
+|                   |           |             | on.                                                                                                                                                    |
+| CHKPLC-51         | warning   | 1           | %d unplaced pins detected, please place them properly or add "set_db place_global_place_io_pins true" to place them automatically in the flow.         |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		(Real time: 0:00:01.0, Memory: 3045.5M)
+
+        Checking 'opt' category...
+        Messages issued during checks:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                                                                                                       |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| IMPOPT-2901       | warning   | 1           | Design is not placed. Place the design before running                                                                             |
+| IMPOPT-7272       | warning   | 1           | Found %d std cell out of %d that cannot be placed legally and will be marked don't use                                            |
+| IMPOPT-7276       | warning   | 1           | %d instance(s) out of %d are unplaced.                                                                                            |
+| IMPOPT-7283       | warning   | 87          | The cell <%s> does not have any footprint defined. This will impact optimization. The instance cannot be deleted by optimization. |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		(Real time: 0:00:04.0, Memory: 3215.7M)
+
+        Checking 'cts' category...
+        No issues found during checks.
+		(Real time: 0:00:00.0, Memory: 3215.9M)
+
+        Checking 'route' category...
+        Messages issued during checks:
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                                                                           |
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| NRIG-1313         | warning   | 409         | Top level pin %s is unplaced and is a part of routing net %s. Place the top level pin before routing. |
+| NRIG-69           | warning   | 6822        | %s %s is unplaced. All instances must be placed before routing. Place the instance before continuing. |
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+		(Real time: 0:00:02.0, Memory: 3277.4M)
+
+        Checking 'signoff' category...
+        Messages issued during checks:
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| ID                | Severity  | Count       | Description                                                                                                           |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| IMPESO-441        | error     | 1           | The placement density is reported a 0%% which means that LEF is loaded but not the DEF.                               |
+| IMPESO-444        | error     | 1           | There has to be at least one host and some threads per hosts to run distributed MMMC timing analysis.                 |
+| IMPESO-450        | error     | 1           | Tempus executable is not part of the PATH environment variable, so tool won't be able to run signoff timing analysis. |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		(Real time: 0:00:00.0, Memory: 3277.4M)
+
+**INFO: Identified 23 error(s) and 7704 warning(s) during 'check_design -type {all}'.
+End: Design checking

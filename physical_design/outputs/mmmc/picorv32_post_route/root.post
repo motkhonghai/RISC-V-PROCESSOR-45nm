@@ -11,7 +11,7 @@
 ::db::check_and_set_root_attr delaycal_ignore_net_load false
 ::db::check_and_set_root_attr design_bottom_routing_layer Metal2
 ::db::check_and_set_root_attr design_top_routing_layer Metal11
-::db::check_and_set_root_attr extract_design_signature 167101344
+::db::check_and_set_root_attr extract_design_signature 134427546
 ::db::check_and_set_root_attr extract_qrc_n2p_accuracy_enhancement true
 ::db::check_and_set_root_attr extract_rc_coupled true
 ::db::check_and_set_root_attr extract_rc_coupling_cap_threshold 0.1
