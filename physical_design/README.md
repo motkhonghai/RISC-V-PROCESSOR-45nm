@@ -7,12 +7,13 @@ chưa có SRAM, pad ring hoặc hệ thống SoC bao quanh.
 
 ## Trạng thái và điều kiện chạy
 
-Flow gần nhất ở commit `49c783a` đã chạy đủ 7 stage bằng Innovus Stylus.
-Setup WNS là +2.472 ns, DRC bằng 0 và connectivity bằng 0. Tuy nhiên synthesis
-vẫn còn 1.021 `SDFFQX1`, tạo 2 lỗi `IMPSP-9099`; 26 trong 33 hold path được
-report kết thúc tại chân SI. Truy vấn chặn scan-cell đã được sửa và bổ sung
-fail-fast check; cần chạy lại synthesis rồi chạy lại toàn bộ PD để xác nhận
-timing cuối.
+PD gần nhất ở commit `49c783a` đã chạy đủ 7 stage: setup WNS +2.472 ns,
+DRC bằng 0 và connectivity bằng 0, nhưng còn scan-cell/hold như ghi bên dưới.
+Synthesis mới ở commit `fa4c6d7` đã chặn 80 scan base cell và xác nhận mapped
+scan count bằng 0, không có unresolved reference hoặc tool error. Cell area
+tăng từ 19501.524 lên 19942.020 µm² (+2.26%) vì `SDFFQX1` được thay bằng
+functional flop và mux. Cần chạy lại toàn bộ PD bằng handoff mới để xác nhận
+`IMPSP-9099` và hold đã hết.
 
 Máy chạy cần Innovus/license, Liberty, LEF, QRC và database synthesis đầy đủ.
 Phải chạy lại synthesis để handoff mới không dùng `SDFF*` trong flow
@@ -58,7 +59,7 @@ thoát GUI.
 
 | Script | Thao tác | Checkpoint trong outputs/mmmc |
 |---|---|---|
-| 1_init_design.tcl | Read common DB, cấu hình OCV/CPPR, CTS/filler/tie cells | picorv32_init |
+| 1_init_design.tcl | Read common DB, cấu hình OCV/CPPR, CTS/filler/tie cells, kiểm tra input design/timing | picorv32_init |
 | 2_floorplan_power.tcl | Core, pin plan, VDD/VSS ring và stripes, special route | picorv32_floorplan_power |
 | 3_placement.tcl | place_opt_design, pre-CTS setup report | picorv32_place |
 | 4_cts.tcl | clock_opt_design, propagated clocks, setup/hold report | picorv32_post_cts |
@@ -68,7 +69,22 @@ thoát GUI.
 
 Report nằm trong `physical_design/reports/mmmc/<stage>/`.
 Stage 1 tạo lại các path group I2C/R2R/C2O/I2O ở global scope vì Innovus bỏ
-qua path group nằm trong mode-specific SDC (`TA-976`).
+qua path group nằm trong mode-specific SDC (`TA-976`). Sau khi nạp handoff,
+stage 1 chạy hai kiểm tra Stylus trước khi ghi checkpoint:
+
+```tcl
+check_design -type all > ${REPORT_PATH}/check_design_all.rpt
+check_timing -verbose > ${REPORT_PATH}/check_timing.rpt
+```
+
+`check_design -type all` kiểm tra tính nhất quán của netlist, physical/timing
+library, floorplan, placement, I/O, tie cell và power/ground data mà handoff
+đã cung cấp. `check_timing -verbose` kiểm tra clock và timing constraint. Phải
+đọc cả hai report trước khi tiếp tục stage 2; không chấp nhận missing cell,
+unresolved netlist reference, cell thiếu timing/physical view, clock thiếu
+constraint hoặc timing exception không hợp lệ. Một số mục floorplan/placement
+có thể chưa áp dụng ở stage 1 vì floorplan chỉ được tạo ở stage 2; cần phân
+loại theo nội dung report, không chỉ nhìn tổng số warning.
 
 ## Floorplan, pins và power
 
@@ -98,13 +114,16 @@ phải kiểm tra connectivity lại.
 
 ## Lỗi kỹ thuật đã gặp và hướng xử lý
 
-Các số liệu ban đầu thuộc lần chạy ở commit `874a749`; kết quả xác nhận gần
-nhất thuộc commit `49c783a`. Không dùng chúng làm kết quả signoff sau khi
-script đã thay đổi; phải chạy lại synthesis và PD.
+Các số liệu PD ban đầu thuộc commit `874a749`, PD gần nhất thuộc `49c783a` và
+synthesis sạch scan thuộc `fa4c6d7`. Không dùng report PD cũ làm kết quả
+signoff cho handoff synthesis mới; phải chạy lại toàn bộ PD.
 
 | Mã lỗi/hiện tượng | Nguyên nhân đã xác định | Cách xử lý | Cách xác nhận |
 |---|---|---|---|
-| `IMPSP-9099` xuất hiện 2 lần khi placement | Genus dùng 1.021 cell `SDFFQX1` để thực hiện mux-register trong flow functional không có scan-chain. Pattern đầu tiên là `*/SDFF*`, nhưng base-cell name không có library prefix nên query trả về rỗng; do không có nhánh báo lỗi, synthesis vẫn ghi handoff. Lần chạy `49c783a` vì vậy có 26/33 reported hold path kết thúc tại chân SI. | Query bằng `SDFF*`, `SEDFF*`, `SPDFF*`, `SRDFF*`, yêu cầu phải match base cell, đặt `.dont_use true`, rồi đếm lại netlist. Nếu còn scan instance, Genus dừng trước khi ghi Innovus handoff. Nếu dự án cần DFT thật thì thay bằng scan insertion/chain definition đầy đủ. | `picorv32_scan_cell_check.rpt` phải ghi 0; netlist không còn scan instance; log placement không còn `IMPSP-9099`; hold report không còn endpoint SI/SE. |
+| Flow PD nạp `INVS` nhưng không có report kiểm tra input riêng | Kiểm tra file tồn tại chỉ chứng minh đường dẫn handoff hợp lệ; nó không phát hiện netlist/library/MMMC data thiếu hoặc không nhất quán trong Innovus. Kiểm tra `check_design -unresolved` của Genus cũng không thay thế kiểm tra import phía Innovus. | Stage 1 chạy lệnh Stylus `check_design -type all` và `check_timing -verbose` ngay sau `read_db -common`, tạo path group và cấu hình analysis. | Đọc `1_init_design/check_design_all.rpt` và `1_init_design/check_timing.rpt` trước stage 2; không có missing/unresolved cell, library-view mismatch hoặc timing-intent lỗi. |
+| `IMPSP-9099` xuất hiện 2 lần khi placement | Genus dùng 1.021 cell `SDFFQX1` để thực hiện mux-register trong flow functional không có scan-chain. Pattern đầu tiên là `*/SDFF*`, nhưng base-cell name không có library prefix nên query trả về rỗng; do không có nhánh báo lỗi, synthesis vẫn ghi handoff. Lần chạy `49c783a` vì vậy có 26/33 reported hold path kết thúc tại chân SI. | Query bằng `SDFF*`, `SEDFF*`, `SPDFF*`, `SRDFF*`, yêu cầu phải match base cell, đặt `.dont_use true`, rồi đếm lại netlist. Nếu còn scan instance, Genus dừng trước khi ghi Innovus handoff. Nếu dự án cần DFT thật thì thay bằng scan insertion/chain definition đầy đủ. | Synthesis `fa4c6d7` đã xác nhận `picorv32_scan_cell_check.rpt = 0`. Bước còn lại là rerun PD và xác nhận log placement không còn `IMPSP-9099`, hold report không còn endpoint SI/SE. |
+| Genus `CDFG-475/476`: case không parallel/full như pragma | RTL PicoRV32 upstream dùng `(* parallel_case, full_case *)` cho các one-hot decode/case. Với cấu hình parameter hiện tại, Genus chứng minh một số điều kiện có thể overlap hoặc không cover hết, nên cảnh báo rằng pragma mạnh hơn cấu trúc logic thực tế. | Không suppress và không tự xóa pragma khi chưa có regression/formal equivalence, vì thay đổi có thể ảnh hưởng decode semantics và PPA. Giữ warning được ghi nhận; trước signoff phải chạy RTL-to-gate formal equivalence và ISA regression. | Formal equivalence pass và simulation không có illegal-state mismatch; nếu chỉnh RTL thì rerun toàn bộ synthesis/PD. |
+| Genus `ELABUTL-123`: 32 bit `pcpi_insn` undriven lúc elaborate | Cấu hình mặc định tắt PCPI; trước constant propagation, output bus tùy chọn chưa có driver hữu hiệu. Netlist cuối đã tie các bit `pcpi_insn` về 0. | Chấp nhận cho cấu hình PCPI-disabled nhưng phải kiểm tra netlist cuối. Nếu bật PCPI, warning này không được phép tồn tại và interface phải có logic driver thực. | Netlist hiện có `assign pcpi_insn[*] = 1'b0`; không có unresolved reference. Khi đổi parameter, chạy lại lint/check-design. |
 | `NRGR-59`, `NRGR-60`, `NRGR-58`, `NRGR-62`; 372 DRC `OffGrd` trên Metal3/Metal4 | Offset trong pin file cũ là các số chia đều nhưng không nằm trên manufacturing grid 0.005 µm và routing track. NanoRoute không truy cập được chân, sau đó báo open net. | Snap top/bottom pins vào X track Metal4 và left/right pins vào Y track Metal3 trong `pins_mmmc.io`. Pin plan hiện có 409/409 pin on-track, không trùng offset trên cùng cạnh. | Log route không còn `NRGR-59/60`; `check_drc` không còn Metal3/Metal4 `OffGrd`. |
 | 8 DRC `MetSpc` trên Metal10 | Hai stripe VDD/VSS rộng 1 µm chạy song song toàn chiều cao. Spacing table Metal10 yêu cầu 1.25 µm cho trường hợp width/parallel-run-length này. Giá trị 1.0 µm ở lần chạy `6ad9789` vẫn còn đúng 8 violation. | Tăng `add_stripes -spacing` lên 1.5 µm để có margin 0.25 µm và giữ tọa độ thuận grid. | Lần chạy `49c783a` xác nhận `check_drc = 0`. |
 | 319 connectivity violations: 212 net không có route, 106 terminal hở, 1 VSS special-wire open | Phần lớn signal I/O pin không thể route do off-grid; signal router vì thế bỏ các net và cả output hằng ánh xạ vào VSS. | Sửa pin grid; giữ `route_special -connect core_pin` cho PG rail và để signal router nối top-level signal pins. Lần chạy `6ad9789` đã xác nhận connectivity bằng 0. | `check_connectivity` phải báo 0 violation; không chỉ dựa vào việc `route_opt_design` chạy xong. |

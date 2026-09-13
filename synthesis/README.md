@@ -205,6 +205,10 @@ script dừng trước khi ghi Innovus handoff để tránh PD dùng nhầm data
 Nếu dự án bổ sung DFT thật, bỏ phần chặn/check này và thay bằng quy trình scan
 insertion/scan-chain đầy đủ.
 
+Lần chạy ở commit `fa4c6d7` đã xác nhận query match 80 scan base cell và
+netlist cuối có 0 mapped scan-cell instance. Cell area tăng khoảng 2.26% so
+với mapping dùng `SDFFQX1`; đây là chi phí dự kiến của functional mux + flop.
+
 File `picorv32.v` chứa nhiều module nhưng `elaborate picorv32` chọn module
 `picorv32` làm top.
 

@@ -71,6 +71,19 @@ set_db add_tieoffs_cells $TIE_CELLS
 puts "MMMC analysis views: [get_db analysis_views]"
 
 ###############################
+# Check imported design
+###############################
+# Stylus Common UI checks for inconsistent or missing netlist, library,
+# timing, floorplan, I/O and power/ground data before implementation starts.
+check_design -type all \
+    > ${REPORT_PATH}/check_design_all.rpt
+
+# Check clocks, exceptions and timing constraints independently from the
+# structural/library checks above.
+check_timing -verbose \
+    > ${REPORT_PATH}/check_timing.rpt
+
+###############################
 # Save design
 ###############################
 write_db $OUTPUT_DB
