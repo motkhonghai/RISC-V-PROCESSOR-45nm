@@ -17,6 +17,8 @@ set OUTPUT_PATH ${PROJECT_PATH}/physical_design/outputs/mmmc
 set REPORT_PATH ${PROJECT_PATH}/physical_design/reports/mmmc/6_chip_finish
 set OUTPUT_DB   ${PROJECT_PATH}/physical_design/outputs/mmmc/picorv32_finish
 
+set FILLER_CELLS [list FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1]
+
 file mkdir $OUTPUT_PATH
 file mkdir $REPORT_PATH
 
@@ -39,6 +41,25 @@ if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
 set_db delaycal_enable_si true
 set_db extract_rc_engine post_route
 set_db extract_rc_effort_level high
+extract_rc
+
+###############################
+# Post-extraction recovery
+###############################
+# Stage 5 optimizes with post-route estimates. After detailed RC extraction,
+# a few transition violations can reappear, so fix DRV/timing on extracted RC,
+# repair ECO routes, and extract again before final reports.
+delete_filler -cells $FILLER_CELLS -prefix FILLER
+set_db opt_fix_hold_verbose true
+set_db opt_post_route_area_reclaim hold_and_setup_aware
+set_db opt_hold_target_slack 0.010
+opt_design -post_route -drv -setup -hold \
+    -hold_violation_report ${REPORT_PATH}/unfixed_hold_after_extract
+
+set_db add_fillers_cells $FILLER_CELLS
+add_fillers
+route_eco
+
 extract_rc
 
 ###############################

@@ -7,14 +7,17 @@ chưa có SRAM, pad ring hoặc hệ thống SoC bao quanh.
 
 ## Trạng thái và điều kiện chạy
 
-PD ở commit `4b9377e` đã chạy đủ 7 stage với handoff sạch scan: exported
-netlist không có `SDFF*`, log không còn `IMPSP-9099`, setup WNS +2.316 ns,
-DRC bằng 0 và connectivity bằng 0. Cell area sau PD là 21568.572 µm² với
-7.207 instance. Recovery mới đã xóa max-transition/max-cap violation, nhưng
-report cuối vẫn còn 23 R2R hold paths với WNS -0.009 ns; summary ngay trong
-post-route optimizer là WNS -0.008 ns, TNS -0.092 ns và còn 159 real
-max-fanout violations. Script đã được sửa tiếp để area reclaim bảo toàn hold
-và đặt hold margin 10 ps; cần rerun stage 5 đến stage 7 để xác nhận.
+PD ở commit `e140862` đã chạy đủ 7 stage với handoff sạch scan: exported
+netlist không có `SDFF*`, log không còn `IMPSP-9099`, setup WNS +2.247 ns,
+hold WNS +0.001 ns, DRC bằng 0 và connectivity bằng 0. Cell area sau PD là
+22862.016 µm² với 7.933 instance, density khoảng 70.071%. Fix hold bằng
+`opt_post_route_area_reclaim hold_and_setup_aware` và hold target slack 10 ps
+đã hiệu quả. Tuy nhiên final opt summary còn 6 real max-transition violations
+trên các net data như `mem_wordsize[1]`, `decoded_imm_j[15]`,
+`decoded_imm[31]`, `decoded_imm[9]`, `n_3117`, `pcpi_rs1[4]`; max-cap sạch
+và còn 159 real max-fanout violations. Stage 6 đã được sửa tiếp để chạy
+post-extraction DRV/timing recovery rồi extract lại trước khi report cuối;
+cần rerun stage 6 đến stage 7 để xác nhận.
 
 Máy chạy cần Innovus/license, Liberty, LEF, QRC và database synthesis đầy đủ.
 Phải chạy lại synthesis để handoff mới không dùng `SDFF*` trong flow
@@ -65,7 +68,7 @@ thoát GUI.
 | 3_placement.tcl | place_opt_design, `check_design -type place`, pre-CTS setup report | picorv32_place |
 | 4_cts.tcl | `check_design -type cts`, clock_opt_design, propagated clocks, setup/hold report | picorv32_post_cts |
 | 5_routing.tcl | route_opt_design, post-route timing/DRV recovery, filler, ECO route và setup/hold report | picorv32_post_route |
-| 6_chip_finish.tcl | RC extraction, SI timing, area/power, DRC/connectivity | picorv32_finish |
+| 6_chip_finish.tcl | RC extraction, post-extraction DRV/timing recovery, area/power, DRC/connectivity | picorv32_finish |
 | 7_export.tcl | DB, netlist, DEF và SDC của slow_setup_view/fast_hold_view | picorv32_final |
 
 Report nằm trong `physical_design/reports/mmmc/<stage>/`.
@@ -122,8 +125,8 @@ phải kiểm tra connectivity lại.
 ## Lỗi kỹ thuật đã gặp và hướng xử lý
 
 Các số liệu PD ban đầu thuộc commit `874a749`, synthesis sạch scan thuộc
-`fa4c6d7` và PD sạch scan gần nhất thuộc `4b9377e`. Script đã thay đổi sau
-lần chạy này nên phải rerun stage 5-7 trước khi dùng kết quả timing cuối.
+`fa4c6d7` và PD sạch hold gần nhất thuộc `e140862`. Script đã thay đổi sau
+lần chạy này nên phải rerun stage 6-7 trước khi dùng kết quả DRV/timing cuối.
 
 | Mã lỗi/hiện tượng | Nguyên nhân đã xác định | Cách xử lý | Cách xác nhận |
 |---|---|---|---|
@@ -140,8 +143,9 @@ lần chạy này nên phải rerun stage 5-7 trước khi dùng kết quả tim
 | `NREX-102: Has no routing` trên PCPI/IRQ và một số port | Với parameter mặc định, PCPI/IRQ bị tắt nên một số interface net chỉ còn một terminal hoặc không có timing path. Router không tạo dây cho net không cần kết nối; extraction vẫn phát warning tổng quát. VDD/VSS cũng không được signal RC extractor xử lý vì là PG/SRPG net. | Không che warning trước khi phân loại. So sánh với `check_connectivity`; net một terminal của tính năng bị tắt có thể chấp nhận. Nếu bật PCPI/IRQ, phải rerun synthesis và mọi net nhiều terminal tương ứng phải được route/extract. | `check_connectivity = 0`; không có timed multi-terminal net bị `Has no routing`; setup/hold report không dựa vào net chưa extract. |
 | `IMPSR-4302` nói cap-table/qrcTechFile đã có trong design | MMMC RC corner đã cung cấp `gpdk045.tch`, nên Innovus bỏ thông tin RC trùng lặp trong technology LEF. Thông báo không có nghĩa flow đang dùng capTbl riêng. | Giữ duy nhất QRC technology file GPDK045; không thêm capTbl từ process/project khác. | `mmmc.view` chỉ tham chiếu `gpdk045.tch`; extraction hoàn thành bằng QRC engine. |
 | Hold WNS `-0.211 ns` khi pin hở, sau khi route đủ còn `-0.050 ns` | Lần chạy `6ad9789` xác nhận worst path là C2O và đã có nhiều `DLY1X1`. Giá trị `set_output_delay -min -0.20` tự giả định receiver cần hold 0.20 ns, nhưng project standalone chưa có specification ngoài chip. Cộng uncertainty 0.10 ns làm required minimum delay thành 0.30 ns. | Dùng minimum output delay trung tính 0.00 ns cho standalone flow; khi tích hợp SoC phải thay bằng `-t_hold` từ receiver thật. Lần chạy `49c783a` không còn C2O hold violation; WNS còn lại là -0.007 ns ở R2R và chủ yếu liên quan scan cell. | Connectivity = 0 trước khi đọc `6_chip_finish/hold.rpt`; setup/hold WNS đều phải ≥ 0 với specification được chấp nhận. |
-| PD sạch scan còn hold WNS khoảng -0.008 ns sau recovery | Trong run `4b9377e`, optimizer đã thêm 21 `CLKBUFX2`, resize 3 cell và thật sự đạt hold WNS/TNS bằng 0 ở density 66.285%. Bước `Hold Area Reclaim` mặc định sau đó xóa 34 instance và làm hold quay lại; đây không phải do hết placement site. | Đặt `opt_post_route_area_reclaim hold_and_setup_aware` để reclaim phải bảo toàn cả setup lẫn hold, và `opt_hold_target_slack 0.010` để có 10 ps margin trước filler/ECO route. Vẫn giữ `unfixed_hold` report. | Rerun stage 5-7; hold WNS/TNS sau extraction phải ≥ 0, setup vẫn ≥ 0, DRC/connectivity vẫn bằng 0. Nếu còn âm, đọc `unfixed_hold`/`failure_reason` trước khi cho phép overlap hoặc ECO buffer thủ công. |
-| Post-route còn 159 real max-fanout violations dù max-transition và max-cap đã sạch | SDC đặt giới hạn topology toàn design là 16; nhiều decode/reset net có 32–69 sink. `-drv` ưu tiên các giới hạn điện thực tế và không tự bảo đảm mọi `set_max_fanout`; 16 clock-tree net được report riêng, không tính vào 159 real violation. | Chưa nới/xóa constraint chỉ để làm đẹp report. Trước hết xác định giới hạn fanout có phải specification hay chỉ synthesis heuristic; nếu bắt buộc, bật fanout-load repair/buffer tree từ placement rồi rerun CTS/route. Nếu không bắt buộc, thay SDC bằng max-transition/max-cap theo Liberty và ghi rõ quyết định. | Max-transition/max-cap phải bằng 0. Max-fanout chỉ được sign off sau khi specification được xác nhận hoặc real violation bằng 0; không trộn clock net ký hiệu `C` với real violation `R`. |
+| PD sạch scan còn hold WNS khoảng -0.008 ns sau recovery | Trong run `4b9377e`, optimizer đã thêm 21 `CLKBUFX2`, resize 3 cell và thật sự đạt hold WNS/TNS bằng 0 ở density 66.285%. Bước `Hold Area Reclaim` mặc định sau đó xóa 34 instance và làm hold quay lại; đây không phải do hết placement site. | Đặt `opt_post_route_area_reclaim hold_and_setup_aware` để reclaim phải bảo toàn cả setup lẫn hold, và `opt_hold_target_slack 0.010` để có 10 ps margin trước filler/ECO route. Vẫn giữ `unfixed_hold` report. | Run `e140862` xác nhận sau extraction: hold WNS +0.001 ns, TNS 0, setup WNS +2.247 ns, DRC/connectivity bằng 0. |
+| Run `e140862` còn 6 real max-transition violations sau post-route optimization | Stage 5 đã đóng setup/hold nhưng DRV vẫn còn ở các net data fanout vừa/cao: worst là `mem_wordsize[1]` với transition 0.650 ns so với limit 0.280 ns, slack -0.370 ns. Các net còn lại là `decoded_imm_j[15]`, `decoded_imm[31]`, `decoded_imm[9]`, `n_3117`, `pcpi_rs1[4]`. Đây không phải lỗi DRC/connectivity, mà là electrical/timing quality issue sau route. | Stage 6 phải extract RC trước, bỏ filler, chạy `opt_design -post_route -drv -setup -hold` với area reclaim hold/setup-aware, thêm filler lại, `route_eco`, rồi `extract_rc` lần nữa trước final reports. Nếu vẫn còn, cần buffer/resize thủ công hoặc xử lý fanout tree sớm hơn từ placement/synthesis. | Rerun stage 6-7; final opt summary và timingReports `postRoute.tran` phải báo 0 max-transition violation, trong khi setup/hold vẫn ≥ 0 và DRC/connectivity bằng 0. |
+| Post-route còn 159 real max-fanout violations | SDC đặt giới hạn topology toàn design là 16; nhiều decode/reset net có 32–69 sink. `-drv` ưu tiên các giới hạn điện thực tế và không tự bảo đảm mọi `set_max_fanout`; 16 clock-tree net được report riêng, không tính vào 159 real violation. | Chưa nới/xóa constraint chỉ để làm đẹp report. Trước hết xác định giới hạn fanout có phải specification hay chỉ synthesis heuristic; nếu bắt buộc, bật fanout-load repair/buffer tree từ placement hoặc synthesis rồi rerun CTS/route. Nếu không bắt buộc, thay SDC bằng max-transition/max-cap theo Liberty và ghi rõ quyết định. | Max-transition/max-cap phải bằng 0. Max-fanout chỉ được sign off sau khi specification được xác nhận hoặc real violation bằng 0; không trộn clock net ký hiệu `C` với real violation `R`. |
 | `IMPIMEX-7031` khi chạy full flow | Gọi `read_db` nhiều lần trong cùng Innovus session khi mỗi stage tự reload checkpoint. | Stage 1 dùng `read_db -common`; `run_full.tcl` giữ database trong memory qua `PD_DATABASE_LOADED`. Stage chạy độc lập mới đọc checkpoint của stage trước. | Full flow đi liên tục qua đủ `Done 1` đến `Done 7` mà không reload database. |
 | `IMPCTE-290` trong fast hold view | SDC cũ dùng `set_driving_cell` với cell/library chỉ phù hợp slow view. | Dùng `set_input_transition -max/-min` cho input interface, dùng được ở cả hai MMMC view. | `read_db`/timing initialization không còn `IMPCTE-290`. |
 | `TA-976` đối với path group | Path group được Genus export bên trong mode-specific SDC nhưng Innovus bỏ qua. | Tạo lại I2C/R2R/C2O/I2O ở global scope trong stage 1 sau khi nạp handoff. | Các timing report Innovus hiển thị đúng các group thay vì gom hết vào default. |
