@@ -38,14 +38,25 @@ if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
 ###############################
 # Route and optimize design
 ###############################
-route_opt_design
+set_db opt_fix_hold_verbose true
+route_opt_design -setup -hold
 
 ###############################
-# Insert filler cells after timing optimization
+# Final post-route timing/DRV recovery
 ###############################
-# Keep whitespace available while route_opt_design inserts hold buffers.
+# route_opt_design can insert transparent fillers before its final recovery.
+# Remove those fillers so post-route optimization has legal sites for delay
+# cells and buffers, then optimize against the final routed parasitics.
+delete_filler -cells $FILLER_CELLS -prefix FILLER
+opt_design -post_route -drv -setup -hold \
+    -hold_violation_report ${REPORT_PATH}/unfixed_hold
+
+###############################
+# Insert filler cells and repair affected ECO routes
+###############################
 set_db add_fillers_cells $FILLER_CELLS
 add_fillers
+route_eco
 
 ###############################
 # Report and save design

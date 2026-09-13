@@ -36,6 +36,9 @@ if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
 ###############################
 # Create and optimize clock tree
 ###############################
+check_design -type cts \
+    > ${REPORT_PATH}/check_design_cts.rpt
+
 clock_opt_design
 set_interactive_constraint_modes [all_constraint_modes -active]
 set_propagated_clock [all_clocks]

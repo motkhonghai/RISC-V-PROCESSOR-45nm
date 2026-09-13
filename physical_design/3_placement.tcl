@@ -38,6 +38,10 @@ if {[info exists PD_DATABASE_LOADED] && $PD_DATABASE_LOADED} {
 ###############################
 place_opt_design
 
+# Run the placement category only after cells and I/O pins are placed.
+check_design -type place \
+    > ${REPORT_PATH}/check_design_place.rpt
+
 ###############################
 # Report and save design
 ###############################

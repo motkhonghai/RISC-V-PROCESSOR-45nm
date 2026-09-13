@@ -21,7 +21,6 @@ set PROCESS_NODE 45
 set TOP_ROUTING_LAYER Metal11
 set CTS_BUFFER_CELLS [list CLKBUFX8 CLKBUFX16 CLKBUFX20]
 set CTS_INVERTER_CELLS [list CLKINVX8 CLKINVX16 CLKINVX20]
-set FILLER_CELLS [list FILL64 FILL32 FILL16 FILL8 FILL4 FILL2 FILL1]
 set TIE_CELLS [list TIELO TIEHI]
 
 file mkdir $OUTPUT_PATH
@@ -65,7 +64,6 @@ set_db timing_analysis_type ocv
 set_db design_top_routing_layer $TOP_ROUTING_LAYER
 set_db cts_buffer_cells $CTS_BUFFER_CELLS
 set_db cts_inverter_cells $CTS_INVERTER_CELLS
-set_db add_fillers_cells $FILLER_CELLS
 set_db add_tieoffs_cells $TIE_CELLS
 
 puts "MMMC analysis views: [get_db analysis_views]"
@@ -73,10 +71,18 @@ puts "MMMC analysis views: [get_db analysis_views]"
 ###############################
 # Check imported design
 ###############################
-# Stylus Common UI checks for inconsistent or missing netlist, library,
-# timing, floorplan, I/O and power/ground data before implementation starts.
-check_design -type all \
-    > ${REPORT_PATH}/check_design_all.rpt
+# At stage 1 only check categories that are valid immediately after importing
+# the handoff. Place/CTS/route/signoff checks belong to their own later stages.
+check_design -type [list \
+    library \
+    netlist \
+    synthesis \
+    power_intent \
+    timing \
+    hierarchical \
+    assign_statements \
+    extract_rc] \
+    > ${REPORT_PATH}/check_design_input.rpt
 
 # Check clocks, exceptions and timing constraints independently from the
 # structural/library checks above.

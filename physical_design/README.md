@@ -7,13 +7,14 @@ chưa có SRAM, pad ring hoặc hệ thống SoC bao quanh.
 
 ## Trạng thái và điều kiện chạy
 
-PD gần nhất ở commit `49c783a` đã chạy đủ 7 stage: setup WNS +2.472 ns,
-DRC bằng 0 và connectivity bằng 0, nhưng còn scan-cell/hold như ghi bên dưới.
-Synthesis mới ở commit `fa4c6d7` đã chặn 80 scan base cell và xác nhận mapped
-scan count bằng 0, không có unresolved reference hoặc tool error. Cell area
-tăng từ 19501.524 lên 19942.020 µm² (+2.26%) vì `SDFFQX1` được thay bằng
-functional flop và mux. Cần chạy lại toàn bộ PD bằng handoff mới để xác nhận
-`IMPSP-9099` và hold đã hết.
+PD ở commit `921693d` đã chạy đủ 7 stage với handoff sạch scan: exported
+netlist không có `SDFF*`, log không còn `IMPSP-9099`, setup WNS +2.316 ns,
+DRC bằng 0 và connectivity bằng 0. Cell area sau PD là 21587.382 µm² với
+7.220 instance. Tuy nhiên còn 25 R2R hold paths, WNS -0.009 ns; post-route
+summary cũng còn một max-transition net với slack -0.130 ns và 159 real
+max-fanout violations. Script đã được sửa để chạy thêm timing/DRV recovery
+khi filler tạm đã được xóa; cần rerun stage 5 đến stage 7 hoặc toàn bộ flow
+để xác nhận hold/DRV cuối.
 
 Máy chạy cần Innovus/license, Liberty, LEF, QRC và database synthesis đầy đủ.
 Phải chạy lại synthesis để handoff mới không dùng `SDFF*` trong flow
@@ -59,11 +60,11 @@ thoát GUI.
 
 | Script | Thao tác | Checkpoint trong outputs/mmmc |
 |---|---|---|
-| 1_init_design.tcl | Read common DB, cấu hình OCV/CPPR, CTS/filler/tie cells, kiểm tra input design/timing | picorv32_init |
+| 1_init_design.tcl | Read common DB, cấu hình OCV/CPPR và CTS/tie cells, kiểm tra input design/timing | picorv32_init |
 | 2_floorplan_power.tcl | Core, pin plan, VDD/VSS ring và stripes, special route | picorv32_floorplan_power |
-| 3_placement.tcl | place_opt_design, pre-CTS setup report | picorv32_place |
-| 4_cts.tcl | clock_opt_design, propagated clocks, setup/hold report | picorv32_post_cts |
-| 5_routing.tcl | route_opt_design, sau đó filler và setup/hold report | picorv32_post_route |
+| 3_placement.tcl | place_opt_design, `check_design -type place`, pre-CTS setup report | picorv32_place |
+| 4_cts.tcl | `check_design -type cts`, clock_opt_design, propagated clocks, setup/hold report | picorv32_post_cts |
+| 5_routing.tcl | route_opt_design, post-route timing/DRV recovery, filler, ECO route và setup/hold report | picorv32_post_route |
 | 6_chip_finish.tcl | RC extraction, SI timing, area/power, DRC/connectivity | picorv32_finish |
 | 7_export.tcl | DB, netlist, DEF và SDC của slow_setup_view/fast_hold_view | picorv32_final |
 
@@ -73,18 +74,22 @@ qua path group nằm trong mode-specific SDC (`TA-976`). Sau khi nạp handoff,
 stage 1 chạy hai kiểm tra Stylus trước khi ghi checkpoint:
 
 ```tcl
-check_design -type all > ${REPORT_PATH}/check_design_all.rpt
+check_design -type [list library netlist synthesis power_intent timing \
+    hierarchical assign_statements extract_rc] \
+    > ${REPORT_PATH}/check_design_input.rpt
 check_timing -verbose > ${REPORT_PATH}/check_timing.rpt
 ```
 
-`check_design -type all` kiểm tra tính nhất quán của netlist, physical/timing
-library, floorplan, placement, I/O, tie cell và power/ground data mà handoff
-đã cung cấp. `check_timing -verbose` kiểm tra clock và timing constraint. Phải
-đọc cả hai report trước khi tiếp tục stage 2; không chấp nhận missing cell,
-unresolved netlist reference, cell thiếu timing/physical view, clock thiếu
-constraint hoặc timing exception không hợp lệ. Một số mục floorplan/placement
-có thể chưa áp dụng ở stage 1 vì floorplan chỉ được tạo ở stage 2; cần phân
-loại theo nội dung report, không chỉ nhìn tổng số warning.
+Stage 1 chỉ chạy các category hợp lệ ngay sau khi import. Placement và CTS
+được kiểm tra đúng thời điểm ở stage 3 và stage 4. Không dùng `-type all` ở
+stage 1 vì floorplan, placement, PG followpin và signoff environment chưa tồn
+tại. `check_timing -verbose` kiểm tra clock và timing constraint. Phải đọc
+report trước khi tiếp tục; không chấp nhận missing/unresolved cell đang được
+dùng, library-view mismatch, clock thiếu constraint hoặc timing exception
+không hợp lệ. `CHKLIBRARY-2` trên scan cell không được dùng có thể chấp nhận
+khi exported netlist xác nhận scan count bằng 0. `no_drive` là hệ quả của mô
+hình `set_input_transition` thay vì external driver cell; `ideal_clock_waveform`
+là trạng thái dự kiến trước CTS.
 
 ## Floorplan, pins và power
 
@@ -114,14 +119,15 @@ phải kiểm tra connectivity lại.
 
 ## Lỗi kỹ thuật đã gặp và hướng xử lý
 
-Các số liệu PD ban đầu thuộc commit `874a749`, PD gần nhất thuộc `49c783a` và
-synthesis sạch scan thuộc `fa4c6d7`. Không dùng report PD cũ làm kết quả
-signoff cho handoff synthesis mới; phải chạy lại toàn bộ PD.
+Các số liệu PD ban đầu thuộc commit `874a749`, synthesis sạch scan thuộc
+`fa4c6d7` và PD sạch scan gần nhất thuộc `921693d`. Script đã thay đổi sau
+lần chạy này nên phải rerun stage 5-7 trước khi dùng kết quả timing cuối.
 
 | Mã lỗi/hiện tượng | Nguyên nhân đã xác định | Cách xử lý | Cách xác nhận |
 |---|---|---|---|
-| Flow PD nạp `INVS` nhưng không có report kiểm tra input riêng | Kiểm tra file tồn tại chỉ chứng minh đường dẫn handoff hợp lệ; nó không phát hiện netlist/library/MMMC data thiếu hoặc không nhất quán trong Innovus. Kiểm tra `check_design -unresolved` của Genus cũng không thay thế kiểm tra import phía Innovus. | Stage 1 chạy lệnh Stylus `check_design -type all` và `check_timing -verbose` ngay sau `read_db -common`, tạo path group và cấu hình analysis. | Đọc `1_init_design/check_design_all.rpt` và `1_init_design/check_timing.rpt` trước stage 2; không có missing/unresolved cell, library-view mismatch hoặc timing-intent lỗi. |
-| `IMPSP-9099` xuất hiện 2 lần khi placement | Genus dùng 1.021 cell `SDFFQX1` để thực hiện mux-register trong flow functional không có scan-chain. Pattern đầu tiên là `*/SDFF*`, nhưng base-cell name không có library prefix nên query trả về rỗng; do không có nhánh báo lỗi, synthesis vẫn ghi handoff. Lần chạy `49c783a` vì vậy có 26/33 reported hold path kết thúc tại chân SI. | Query bằng `SDFF*`, `SEDFF*`, `SPDFF*`, `SRDFF*`, yêu cầu phải match base cell, đặt `.dont_use true`, rồi đếm lại netlist. Nếu còn scan instance, Genus dừng trước khi ghi Innovus handoff. Nếu dự án cần DFT thật thì thay bằng scan insertion/chain definition đầy đủ. | Synthesis `fa4c6d7` đã xác nhận `picorv32_scan_cell_check.rpt = 0`. Bước còn lại là rerun PD và xác nhận log placement không còn `IMPSP-9099`, hold report không còn endpoint SI/SE. |
+| `check_design -type all` ở stage 1 báo 23 error và 7.704 warning dù full flow vẫn sạch DRC/connectivity | `-type all` gọi cả place/route/signoff checks trước khi floorplan và PG followpin được tạo. Vì vậy có 20 `IMPPP-4422` về followpin và 3 `IMPESO-*` do placement/Tempus/distributed signoff environment chưa sẵn sàng; hàng nghìn unplaced-object warning cũng là sai thời điểm. | Stage 1 chỉ kiểm tra input categories `library/netlist/synthesis/power_intent/timing/hierarchical/assign_statements/extract_rc`. Chạy `place` sau placement và `cts` ngay trước CTS. | Rerun flow; `check_design_input.rpt` không còn `IMPPP-4422`/`IMPESO-*`; đọc thêm `check_design_place.rpt` và `check_design_cts.rpt`. |
+| `check_timing` báo 102 `no_drive` và một `ideal_clock_waveform` | Interface được mô hình bằng `set_input_transition` để dùng chung cho cả slow/fast library, không bằng một external driving cell; clock vẫn ideal trước CTS. Đây không phải missing input delay: timing category của `check_design` báo sạch. | Giữ mô hình transition/load cho block standalone. Khi có chip-level driver/receiver thật, thay bằng cell và interface timing đã characterize. | Mọi data input vẫn có min/max input delay và transition; sau CTS clock được propagated; setup/hold reports có đủ I2C/R2R/C2O/I2O paths. |
+| `IMPSP-9099` xuất hiện 2 lần khi placement | Genus dùng 1.021 cell `SDFFQX1` để thực hiện mux-register trong flow functional không có scan-chain. Pattern đầu tiên là `*/SDFF*`, nhưng base-cell name không có library prefix nên query trả về rỗng; do không có nhánh báo lỗi, synthesis vẫn ghi handoff. Lần chạy `49c783a` vì vậy có 26/33 reported hold path kết thúc tại chân SI. | Query bằng `SDFF*`, `SEDFF*`, `SPDFF*`, `SRDFF*`, yêu cầu phải match base cell, đặt `.dont_use true`, rồi đếm lại netlist. Nếu còn scan instance, Genus dừng trước khi ghi Innovus handoff. Nếu dự án cần DFT thật thì thay bằng scan insertion/chain definition đầy đủ. | Synthesis `fa4c6d7` và PD `921693d` đã xác nhận scan count bằng 0; `IMPSP-9099` và endpoint SI/SE đã hết. `IMPSP-9025` “No scan chain” là dự kiến cho functional flow này. |
 | Genus `CDFG-475/476`: case không parallel/full như pragma | RTL PicoRV32 upstream dùng `(* parallel_case, full_case *)` cho các one-hot decode/case. Với cấu hình parameter hiện tại, Genus chứng minh một số điều kiện có thể overlap hoặc không cover hết, nên cảnh báo rằng pragma mạnh hơn cấu trúc logic thực tế. | Không suppress và không tự xóa pragma khi chưa có regression/formal equivalence, vì thay đổi có thể ảnh hưởng decode semantics và PPA. Giữ warning được ghi nhận; trước signoff phải chạy RTL-to-gate formal equivalence và ISA regression. | Formal equivalence pass và simulation không có illegal-state mismatch; nếu chỉnh RTL thì rerun toàn bộ synthesis/PD. |
 | Genus `ELABUTL-123`: 32 bit `pcpi_insn` undriven lúc elaborate | Cấu hình mặc định tắt PCPI; trước constant propagation, output bus tùy chọn chưa có driver hữu hiệu. Netlist cuối đã tie các bit `pcpi_insn` về 0. | Chấp nhận cho cấu hình PCPI-disabled nhưng phải kiểm tra netlist cuối. Nếu bật PCPI, warning này không được phép tồn tại và interface phải có logic driver thực. | Netlist hiện có `assign pcpi_insn[*] = 1'b0`; không có unresolved reference. Khi đổi parameter, chạy lại lint/check-design. |
 | `NRGR-59`, `NRGR-60`, `NRGR-58`, `NRGR-62`; 372 DRC `OffGrd` trên Metal3/Metal4 | Offset trong pin file cũ là các số chia đều nhưng không nằm trên manufacturing grid 0.005 µm và routing track. NanoRoute không truy cập được chân, sau đó báo open net. | Snap top/bottom pins vào X track Metal4 và left/right pins vào Y track Metal3 trong `pins_mmmc.io`. Pin plan hiện có 409/409 pin on-track, không trùng offset trên cùng cạnh. | Log route không còn `NRGR-59/60`; `check_drc` không còn Metal3/Metal4 `OffGrd`. |
@@ -131,7 +137,7 @@ signoff cho handoff synthesis mới; phải chạy lại toàn bộ PD.
 | `NREX-102: Has no routing` trên PCPI/IRQ và một số port | Với parameter mặc định, PCPI/IRQ bị tắt nên một số interface net chỉ còn một terminal hoặc không có timing path. Router không tạo dây cho net không cần kết nối; extraction vẫn phát warning tổng quát. VDD/VSS cũng không được signal RC extractor xử lý vì là PG/SRPG net. | Không che warning trước khi phân loại. So sánh với `check_connectivity`; net một terminal của tính năng bị tắt có thể chấp nhận. Nếu bật PCPI/IRQ, phải rerun synthesis và mọi net nhiều terminal tương ứng phải được route/extract. | `check_connectivity = 0`; không có timed multi-terminal net bị `Has no routing`; setup/hold report không dựa vào net chưa extract. |
 | `IMPSR-4302` nói cap-table/qrcTechFile đã có trong design | MMMC RC corner đã cung cấp `gpdk045.tch`, nên Innovus bỏ thông tin RC trùng lặp trong technology LEF. Thông báo không có nghĩa flow đang dùng capTbl riêng. | Giữ duy nhất QRC technology file GPDK045; không thêm capTbl từ process/project khác. | `mmmc.view` chỉ tham chiếu `gpdk045.tch`; extraction hoàn thành bằng QRC engine. |
 | Hold WNS `-0.211 ns` khi pin hở, sau khi route đủ còn `-0.050 ns` | Lần chạy `6ad9789` xác nhận worst path là C2O và đã có nhiều `DLY1X1`. Giá trị `set_output_delay -min -0.20` tự giả định receiver cần hold 0.20 ns, nhưng project standalone chưa có specification ngoài chip. Cộng uncertainty 0.10 ns làm required minimum delay thành 0.30 ns. | Dùng minimum output delay trung tính 0.00 ns cho standalone flow; khi tích hợp SoC phải thay bằng `-t_hold` từ receiver thật. Lần chạy `49c783a` không còn C2O hold violation; WNS còn lại là -0.007 ns ở R2R và chủ yếu liên quan scan cell. | Connectivity = 0 trước khi đọc `6_chip_finish/hold.rpt`; setup/hold WNS đều phải ≥ 0 với specification được chấp nhận. |
-| Hold optimizer báo `NoLegalLoc` hoặc local density 100% | Lần chạy `49c783a` đã đặt filler sau `route_opt_design` nhưng late recovery vẫn có local density 100%; vì vậy filler không phải nguyên nhân trực tiếp duy nhất. Các scan-based mux path ngắn tập trung trong register file làm optimizer chèn nhiều hold buffer và cạn cell hợp lệ ở vùng cục bộ. | Giữ đúng thứ tự `route_opt_design` trước `add_fillers`; trước hết loại scan-cell mapping. Nếu sau synthesis sạch scan vẫn còn `NoLegalLoc`, tăng core/giảm utilization hoặc tạo thêm whitespace quanh vùng vi phạm thay vì nới hold constraint. | Netlist scan count = 0, xem lại failure-reason report và hold WNS. Chỉ điều chỉnh floorplan nếu violation không còn liên quan SI/SE. |
+| PD sạch scan vẫn còn 25 R2R hold paths, WNS -0.009 ns; một max-transition net slack -0.130 ns và 159 real max-fanout violations | `route_opt_design` đã giảm hold từ -0.033 ns/1.187 paths xuống -0.008 ns/25 paths. Sau ECO route, transparent filler flow chèn 5.900 filler; lần recovery cuối thấy density 100% và chỉ thử safe-resize, nhưng `failure_reason.rpt` báo `NoCellSelected/InvalidCell`. Các DRV còn lại cũng xuất hiện trong summary sau ECO route. | Sau `route_opt_design`, xóa filler prefix `FILLER`, chạy `opt_design -post_route -drv -setup -hold` trên routed parasitics, sau đó thêm filler lại và chạy `route_eco`. Ghi `unfixed_hold` report để chẩn đoán nếu còn path. | Rerun stage 5-7; hold WNS/TNS phải ≥ 0, real max-transition/max-fanout violation bằng 0, setup vẫn ≥ 0, DRC/connectivity vẫn bằng 0. Nếu vẫn thiếu legal site thì mới tăng core/giảm utilization hoặc đánh giá lại fanout constraint theo interface/library specification. |
 | `IMPIMEX-7031` khi chạy full flow | Gọi `read_db` nhiều lần trong cùng Innovus session khi mỗi stage tự reload checkpoint. | Stage 1 dùng `read_db -common`; `run_full.tcl` giữ database trong memory qua `PD_DATABASE_LOADED`. Stage chạy độc lập mới đọc checkpoint của stage trước. | Full flow đi liên tục qua đủ `Done 1` đến `Done 7` mà không reload database. |
 | `IMPCTE-290` trong fast hold view | SDC cũ dùng `set_driving_cell` với cell/library chỉ phù hợp slow view. | Dùng `set_input_transition -max/-min` cho input interface, dùng được ở cả hai MMMC view. | `read_db`/timing initialization không còn `IMPCTE-290`. |
 | `TA-976` đối với path group | Path group được Genus export bên trong mode-specific SDC nhưng Innovus bỏ qua. | Tạo lại I2C/R2R/C2O/I2O ở global scope trong stage 1 sau khi nạp handoff. | Các timing report Innovus hiển thị đúng các group thay vì gom hết vào default. |
