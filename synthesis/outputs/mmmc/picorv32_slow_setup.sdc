@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sat Sep 12 21:57:00 +07 2026
+#  Created by Genus(TM) Synthesis Solution 25.13-s071_1 on Sun Sep 13 09:36:56 +07 2026
 
 # ####################################################################
 
@@ -1440,17 +1440,13 @@ group_path -name I2C -from [list \
   [get_cells {mem_rdata_q_reg[18]}]  \
   [get_cells {mem_rdata_q_reg[19]}]  \
   [get_cells {mem_rdata_q_reg[20]}]  \
-  [get_cells {mem_rdata_q_reg[21]}]  \
   [get_cells {mem_rdata_q_reg[22]}]  \
   [get_cells {mem_rdata_q_reg[23]}]  \
   [get_cells {mem_rdata_q_reg[24]}]  \
   [get_cells {mem_rdata_q_reg[25]}]  \
   [get_cells {mem_rdata_q_reg[26]}]  \
-  [get_cells {mem_rdata_q_reg[27]}]  \
   [get_cells {mem_rdata_q_reg[28]}]  \
   [get_cells {mem_rdata_q_reg[29]}]  \
-  [get_cells {mem_rdata_q_reg[30]}]  \
-  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {mem_state_reg[0]}]  \
   [get_cells {mem_state_reg[1]}]  \
   [get_cells mem_valid_reg]  \
@@ -1539,7 +1535,7 @@ group_path -name I2C -from [list \
   [get_cells {reg_op1_reg[20]}]  \
   [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
@@ -1658,6 +1654,10 @@ group_path -name I2C -from [list \
   [get_cells instr_lui_reg]  \
   [get_cells mem_do_rinst_reg]  \
   [get_cells {mem_rdata_q_reg[14]}]  \
+  [get_cells {mem_rdata_q_reg[21]}]  \
+  [get_cells {mem_rdata_q_reg[27]}]  \
+  [get_cells {mem_rdata_q_reg[30]}]  \
+  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
@@ -1670,8 +1670,8 @@ group_path -name I2C -from [list \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[29]}]  \
+  [get_cells {reg_op1_reg[30]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ]
 group_path -name R2R -from [list \
   [get_cells {alu_out_q_reg[0]}]  \
@@ -2998,17 +2998,13 @@ group_path -name R2R -from [list \
   [get_cells {mem_rdata_q_reg[18]}]  \
   [get_cells {mem_rdata_q_reg[19]}]  \
   [get_cells {mem_rdata_q_reg[20]}]  \
-  [get_cells {mem_rdata_q_reg[21]}]  \
   [get_cells {mem_rdata_q_reg[22]}]  \
   [get_cells {mem_rdata_q_reg[23]}]  \
   [get_cells {mem_rdata_q_reg[24]}]  \
   [get_cells {mem_rdata_q_reg[25]}]  \
   [get_cells {mem_rdata_q_reg[26]}]  \
-  [get_cells {mem_rdata_q_reg[27]}]  \
   [get_cells {mem_rdata_q_reg[28]}]  \
   [get_cells {mem_rdata_q_reg[29]}]  \
-  [get_cells {mem_rdata_q_reg[30]}]  \
-  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {mem_state_reg[0]}]  \
   [get_cells {mem_state_reg[1]}]  \
   [get_cells mem_valid_reg]  \
@@ -3097,7 +3093,7 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[20]}]  \
   [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
@@ -3216,6 +3212,10 @@ group_path -name R2R -from [list \
   [get_cells instr_lui_reg]  \
   [get_cells mem_do_rinst_reg]  \
   [get_cells {mem_rdata_q_reg[14]}]  \
+  [get_cells {mem_rdata_q_reg[21]}]  \
+  [get_cells {mem_rdata_q_reg[27]}]  \
+  [get_cells {mem_rdata_q_reg[30]}]  \
+  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
@@ -3228,8 +3228,8 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[29]}]  \
+  [get_cells {reg_op1_reg[30]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ] -to [list \
   [get_cells {alu_out_q_reg[0]}]  \
   [get_cells {alu_out_q_reg[1]}]  \
@@ -4555,17 +4555,13 @@ group_path -name R2R -from [list \
   [get_cells {mem_rdata_q_reg[18]}]  \
   [get_cells {mem_rdata_q_reg[19]}]  \
   [get_cells {mem_rdata_q_reg[20]}]  \
-  [get_cells {mem_rdata_q_reg[21]}]  \
   [get_cells {mem_rdata_q_reg[22]}]  \
   [get_cells {mem_rdata_q_reg[23]}]  \
   [get_cells {mem_rdata_q_reg[24]}]  \
   [get_cells {mem_rdata_q_reg[25]}]  \
   [get_cells {mem_rdata_q_reg[26]}]  \
-  [get_cells {mem_rdata_q_reg[27]}]  \
   [get_cells {mem_rdata_q_reg[28]}]  \
   [get_cells {mem_rdata_q_reg[29]}]  \
-  [get_cells {mem_rdata_q_reg[30]}]  \
-  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {mem_state_reg[0]}]  \
   [get_cells {mem_state_reg[1]}]  \
   [get_cells mem_valid_reg]  \
@@ -4654,7 +4650,7 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[20]}]  \
   [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
@@ -4773,6 +4769,10 @@ group_path -name R2R -from [list \
   [get_cells instr_lui_reg]  \
   [get_cells mem_do_rinst_reg]  \
   [get_cells {mem_rdata_q_reg[14]}]  \
+  [get_cells {mem_rdata_q_reg[21]}]  \
+  [get_cells {mem_rdata_q_reg[27]}]  \
+  [get_cells {mem_rdata_q_reg[30]}]  \
+  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
@@ -4785,8 +4785,8 @@ group_path -name R2R -from [list \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[29]}]  \
+  [get_cells {reg_op1_reg[30]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ]
 group_path -name C2O -from [list \
   [get_cells {alu_out_q_reg[0]}]  \
@@ -6113,17 +6113,13 @@ group_path -name C2O -from [list \
   [get_cells {mem_rdata_q_reg[18]}]  \
   [get_cells {mem_rdata_q_reg[19]}]  \
   [get_cells {mem_rdata_q_reg[20]}]  \
-  [get_cells {mem_rdata_q_reg[21]}]  \
   [get_cells {mem_rdata_q_reg[22]}]  \
   [get_cells {mem_rdata_q_reg[23]}]  \
   [get_cells {mem_rdata_q_reg[24]}]  \
   [get_cells {mem_rdata_q_reg[25]}]  \
   [get_cells {mem_rdata_q_reg[26]}]  \
-  [get_cells {mem_rdata_q_reg[27]}]  \
   [get_cells {mem_rdata_q_reg[28]}]  \
   [get_cells {mem_rdata_q_reg[29]}]  \
-  [get_cells {mem_rdata_q_reg[30]}]  \
-  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {mem_state_reg[0]}]  \
   [get_cells {mem_state_reg[1]}]  \
   [get_cells mem_valid_reg]  \
@@ -6212,7 +6208,7 @@ group_path -name C2O -from [list \
   [get_cells {reg_op1_reg[20]}]  \
   [get_cells {reg_op1_reg[21]}]  \
   [get_cells {reg_op1_reg[24]}]  \
-  [get_cells {reg_op1_reg[30]}]  \
+  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[31]}]  \
   [get_cells {reg_op2_reg[0]}]  \
   [get_cells {reg_op2_reg[1]}]  \
@@ -6331,6 +6327,10 @@ group_path -name C2O -from [list \
   [get_cells instr_lui_reg]  \
   [get_cells mem_do_rinst_reg]  \
   [get_cells {mem_rdata_q_reg[14]}]  \
+  [get_cells {mem_rdata_q_reg[21]}]  \
+  [get_cells {mem_rdata_q_reg[27]}]  \
+  [get_cells {mem_rdata_q_reg[30]}]  \
+  [get_cells {mem_rdata_q_reg[31]}]  \
   [get_cells {reg_op1_reg[0]}]  \
   [get_cells {reg_op1_reg[1]}]  \
   [get_cells {reg_op1_reg[4]}]  \
@@ -6343,8 +6343,8 @@ group_path -name C2O -from [list \
   [get_cells {reg_op1_reg[25]}]  \
   [get_cells {reg_op1_reg[26]}]  \
   [get_cells {reg_op1_reg[27]}]  \
-  [get_cells {reg_op1_reg[28]}]  \
   [get_cells {reg_op1_reg[29]}]  \
+  [get_cells {reg_op1_reg[30]}]  \
   [get_cells {decoded_imm_j_reg[19]}] ] -to [list \
   [get_ports trap]  \
   [get_ports mem_valid]  \
@@ -8391,5 +8391,61 @@ set_input_transition -min 0.05 [get_ports {irq[1]}]
 set_input_transition -max 0.1 [get_ports {irq[1]}]
 set_input_transition -min 0.05 [get_ports {irq[0]}]
 set_input_transition -max 0.1 [get_ports {irq[0]}]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFHQX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFHQX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFHQX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFHQX8]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFNSRX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFNSRX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFNSRX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFNSRXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFQX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFQX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFQX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFQXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRHQX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRHQX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRHQX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRHQX8]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFRXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSHQX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSHQX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSHQX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSHQX8]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRHQX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRHQX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRHQX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRHQX8]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSRXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFSXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFTRX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFTRX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFTRX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFTRXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SDFFXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFHQX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFHQX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFHQX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFHQX8]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFTRX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFTRX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFTRX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFTRXL]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFX1]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFX2]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFX4]
+set_dont_use true [get_lib_cells slow_vdd1v0/SEDFFXL]
 set_clock_uncertainty -setup 0.2 [get_clocks core_clk]
 set_clock_uncertainty -hold 0.1 [get_clocks core_clk]

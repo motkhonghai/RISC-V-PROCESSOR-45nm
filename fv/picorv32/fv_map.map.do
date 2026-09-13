@@ -1752,17 +1752,13 @@ add mapped point mem_rdata_q[17]/q mem_rdata_q_reg[17]/Q -type DFF DFF
 add mapped point mem_rdata_q[18]/q mem_rdata_q_reg[18]/Q -type DFF DFF
 add mapped point mem_rdata_q[19]/q mem_rdata_q_reg[19]/Q -type DFF DFF
 add mapped point mem_rdata_q[20]/q mem_rdata_q_reg[20]/Q -type DFF DFF
-add mapped point mem_rdata_q[21]/q mem_rdata_q_reg[21]/Q -type DFF DFF
 add mapped point mem_rdata_q[22]/q mem_rdata_q_reg[22]/Q -type DFF DFF
 add mapped point mem_rdata_q[23]/q mem_rdata_q_reg[23]/Q -type DFF DFF
 add mapped point mem_rdata_q[24]/q mem_rdata_q_reg[24]/Q -type DFF DFF
 add mapped point mem_rdata_q[25]/q mem_rdata_q_reg[25]/Q -type DFF DFF
 add mapped point mem_rdata_q[26]/q mem_rdata_q_reg[26]/Q -type DFF DFF
-add mapped point mem_rdata_q[27]/q mem_rdata_q_reg[27]/Q -type DFF DFF
 add mapped point mem_rdata_q[28]/q mem_rdata_q_reg[28]/Q -type DFF DFF
 add mapped point mem_rdata_q[29]/q mem_rdata_q_reg[29]/Q -type DFF DFF
-add mapped point mem_rdata_q[30]/q mem_rdata_q_reg[30]/Q -type DFF DFF
-add mapped point mem_rdata_q[31]/q mem_rdata_q_reg[31]/Q -type DFF DFF
 add mapped point mem_state[0]/q mem_state_reg[0]/Q -type DFF DFF
 add mapped point mem_state[1]/q mem_state_reg[1]/Q -type DFF DFF
 add mapped point mem_valid/q mem_valid_reg/Q -type DFF DFF
@@ -1851,7 +1847,7 @@ add mapped point reg_op1[19]/q reg_op1_reg[19]/Q -type DFF DFF
 add mapped point reg_op1[20]/q reg_op1_reg[20]/Q -type DFF DFF
 add mapped point reg_op1[21]/q reg_op1_reg[21]/Q -type DFF DFF
 add mapped point reg_op1[24]/q reg_op1_reg[24]/Q -type DFF DFF
-add mapped point reg_op1[30]/q reg_op1_reg[30]/Q -type DFF DFF
+add mapped point reg_op1[28]/q reg_op1_reg[28]/Q -type DFF DFF
 add mapped point reg_op1[31]/q reg_op1_reg[31]/Q -type DFF DFF
 add mapped point reg_op2[0]/q reg_op2_reg[0]/Q -type DFF DFF
 add mapped point reg_op2[1]/q reg_op2_reg[1]/Q -type DFF DFF
@@ -1961,6 +1957,10 @@ add mapped point decoded_imm_j[11]/q decoded_imm_j_reg[11]/Q -type DFF DFF
 add mapped point instr_lui/q instr_lui_reg/Q -type DFF DFF
 add mapped point mem_do_rinst/q mem_do_rinst_reg/Q -type DFF DFF
 add mapped point mem_rdata_q[14]/q mem_rdata_q_reg[14]/Q -type DFF DFF
+add mapped point mem_rdata_q[21]/q mem_rdata_q_reg[21]/Q -type DFF DFF
+add mapped point mem_rdata_q[27]/q mem_rdata_q_reg[27]/Q -type DFF DFF
+add mapped point mem_rdata_q[30]/q mem_rdata_q_reg[30]/Q -type DFF DFF
+add mapped point mem_rdata_q[31]/q mem_rdata_q_reg[31]/Q -type DFF DFF
 add mapped point reg_op1[0]/q reg_op1_reg[0]/Q -type DFF DFF
 add mapped point reg_op1[1]/q reg_op1_reg[1]/Q -type DFF DFF
 add mapped point reg_op1[4]/q reg_op1_reg[4]/Q -type DFF DFF
@@ -1973,8 +1973,8 @@ add mapped point reg_op1[23]/q reg_op1_reg[23]/Q -type DFF DFF
 add mapped point reg_op1[25]/q reg_op1_reg[25]/Q -type DFF DFF
 add mapped point reg_op1[26]/q reg_op1_reg[26]/Q -type DFF DFF
 add mapped point reg_op1[27]/q reg_op1_reg[27]/Q -type DFF DFF
-add mapped point reg_op1[28]/q reg_op1_reg[28]/Q -type DFF DFF
 add mapped point reg_op1[29]/q reg_op1_reg[29]/Q -type DFF DFF
+add mapped point reg_op1[30]/q reg_op1_reg[30]/Q -type DFF DFF
 
 
 
