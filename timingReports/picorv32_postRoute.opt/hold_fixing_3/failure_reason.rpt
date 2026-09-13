@@ -8,28 +8,28 @@ Hold Slack:    -7.8ps
 
 Node: cpuregs_reg[7][19]/D
 Net:  FE_PHN787_n_1747
-  Setup Slack:   6752.6ps
+  Setup Slack:   6752.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89692/Y
 Net:  FE_PHN787_n_1747
-  Setup Slack:   6752.6ps
+  Setup Slack:   6752.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89692/A
 Net:  cpuregs[7][19]
-  Setup Slack:   9273.3ps
+  Setup Slack:   9273.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[7][19]/Q
 Net:  cpuregs[7][19]
-  Setup Slack:   8449.3ps
+  Setup Slack:   8450.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -58,14 +58,14 @@ Net:  FE_PHN802_n_1808
       NoCellSelected(2)
 Node: g89631/A
 Net:  cpuregs[10][25]
-  Setup Slack:   9288.2ps
+  Setup Slack:   9288.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[10][25]/Q
 Net:  cpuregs[10][25]
-  Setup Slack:   8303.3ps
+  Setup Slack:   8302.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -80,14 +80,14 @@ Hold Slack:    -7.5ps
 
 Node: cpuregs_reg[8][10]/D
 Net:  n_1876
-  Setup Slack:   7036.0ps
+  Setup Slack:   7036.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89563/Y
 Net:  n_1876
-  Setup Slack:   7036.0ps
+  Setup Slack:   7036.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -101,7 +101,7 @@ Net:  cpuregs[8][10]
       InvalidCell
 Node: cpuregs_reg[8][10]/Q
 Net:  cpuregs[8][10]
-  Setup Slack:   8546.9ps
+  Setup Slack:   8550.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -116,28 +116,28 @@ Hold Slack:    -7.4ps
 
 Node: cpuregs_reg[30][21]/D
 Net:  n_2012
-  Setup Slack:   6518.2ps
+  Setup Slack:   6518.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89427/Y
 Net:  n_2012
-  Setup Slack:   6518.2ps
+  Setup Slack:   6518.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89427/B
 Net:  cpuregs[30][21]
-  Setup Slack:   9288.6ps
+  Setup Slack:   9288.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[30][21]/Q
 Net:  cpuregs[30][21]
-  Setup Slack:   8685.4ps
+  Setup Slack:   8688.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -166,14 +166,14 @@ Net:  n_1711
       NoCellSelected(2)
 Node: g89729/A
 Net:  cpuregs[11][25]
-  Setup Slack:   9285.2ps
+  Setup Slack:   9285.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[11][25]/Q
 Net:  cpuregs[11][25]
-  Setup Slack:   8276.2ps
+  Setup Slack:   8275.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -188,14 +188,14 @@ Hold Slack:    -6.8ps
 
 Node: cpuregs_reg[6][19]/D
 Net:  n_1897
-  Setup Slack:   6751.3ps
+  Setup Slack:   6751.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89542/Y
 Net:  n_1897
-  Setup Slack:   6751.3ps
+  Setup Slack:   6751.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -209,7 +209,7 @@ Net:  cpuregs[6][19]
       InvalidCell
 Node: cpuregs_reg[6][19]/Q
 Net:  cpuregs[6][19]
-  Setup Slack:   8486.8ps
+  Setup Slack:   8487.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -224,28 +224,28 @@ Hold Slack:    -6.7ps
 
 Node: cpuregs_reg[10][29]/D
 Net:  n_1803
-  Setup Slack:   5549.8ps
+  Setup Slack:   5550.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89636/Y
 Net:  n_1803
-  Setup Slack:   5549.8ps
+  Setup Slack:   5550.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89636/A
 Net:  cpuregs[10][29]
-  Setup Slack:   9282.2ps
+  Setup Slack:   9282.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[10][29]/Q
 Net:  cpuregs[10][29]
-  Setup Slack:   8419.0ps
+  Setup Slack:   8418.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -260,14 +260,14 @@ Hold Slack:    -6.6ps
 
 Node: cpuregs_reg[8][13]/D
 Net:  n_1873
-  Setup Slack:   7037.7ps
+  Setup Slack:   7038.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89566/Y
 Net:  n_1873
-  Setup Slack:   7037.7ps
+  Setup Slack:   7038.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -281,7 +281,7 @@ Net:  cpuregs[8][13]
       InvalidCell
 Node: cpuregs_reg[8][13]/Q
 Net:  cpuregs[8][13]
-  Setup Slack:   8524.1ps
+  Setup Slack:   8523.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -296,14 +296,14 @@ Hold Slack:    -6.6ps
 
 Node: cpuregs_reg[5][10]/D
 Net:  FE_PHN845_n_1936
-  Setup Slack:   6842.8ps
+  Setup Slack:   6844.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89503/Y
 Net:  FE_PHN845_n_1936
-  Setup Slack:   6842.8ps
+  Setup Slack:   6844.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -317,7 +317,7 @@ Net:  cpuregs[5][10]
       InvalidCell
 Node: cpuregs_reg[5][10]/Q
 Net:  cpuregs[5][10]
-  Setup Slack:   8655.3ps
+  Setup Slack:   8658.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -328,32 +328,32 @@ Net:  cpuregs[5][10]
 Endpoint:      cpuregs_reg[31][21]/D
 Beginpoint:    cpuregs_reg[31][21]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -6.4ps
+Hold Slack:    -6.5ps
 
 Node: cpuregs_reg[31][21]/D
 Net:  n_1966
-  Setup Slack:   6516.8ps
+  Setup Slack:   6517.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89473/Y
 Net:  n_1966
-  Setup Slack:   6516.8ps
+  Setup Slack:   6517.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89473/B
 Net:  cpuregs[31][21]
-  Setup Slack:   9287.8ps
+  Setup Slack:   9287.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[31][21]/Q
 Net:  cpuregs[31][21]
-  Setup Slack:   8706.0ps
+  Setup Slack:   8708.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -368,14 +368,14 @@ Hold Slack:    -6.3ps
 
 Node: decoded_imm_j_reg[10]/D
 Net:  n_1530
-  Setup Slack:   7480.7ps
+  Setup Slack:   7479.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89980/Y
 Net:  n_1530
-  Setup Slack:   7480.7ps
+  Setup Slack:   7479.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -414,7 +414,7 @@ Net:  decoded_imm_j[10]
 Endpoint:      cpuregs_reg[5][28]/D
 Beginpoint:    cpuregs_reg[5][28]/Q
 Analysis View: fast_hold_view
-Hold Slack:    -5.9ps
+Hold Slack:    -6.0ps
 
 Node: cpuregs_reg[5][28]/D
 Net:  n_1918
@@ -432,14 +432,14 @@ Net:  n_1918
       NoCellSelected(2)
 Node: g89521/B
 Net:  cpuregs[5][28]
-  Setup Slack:   9275.9ps
+  Setup Slack:   9276.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[5][28]/Q
 Net:  cpuregs[5][28]
-  Setup Slack:   8600.4ps
+  Setup Slack:   8598.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -454,28 +454,28 @@ Hold Slack:    -5.8ps
 
 Node: cpuregs_reg[30][25]/D
 Net:  n_2007
-  Setup Slack:   5991.4ps
+  Setup Slack:   5991.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89432/Y
 Net:  n_2007
-  Setup Slack:   5991.4ps
+  Setup Slack:   5991.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89432/B
 Net:  cpuregs[30][25]
-  Setup Slack:   9284.9ps
+  Setup Slack:   9284.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[30][25]/Q
 Net:  cpuregs[30][25]
-  Setup Slack:   8651.1ps
+  Setup Slack:   8651.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -504,14 +504,14 @@ Net:  n_2071
       NoCellSelected(2)
 Node: g89368/B
 Net:  cpuregs[28][25]
-  Setup Slack:   9272.4ps
+  Setup Slack:   9272.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[28][25]/Q
 Net:  cpuregs[28][25]
-  Setup Slack:   8637.0ps
+  Setup Slack:   8636.8ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -526,28 +526,28 @@ Hold Slack:    -3.8ps
 
 Node: cpuregs_reg[14][21]/D
 Net:  FE_PHN966_n_2417
-  Setup Slack:   6513.5ps
+  Setup Slack:   6513.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g88973/Y
 Net:  FE_PHN966_n_2417
-  Setup Slack:   6513.5ps
+  Setup Slack:   6513.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g88973/B
 Net:  cpuregs[14][21]
-  Setup Slack:   9275.1ps
+  Setup Slack:   9275.0ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[14][21]/Q
 Net:  cpuregs[14][21]
-  Setup Slack:   8526.0ps
+  Setup Slack:   8539.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -562,14 +562,14 @@ Hold Slack:    -3.8ps
 
 Node: cpuregs_reg[12][4]/D
 Net:  FE_PHN967_n_2494
-  Setup Slack:   7005.6ps
+  Setup Slack:   7006.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g88896/Y
 Net:  FE_PHN967_n_2494
-  Setup Slack:   7005.6ps
+  Setup Slack:   7006.3ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -598,28 +598,28 @@ Hold Slack:    -3.1ps
 
 Node: cpuregs_reg[5][5]/D
 Net:  n_1941
-  Setup Slack:   6846.2ps
+  Setup Slack:   6847.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89498/Y
 Net:  n_1941
-  Setup Slack:   6846.2ps
+  Setup Slack:   6847.2ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89498/B
 Net:  cpuregs[5][5]
-  Setup Slack:   9268.2ps
+  Setup Slack:   9270.5ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[5][5]/Q
 Net:  cpuregs[5][5]
-  Setup Slack:   8524.1ps
+  Setup Slack:   8540.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -634,14 +634,14 @@ Hold Slack:    -3.0ps
 
 Node: cpuregs_reg[12][3]/D
 Net:  FE_PHN988_n_2495
-  Setup Slack:   7006.2ps
+  Setup Slack:   7006.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g88895/Y
 Net:  FE_PHN988_n_2495
-  Setup Slack:   7006.2ps
+  Setup Slack:   7006.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -663,48 +663,6 @@ Net:  cpuregs[12][3]
 
 
 // Path 19
-Endpoint:      is_slti_blt_slt_reg/D
-Beginpoint:    instr_blt_reg/Q
-Analysis View: fast_hold_view
-Hold Slack:    -2.6ps
-
-Node: is_slti_blt_slt_reg/D
-Net:  n_3845
-  Setup Slack:   8982.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: g53682__1705/Y
-Net:  n_3845
-  Setup Slack:   5860.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: g53682__1705/AN
-Net:  instr_blt
-  Setup Slack:   6100.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-Node: FE_PHC706_instr_blt/Y
-Net:  instr_blt
-  Setup Slack:   6100.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-Node: FE_PHC706_instr_blt/A
-Net:  FE_PHN706_instr_blt
-  Setup Slack:   6100.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-Node: instr_blt_reg/Q
-Net:  FE_PHN706_instr_blt
-  Setup Slack:   6100.3ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-
-
-// Path 20
 Endpoint:      cpuregs_reg[7][12]/D
 Beginpoint:    cpuregs_reg[7][12]/Q
 Analysis View: fast_hold_view
@@ -712,14 +670,14 @@ Hold Slack:    -2.4ps
 
 Node: cpuregs_reg[7][12]/D
 Net:  n_1754
-  Setup Slack:   6926.5ps
+  Setup Slack:   6928.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89685/Y
 Net:  n_1754
-  Setup Slack:   6926.5ps
+  Setup Slack:   6928.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -733,14 +691,14 @@ Net:  cpuregs[7][12]
       InvalidCell
 Node: cpuregs_reg[7][12]/Q
 Net:  cpuregs[7][12]
-  Setup Slack:   8606.6ps
+  Setup Slack:   8606.7ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 
 
-// Path 21
+// Path 20
 Endpoint:      cpu_state_reg[3]/D
 Beginpoint:    cpu_state_reg[3]/Q
 Analysis View: fast_hold_view
@@ -748,14 +706,14 @@ Hold Slack:    -1.7ps
 
 Node: cpu_state_reg[3]/D
 Net:  n_3071
-  Setup Slack:   7093.1ps
+  Setup Slack:   7092.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g87251/Y
 Net:  n_3071
-  Setup Slack:   7093.1ps
+  Setup Slack:   7092.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -783,14 +741,14 @@ Net:  cpu_state[3]
       InvalidCell
 Node: cpu_state_reg[3]/Q
 Net:  cpu_state[3]
-  Setup Slack:   7153.0ps
+  Setup Slack:   7152.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 
 
-// Path 22
+// Path 21
 Endpoint:      reg_next_pc_reg[25]/D
 Beginpoint:    reg_next_pc_reg[25]/Q
 Analysis View: fast_hold_view
@@ -798,14 +756,14 @@ Hold Slack:    -1.6ps
 
 Node: reg_next_pc_reg[25]/D
 Net:  n_997
-  Setup Slack:   3599.0ps
+  Setup Slack:   3599.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g90800/Y
 Net:  n_997
-  Setup Slack:   3599.0ps
+  Setup Slack:   3599.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -826,6 +784,48 @@ Net:  reg_next_pc[25]
       NoCellSelected(2)
 
 
+// Path 22
+Endpoint:      is_slti_blt_slt_reg/D
+Beginpoint:    instr_blt_reg/Q
+Analysis View: fast_hold_view
+Hold Slack:    -1.5ps
+
+Node: is_slti_blt_slt_reg/D
+Net:  n_3845
+  Setup Slack:   8989.9ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      NoCellSelected(2)
+Node: g53682__1705/Y
+Net:  n_3845
+  Setup Slack:   5866.2ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+    ECO Safe Resize
+      NoCellSelected(2)
+Node: g53682__1705/AN
+Net:  instr_blt
+  Setup Slack:   6097.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+Node: FE_PHC706_instr_blt/Y
+Net:  instr_blt
+  Setup Slack:   6097.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+Node: FE_PHC706_instr_blt/A
+Net:  FE_PHN706_instr_blt
+  Setup Slack:   6097.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+Node: instr_blt_reg/Q
+Net:  FE_PHN706_instr_blt
+  Setup Slack:   6097.5ps
+  Analysis View: slow_setup_view
+  Failed Reason:
+
+
 // Path 23
 Endpoint:      cpuregs_reg[4][1]/D
 Beginpoint:    cpuregs_reg[4][1]/Q
@@ -834,28 +834,28 @@ Hold Slack:    -0.7ps
 
 Node: cpuregs_reg[4][1]/D
 Net:  FE_PHN1016_n_2021
-  Setup Slack:   6859.9ps
+  Setup Slack:   6860.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89418/Y
 Net:  FE_PHN1016_n_2021
-  Setup Slack:   6859.9ps
+  Setup Slack:   6860.6ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89418/B
 Net:  cpuregs[4][1]
-  Setup Slack:   9258.8ps
+  Setup Slack:   9258.9ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       InvalidCell
 Node: cpuregs_reg[4][1]/Q
 Net:  cpuregs[4][1]
-  Setup Slack:   8340.3ps
+  Setup Slack:   8338.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -863,56 +863,6 @@ Net:  cpuregs[4][1]
 
 
 // Path 24
-Endpoint:      instr_sltiu_reg/D
-Beginpoint:    instr_sltiu_reg/Q
-Analysis View: fast_hold_view
-Hold Slack:    -0.4ps
-
-Node: instr_sltiu_reg/D
-Net:  FE_PHN711_n_1449
-  Setup Slack:   7792.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC711_n_1449/Y
-Net:  FE_PHN711_n_1449
-  Setup Slack:   7792.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: FE_PHC711_n_1449/A
-Net:  n_1449
-  Setup Slack:   7792.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: g90163/Y
-Net:  n_1449
-  Setup Slack:   7792.5ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-Node: g90163/A0N
-Net:  instr_sltiu
-  Setup Slack:   9244.2ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      InvalidCell
-Node: instr_sltiu_reg/Q
-Net:  instr_sltiu
-  Setup Slack:   5912.6ps
-  Analysis View: slow_setup_view
-  Failed Reason:
-    ECO Safe Resize
-      NoCellSelected(2)
-
-
-// Path 25
 Endpoint:      cpuregs_reg[9][1]/D
 Beginpoint:    cpuregs_reg[9][1]/Q
 Analysis View: fast_hold_view
@@ -920,14 +870,14 @@ Hold Slack:    -0.3ps
 
 Node: cpuregs_reg[9][1]/D
 Net:  n_1800
-  Setup Slack:   6982.9ps
+  Setup Slack:   6982.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
       NoCellSelected(2)
 Node: g89639/Y
 Net:  n_1800
-  Setup Slack:   6982.9ps
+  Setup Slack:   6982.1ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
@@ -941,7 +891,7 @@ Net:  cpuregs[9][1]
       InvalidCell
 Node: cpuregs_reg[9][1]/Q
 Net:  cpuregs[9][1]
-  Setup Slack:   8237.7ps
+  Setup Slack:   8235.4ps
   Analysis View: slow_setup_view
   Failed Reason:
     ECO Safe Resize
