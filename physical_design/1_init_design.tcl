@@ -77,7 +77,6 @@ check_design -type [list \
     library \
     netlist \
     synthesis \
-    power_intent \
     timing \
     hierarchical \
     assign_statements \

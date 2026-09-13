@@ -48,6 +48,8 @@ set_propagated_clock [all_clocks]
 ###############################
 report_timing -late  -max_paths 50 > ${REPORT_PATH}/setup.rpt
 report_timing -early -max_paths 50 > ${REPORT_PATH}/hold.rpt
+report_clock_trees -out_file ${REPORT_PATH}/clock_trees.rpt
+report_skew_groups -out_file ${REPORT_PATH}/skew_groups.rpt
 write_db $OUTPUT_DB
 
 puts "Done $STAGE"

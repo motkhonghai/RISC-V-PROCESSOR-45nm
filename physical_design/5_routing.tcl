@@ -48,6 +48,11 @@ route_opt_design -setup -hold
 # Remove those fillers so post-route optimization has legal sites for delay
 # cells and buffers, then optimize against the final routed parasitics.
 delete_filler -cells $FILLER_CELLS -prefix FILLER
+# Preserve both setup and hold during the automatic post-route area-reclaim
+# phase. The setup-aware default removed freshly inserted hold buffers in the
+# previous run and reintroduced about 8 ps of negative hold slack.
+set_db opt_post_route_area_reclaim hold_and_setup_aware
+set_db opt_hold_target_slack 0.010
 opt_design -post_route -drv -setup -hold \
     -hold_violation_report ${REPORT_PATH}/unfixed_hold
 
