@@ -50,6 +50,7 @@ catch {setNanoRouteMode -quiet -route_with_si_post_route_fix false}
 catch {setNanoRouteMode -quiet -timingEngine ".timing_file_379783_f0b52b27-5487-409c-adce-ca51c9757ce4.tif.gz"}
 
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setActiveLogicViewMode -keepHighFanoutCriticalInsts false }
 catch { setUsefulSkewMode -opt_skew_eco_route false }
 catch { setDelayCalMode -enable_hier_save_restore_flow false }
 catch { setDelayCalMode -enable_high_fanout true }
@@ -66,6 +67,7 @@ catch { setAddRingMode -skip_crossing_trunks none }
 catch { setHierMode -disableArt false }
 catch { setHierMode -reportPostRouteArtTiming false }
 catch { setHierMode -trialRouteHonorReadOnly false }
+catch { setImportMode -config true }
 catch { setImportMode -discardFloatingVNets false }
 catch { setImportMode -keepEmptyModule true }
 catch { setTieHiLoMode -cell {{TIELO TIEHI}} }
