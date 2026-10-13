@@ -28,8 +28,6 @@ databases and checkpoint directories are not included on this branch.
 | Clock period | 10 ns |
 | Target frequency | 100 MHz |
 | Implementation node | 45nm |
-| Synthesis tool | Cadence Genus 25.13 |
-| Physical-design tool | Cadence Innovus 25.13 |
 
 ## Repository Structure
 
