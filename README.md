@@ -158,26 +158,6 @@ mW in the report.
 | Clock | 0.0289 | 0.0607 | 0.000009774 | 0.08961 | 12.41% |
 | Total | 0.4409 | 0.2807 | 0.0005379 | 0.7222 | 100% |
 
-## Current Status
-
-The latest reported implementation is clean for the main checks below:
-
-- setup timing
-- hold timing
-- max transition
-- max capacitance
-- DRC
-- connectivity
-- mapped scan-cell check
-
-The remaining item to review is `set_max_fanout 16`. The final report still
-shows 159 real max-fanout violations. These fanout violations do not currently
-cause max-transition, max-capacitance, timing, DRC or connectivity failures in
-the reported run. If fanout 16 is a strict project requirement, the design
-should be re-optimized with fanout repair and rerun through physical design. If
-it is only a synthesis heuristic, the electrical checks already pass in the
-current reports.
-
 ## Delivered Outputs
 
 Key implementation deliverables are included under `outputs/`.
