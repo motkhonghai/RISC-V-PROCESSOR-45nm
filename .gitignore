@@ -1,0 +1,53 @@
+# PDK / thư viện
+lib/
+lef/
+QRC_Tech/
+captable/
+
+# File chạy chương trình và log
+*.tcl
+*.log
+*.log*
+*.cmd*
+*.db
+*.cdb
+*.spef
+*.sh
+*.tstamp
+.rs_icd1.tstamp
+.GenusRestruct_innovus.log*
+mmmc.view
+
+# Artifact trung gian ở gốc
+top.mtarpt
+picorv32.conn.rpt*
+picorv32.geom.rpt*
+rc_model.bin
+.metrics
+.stats.dat
+
+# Thư mục làm việc / trung gian của tool
+extLogDir/
+fv/
+timingReports/
+physical_design/.predict_fp_*
+
+# Checkpoint DB của PD (trong outputs chỉ giữ deliverables ở mmmc/)
+physical_design/outputs/mmmc/picorv32_init/
+physical_design/outputs/mmmc/picorv32_floorplan_power/
+physical_design/outputs/mmmc/picorv32_place/
+physical_design/outputs/mmmc/picorv32_post_cts/
+physical_design/outputs/mmmc/picorv32_post_route/
+physical_design/outputs/mmmc/picorv32_finish/
+physical_design/outputs/mmmc/picorv32_final/
+
+# Checkpoint DB/cdb của Synthesis
+synthesis/outputs/mmmc/INVS/
+synthesis/outputs/mmmc/syn_opt_picorv32.cdb/
+synthesis/outputs/mmmc/.*
+
+# Chỉ giữ README ở gốc
+synthesis/README.md
+constraints/README.md
+physical_design/README.md
+TECHNOLOGY.md
